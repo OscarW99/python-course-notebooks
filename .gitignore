@@ -1,0 +1,15 @@
+# Ignore virtual environment
+python_course/
+
+# Ignore my notes
+personal_notes.txt
+
+# Ignore Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore JupyterLite output directory
+_output/
