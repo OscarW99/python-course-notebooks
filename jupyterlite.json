@@ -1,8 +1,19 @@
 {
-    "content": {
-        "path": "content",
-        "files": [
-            "Testing/example_assignment.ipynb"
-        ]
+    "jupyter-lite-schema-version": 0,
+    "jupyter-config-data": {
+        "appName": "Python for Bioinformatics JupyterLite",
+        "collaborative": true,
+        "disabledExtensions": [],
+        "settingsOverrides": {},
+        "defaultKernelName": "python",
+        "contentProviders": {
+            "drive": {
+                "contents": [
+                    {
+                        "path": "Testing/example_assignment.ipynb"
+                    }
+                ]
+            }
+        }
     }
 }

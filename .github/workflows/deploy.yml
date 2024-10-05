@@ -1,35 +1,42 @@
 name: Deploy JupyterLite
 
 on:
-  # Trigger the workflow on pushes to the main branch
   push:
     branches:
       - main
-  # Also trigger the workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the repository
-        uses: actions/checkout@v2
-
-      - name: Install Python
-        uses: actions/setup-python@v2
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-
-      - name: Install JupyterLite
-        run: pip install jupyterlite
-
-      - name: Build JupyterLite site
+      - name: Install the dependencies
         run: |
-          jupyter lite init
-          jupyter lite build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+          python -m pip install -U jupyterlite-core jupyterlab
+      - name: Build the JupyterLite site
+        run: |
+          jupyter lite build --contents content
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_output
+          path: ./_output
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
