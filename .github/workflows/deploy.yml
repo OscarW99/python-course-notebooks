@@ -18,14 +18,10 @@ jobs:
           python-version: '3.11'
       - name: Install the dependencies
         run: |
-          python -m pip install -U jupyterlite[pyodide]
+          python -m pip install -U jupyterlite-core jupyterlab jupyterlite-pyodide-kernel
       - name: Build the JupyterLite site
         run: |
           jupyter lite build --contents content --output-dir _output
-      - name: Debug - List built contents
-        run: |
-          echo "Contents of _output directory:"
-          ls -R _output
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
