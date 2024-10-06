@@ -13,6 +13,12 @@
           },
           {
             "path": "Testing/test.ipynb"
+          },
+          {
+            "path": "Chapter1/chapter1.1.ipynb"
+          },
+          {
+            "path": "Chapter1/chapter1.2.ipynb"
           }
         ]
       }
