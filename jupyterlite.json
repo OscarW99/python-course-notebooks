@@ -18,6 +18,9 @@
                 "contents": [
                     {
                         "path": "Testing/example_assignment.ipynb"
+                    },
+                    {
+                        "path": "Testing/test.ipynb"
                     }
                 ]
             }
