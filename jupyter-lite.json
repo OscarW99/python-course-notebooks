@@ -3,8 +3,6 @@
     "jupyter-config-data": {
         "appName": "Python for Bioinformatics JupyterLite",
         "collaborative": true,
-        "disabledExtensions": [],
-        "settingsOverrides": {},
         "defaultKernelName": "python",
         "kernelSpecs": {
             "python": {

@@ -24,7 +24,9 @@ jobs:
           echo "Contents of current directory:"
           ls -R
           echo "Contents of jupyter-lite.json:"
-          cat jupyter-lite.json
+          cat jupyter-lite.json || echo "jupyter-lite.json not found"
+          echo "Contents of jupyterlite.json:"
+          cat jupyterlite.json || echo "jupyterlite.json not found"
       - name: Build the JupyterLite site
         run: |
           jupyter lite build --contents content --output-dir _output
