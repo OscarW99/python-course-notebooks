@@ -1,9 +1,22 @@
 {
   "jupyter-config-data": {
-    "appName": "JupyterLite",
+    "appName": "Python for Bioinformatics JupyterLite",
     "appUrl": "./lab",
     "appVersion": "0.4.2",
     "baseUrl": "./",
+    "collaborative": true,
+    "contentProviders": {
+      "drive": {
+        "contents": [
+          {
+            "path": "Testing/example_assignment.ipynb"
+          },
+          {
+            "path": "Testing/test.ipynb"
+          }
+        ]
+      }
+    },
     "defaultKernelName": "python",
     "faviconUrl": "./lab/favicon.ico",
     "federated_extensions": [],
@@ -282,6 +295,13 @@
     },
     "fullLabextensionsUrl": "./extensions",
     "fullStaticUrl": "./build",
+    "kernelSpecs": {
+      "python": {
+        "display_name": "Python (Pyodide)",
+        "language": "python",
+        "name": "python"
+      }
+    },
     "licensesUrl": "./lab/api/licenses"
   },
   "jupyter-lite-schema-version": 0

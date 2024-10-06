@@ -18,15 +18,7 @@ jobs:
           python-version: '3.11'
       - name: Install the dependencies
         run: |
-          python -m pip install -U jupyterlite-core jupyterlab
-      - name: Debug - List contents
-        run: |
-          echo "Contents of current directory:"
-          ls -R
-          echo "Contents of jupyter-lite.json:"
-          cat jupyter-lite.json || echo "jupyter-lite.json not found"
-          echo "Contents of jupyterlite.json:"
-          cat jupyterlite.json || echo "jupyterlite.json not found"
+          python -m pip install -U jupyterlite[pyodide]
       - name: Build the JupyterLite site
         run: |
           jupyter lite build --contents content --output-dir _output
