@@ -21,7 +21,7 @@ jobs:
           python -m pip install -U jupyterlite-core jupyterlab
       - name: Build the JupyterLite site
         run: |
-          jupyter lite build --contents content
+          jupyter lite build --contents content --output-dir _output
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:

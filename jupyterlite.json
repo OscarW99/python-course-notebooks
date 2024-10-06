@@ -6,6 +6,13 @@
         "disabledExtensions": [],
         "settingsOverrides": {},
         "defaultKernelName": "python",
+        "kernelSpecs": {
+            "python": {
+                "name": "python",
+                "display_name": "Python (Pyodide)",
+                "language": "python"
+            }
+        },
         "contentProviders": {
             "drive": {
                 "contents": [
