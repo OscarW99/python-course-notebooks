@@ -1,0 +1,80 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 6: Working with Files</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Python OS Module
+</div>
+<br>
+<div style="font-size:18px;">
+
+**Important Notes Before Starting:**
+
+- All files and directories required for these questions are contained in the subfolder named `data`.
+- Avoid making changes outside the `data` folder to ensure the safety of your local files.
+- If you accidentally modify or delete important files, you may need to recreate the required directory structure.
+
+---
+
+### Directory Structure
+
+```
+data/
+├── bio_data/
+│   ├── gene_data.csv
+│   ├── genome.fasta
+│   ├── notes.txt
+│   ├── sample1.fasta
+│   └── sample2.txt
+└── project_files/
+    ├── processed_data/
+    ├── raw_data/
+    └── results/
+```
+
+# Question 1: Navigating and Creating Directories
+- Write code to:
+    - Print the current working directory.
+    - Navigate to the `project_files` folder and create a new directory called `analysis`.
+    - Confirm that the `analysis` directory has been created by listing all directories inside `project_files`.
+<br></br>
+
+# Question 2: Identifying Specific Files
+- Write a program to identify all FASTA files (files ending with `.fasta`) inside the `bio_data` directory.
+- Print the names of the identified files.
+- Confirm that the output includes the correct files based on the directory structure.
+<br></br>
+
+# Question 3: Modifying the Directory Structure
+- Write code to:
+    - Rename the `raw_data` directory inside `project_files` to `input_data`.
+    - Confirm that the renaming operation was successful by printing the updated directory structure of `project_files`.
+<br></br>
+
+# Question 4: Removing Files and Directories
+- Write a program to:
+    - Safely remove the `notes.txt` file from the `bio_data` directory.
+    - Remove the `results` directory inside `project_files`.
+    - Confirm that the file and directory have been removed by printing the updated structures of their respective parent directories.
+<br></br>
+
+# Question 5: Building Paths
+- Write a script to:
+    - Build a full path to a file called `final_report.txt` located inside the `analysis` directory of `project_files`.
+    - Print the constructed path for both Windows and Unix-like systems.
+    - Confirm that the path is correct by navigating to the specified location and verifying that it exists.
+<br></br>
+
+# Question 6: Move a File
+- Write a script to:
+    - Move the `gene_data.csv` file from the `bio_data` directory to the `analysis` directory inside `project_files`.
+    - Confirm that `gene_data.csv` no longer exists in `bio_data` and is present in `analysis`.
+
+<span style="color:#8b0153;">Hint</span>: Use `os.rename()` with full paths to simulate moving a file.
+<br></br>
+
+# Question 7: Rename Files
+- In the `analysis` directory, write a script to rename all files with a `.csv` extension by appending `_final` to their current names (e.g., `results.csv` becomes `results_final.csv`).
+- Confirm that all files have been renamed successfully.
+<br></br>
+</div>

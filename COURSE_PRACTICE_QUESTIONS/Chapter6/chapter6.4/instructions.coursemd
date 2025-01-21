@@ -1,0 +1,30 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 6: Working with Files</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Working with CSV and TSV Files (csv module)
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1: Reading a CSV File
+- Write a Python script that reads the `data/example.csv` file and prints the first 5 rows of data.
+- Modify the script to print only the `Gene ID` and `Expr B` columns for each row.
+<br></br>
+
+# Question 2: Writing to a TSV File
+- You are given a nested list representing gene expression data, where each inner list contains the gene name, expression value in condition A, and expression value in condition B.
+- Write a Python script to write this data to a new TSV file named `output/gene_expression.tsv`.
+<br></br>
+
+# Question 3: Skipping Headers and Calculating Average Expression
+- Write a Python script that reads the `data/example.csv` file, skips the header row, and calculates the average of `Expr A` and `Expr B` for each gene.
+- Print each gene's ID and its average expression value.
+<br></br>
+
+# Question 4: Filtering Rows and Writing to a New File
+- Write a Python script that reads the `data/example.tsv` file and creates a new file `output/upregulated_genes.tsv` containing only the rows where the gene is upregulated (based on the `Notes` column).
+- The output file should have the same header row as the input file.
+<br></br>
+</div>

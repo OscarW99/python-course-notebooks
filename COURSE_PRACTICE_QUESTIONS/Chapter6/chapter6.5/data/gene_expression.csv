@@ -1,0 +1,5 @@
+Gene_ID,Expression_A,Expression_B,Fold_Change
+^Gene1,10,20,2.0
+^Gene2,5,15,3.0
+^Gene3,8,8,1.0
+^Gene4,2,10,5.0

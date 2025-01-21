@@ -1,0 +1,89 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 7: Error Handling and Logging</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Advanced Exception Handling
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+- Complete the following code to read DNA sequences from the file `data/sequences.txt`:
+
+```python
+def read_dna_file(filename):
+    file = None
+    try:
+        file = open(filename, 'r')
+    except FileNotFoundError:
+        print("File not found")
+    else:
+                    
+    finally:
+
+```
+
+In the else block:
+
+- Read all lines from the file and store them in a list called `sequences`.
+- Print *__"Successfully read {number} sequences"__* with the count of sequences
+
+In the finally block:
+
+- Check if file exists using `if file:`
+- Close the file if it exists
+- Print __*"File closed"*__ after closing
+<br></br>
+
+# Question 2
+- Write code that validates a protein sequence from the file `data/protein_sequence.txt` using the `raise` keyword. The sequence should only contain valid amino acids (use this set: 
+_{'A', 'R', 'N', 'D', 'C', 'Q', 'E', 'G', 'H', 'I', 'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V'}_). Raise a ```ValueError``` with the message __*"Invalid amino acid {X} found at position {Y}"*__ where X is the invalid amino acid and Y is its position (starting from 1).
+<br></br>
+
+# Question 3
+- Create a function that reads two numbers from a file (one per line) and divides them. Your function should:
+
+```python
+def divide_numbers_from_file(filename):
+    # Add try block to:
+    #   - Open and read the file
+    #   - Convert the numbers and perform the division
+    # Add except blocks to handle:
+    #   - FileNotFoundError: print "File not found"
+    #   - ValueError: print "Invalid number found in file"
+    #   - ZeroDivisionError: print "Cannot divide by zero"
+    # Add finally block to:
+    #   - Close the file if it exists
+    #   - Print "Operation completed"
+```
+
+- Test said function with `data/numbers.txt`
+- Modify the `data/numbers.txt` file to contain a zero as the second number and test again to observe the `ZeroDivisionError` handling.
+- Modify the `data/numbers.txt` file to contain a non-numeric value and test again to observe the `ValueError` handling.
+<br></br>
+
+# Question 4
+- Complete the function that reads a DNA sequence from a file and checks its length:
+
+```python
+def check_sequence_length(filename, expected_length):
+    # Add try block to:
+    #   - Open and read the file
+    #   - Strip whitespace from the sequence
+    #   - If length doesn't match expected_length, raise ValueError with message:
+    #     f"Sequence length {actual_length} does not match expected length {expected_length}"
+    # Add except blocks for:
+    #   - FileNotFoundError: print "File not found"
+    #   - ValueError: print the error message
+    # Add else block to:
+    #   - Print "Sequence length is valid"
+    # Add finally block to:
+    #   - Close the file if it exists
+
+```
+
+- Test said function with the file `data/dna_sequence.txt` and an expected length of 20.
+- Test again with the same file but this time with an expected length of 10.
+<br></br>
+</div>

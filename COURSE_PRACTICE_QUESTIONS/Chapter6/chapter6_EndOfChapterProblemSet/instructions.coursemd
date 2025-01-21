@@ -1,0 +1,74 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 6: Working with Files</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    End of Chapter Problem Set
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+- Navigate to the `data/sequences` directory and list all files with the `.fasta` extension. Print the names of these files to the console.
+<br></br>
+
+# Question 2
+- Read the file `data/gene_expression_2024.csv` and extract only the genes that show differential expression (marked with '**_Yes_**' in the '**_Differential_**' column). Save these genes to a new file called `output/differential_genes.csv`.
+<br></br>
+
+# Question 3
+- The file `data/experiment_log.txt` contains experimental notes. Add today's date and the text "_**Data analysis completed**_" at the end of this file without overwriting the existing content.
+
+(We have not yet covered accessing specific dates, but try using the following hint to help).
+
+<span style="color:#8b0153;">Hint</span>: Use **'a'** mode for appending:
+```python
+from datetime import date
+today = date.today()
+today_string = today.strftime("%Y-%m-%d")
+```
+</br>
+
+# Question 4
+You have two files: `data/patient_data_batch1.tsv` and `data/patient_data_batch2.tsv`. Combine these files into a single file `output/combined_patient_data.tsv`, ensuring that you only include the header row once.
+
+</br>
+
+# Question 5
+Using the `os` module, check if the directory `output/results` exists. If it doesn't, create it. Then create three subdirectories inside it: `raw`, `processed`, and `final`.
+
+</br>
+
+# Question 6
+The file `data/sequence_data.fasta` contains DNA sequences with headers. Count how many sequences are in this file (hint: count the lines starting with '**_>_**') and print the total.
+
+</br>
+
+# Question 7
+In the file `data/genotype_data.csv`, replace all missing values (marked as **'NA'**) with **'0'**. Save the modified content to `output/cleaned_genotype_data.csv`.
+
+</br>
+
+# Question 8
+Read the file `data/protein_weights.txt` which contains protein names and their molecular weights (one per line, separated by a tab). Calculate the average molecular weight and append this information at the end of the file.
+
+</br>
+
+# Question 9
+The directory `data/old_records` contains several **.txt** files. Move all files modified before 2024 to a new directory called `data/archive`.
+
+(We have not yet covered file modification times, but try using the following hint to help).
+
+<span style="color:#8b0153;">Hint</span>: Use `os.path.getmtime()` to get modification time of a file:
+```python
+import time
+# Example comparison:
+if time.gmtime(os.path.getmtime(filename)).tm_year < 2024:
+    # Move the file
+```
+</br>
+
+# Question 10
+You have a file `data/gene_names.txt` containing one gene name per line. Create a new file `output/gene_names_uppercase.txt` where all gene names are in uppercase, and add a line number before each gene name.
+
+</br></div>

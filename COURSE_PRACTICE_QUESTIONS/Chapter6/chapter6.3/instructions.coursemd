@@ -1,0 +1,26 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 6: Working with Files</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Writing and Appending to Files
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1: Writing a Simple Message
+Create a new file named **`output/greetings.txt`** and write the message _**"Hello, World of Bioinformatics!"**_ to it.
+<br></br>
+
+# Question 2: Appending to a File
+Append the message _**"Exploring file operations in Python."**_ to the file **`output/greetings.txt`** on a new line.
+<br></br>
+
+# Question 3: Writing Multiple Lines with Loop
+Create a file **`output/gene_info.txt`** and use a loop to write the following genes and their functions, each on a new line: **`["BRCA1 - DNA repair", "TP53 - Cell cycle regulation", "EGFR - Signal transduction"]`**.
+<br></br>
+
+# Question 4: Using `.writelines()` to Write a List
+With the list of strings **`["Sequence A: ATCG", "Sequence B: GCTA", "Sequence C: CGAT"]`**, write these to a file named **`output/sequence_list.txt`** using the **`.writelines()`** method.
+<br></br>
+</div>

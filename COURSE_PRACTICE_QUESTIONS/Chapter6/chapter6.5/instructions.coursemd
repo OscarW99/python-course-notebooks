@@ -1,0 +1,47 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 6: Working with Files</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Reading and Writing CSV/TSV Files with Pandas
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+- Read the file `data/gene_expression.csv` into a DataFrame called `df`. Display the first 5 rows of the DataFrame.
+<br></br>
+
+# Question 2
+- Filter the DataFrame `df` to only include rows where the '**Fold_Change**' column is greater than 2. Write the filtered DataFrame to a new CSV file named `output/upregulated_genes.csv`.
+
+(We have not yet covered filtering rows with Pandas but try using the following hint to help).
+
+<span style="color:#8b0153;">Hint</span>: To filter rows, use the following syntax:
+
+`df = df[df['Column_Name'] > value]`
+<br></br>
+
+
+# Question 3
+- Read the TSV file `data/patient_data.tsv` into a DataFrame. Calculate the average age of the patients and print the result.
+
+(We have not yet covered calculating column averages with Pandas but try using the following hint to help).
+
+<span style="color:#8b0153;">Hint</span>: To calculate the mean average of a column, use the following syntax:
+
+`df['Column_Name'].mean()`
+<br></br>
+
+# Question 4
+- Use the given data to create a Pandas DataFrame.
+    ```python
+    data = {
+        'Protein': ['P53', 'BRCA1', 'EGFR', 'TNF', 'IL6'],
+        'Expression': [0.8, 1.2, 1.5, 0.6, 1.1]
+    }
+    ```
+    1. Print the first few rows of the DataFrame using the `.head()` method.
+    2. Write this DataFrame to a TSV file named `'output/protein_expression.tsv'`.
+<br></br>
+</div>

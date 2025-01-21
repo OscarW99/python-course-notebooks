@@ -1,0 +1,90 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 7: Error Handling and Logging</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    End of Chapter Problem Set
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+- Configure a logging setup that:
+    - Writes to a file called `logs/dna_analysis.log`
+    - Sets the logging level to DEBUG
+    - Includes timestamp, log level, and message in the format
+    - Test your configuration by logging messages at different severity levels
+<br></br>
+
+# Question 2
+- Complete the try-except block to handle potential errors when reading `data/sequences.txt`:
+    - Use appropriate exception handling for file operations
+    - Log any file not found errors
+    - Log unexpected errors with full stack trace
+    - Return None if the file cannot be read
+<br></br>
+
+# Question 3
+- Add appropriate error handling to this code that divides values in `data/numbers.txt`:
+    - Handle both ZeroDivisionError and ValueError separately
+    - Log different messages for each error type
+    - Include the line number where the error occurred
+    - Use a finally block to ensure the file is closed
+<br></br>
+
+# Question 4
+- Modify the existing logging configuration to:
+    - Add a second handler that writes critical errors to `logs/errors.log`
+    - Set different formatting for each handler
+    - Set different logging levels for each handler
+    - Test the configuration with messages at various levels
+<br></br>
+
+# Question 5
+- Add exception handling to process the content of `data/gene_data.txt`:
+    - Log a warning if a line is not in the expected format (should be: **_gene_id\tsequence_**)
+    - Skip invalid lines and continue processing
+    - Keep track of the number of invalid lines
+    - Log a summary when processing is complete
+<br></br>
+
+# Question 6
+- Complete the error handling for this protein analysis code:
+    - Add appropriate exception handling
+    - Log the specific invalid amino acid encountered
+    - Use `logging.exception()` for unexpected errors
+    - Return **-1** if sequence is invalid
+<br></br>
+
+# Question 7
+- Use the logging module to create a debugging log:
+    - Log entry and exit points of functions
+    - Include parameter values in debug messages
+    - Use a format that includes function name
+    - Test with the `calculate_gc_content` function.
+<br></br>
+
+# Question 8
+- Enhance this sequence validation code with error handling:
+    - Raise ValueError for invalid bases
+    - Log position of first invalid base
+    - Include try-except-else structure
+    - Add debug logging of sequence length
+<br></br>
+
+# Question 9
+- Modify this sequence processing code to include both `logging.exception()` and `logging.error()` approaches:
+    - Use `logging.exception()` for file operation errors
+    - Use `logging.error()` with `exc_info=True` for invalid characters
+    - Compare the log outputs from both approaches
+    - Add appropriate error messages for each case
+<br></br>
+
+# Question 10
+- Debug this sequence comparison code:
+    - Add appropriate error checking for sequence lengths
+    - Log entering/exiting the function
+    - Log when differences are found
+    - Include error handling for index errors
+<br></br>
+</div>

@@ -1,0 +1,44 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 6: Working with Files</strong>
+</div>
+
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    File Paths and File Management
+</div>
+<br>
+<div style="font-size:18px;"> 
+
+# Question 1: Create a Relative Path
+Given the following hypothetical directory structure, where your current working directory is inside the `research` folder:
+
+```
+/
+├── research/  ← Current working directory (cwd)
+│   ├── data/
+│   │   └── genome_sequence.fasta
+│   ├── protein_analysis.csv
+│   └── scripts/
+│       └── analyze_data.py
+└── experiment_results.csv
+```
+
+* Write a string to create a relative path to access `genome_sequence.fasta` from the `research` folder.
+<br></br>
+
+# Question 2: Navigating with the Double-dot Syntax
+Given the same hypothetical directory structure as seen in **question 1**, write a string using the double-dot (`..`) syntax to navigate from `/research/data` to access `experiment_results.csv`.
+(`experiment_results.csv` is located one level above the `research` directory)
+<br></br>
+
+# Question 3: Open and Read a File in various modes
+* Open the file `"data/dna_sequence.txt"` in read mode, assign it to the variable `dna_file_r`, and print the file object
+* Open the file `"data/dna_sequence.txt"` in append mode, assign it to the variable `dna_file_a`, and print the file object
+* Open the file `"data/dna_sequence.txt"` in write mode, assign it to the variable `dna_file_w`, and print the file object
+* Close each of these files
+<br></br>
+
+# Question 4: Using the `with` Statement
+Write a Python script using the `with` statement to open `data/dna_sequence.txt` and print the file object.
+<br></br>
+</div>

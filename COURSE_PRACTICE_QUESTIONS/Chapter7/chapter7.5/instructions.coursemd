@@ -1,0 +1,44 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 7: Error Handling and Logging</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Advanced Python Logging
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+- Configure logging to write to a file called `logs/dna_analysis.log` that:
+    - Uses append mode
+    - Sets UTF-8 encoding
+    - Captures all message levels (DEBUG and above)
+    - Test it by logging messages at different severity levels
+<br></br>
+
+# Question 2
+- Complete the `calculate_protein_weight` function to calculate protein molecular weights and logs the following results:
+    
+    - Input sequence (DEBUG level)
+    - Calculation progress (INFO level)
+    - Any invalid amino acids (WARNING level)
+<br></br>
+
+# Question 3
+- Create logging configuration that includes timestamp with a custom format:
+    - Use format **"YYYY-MM-DD HH:MM:SS"**
+    - Include the severity level
+    - Include the actual message
+    - Test it with a log message at INFO level
+<br></br>
+
+# Question 4
+- Implement logging for a DNA sequence validator that includes:
+    - Log messages with timestamps
+    - The filename where logging occurs
+    - The function name
+    - The actual message
+- Test it with this sequence: **"ATXGC"** (X is invalid)
+
+<br></br>
+</div>

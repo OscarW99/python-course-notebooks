@@ -1,0 +1,52 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 7: Error Handling and Logging</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Custom Python Loggers
+</div>
+<br>
+<div style="font-size:18px;">
+
+*Note to students: Each practice question is provided in a separate Python file (q1.py, q2.py, q3.py, q4.py). This separation is important when working with Python's logging module because:*
+
+- *Each logging configuration affects the entire Python process*
+- *Multiple logging configurations in the same file can interfere with each other*
+- *Separate files ensure your logging setup works independently*
+- *Console output will be clearer and easier to understand*
+- *Log files won't conflict or get mixed content*
+
+# Question 1
+(complete this question in `chapter7.6/question1/q1.py`)
+- **Complete the custom logger setup by adding the missing code:**
+  - Set appropriate levels for both handlers (use `handler.setLevel(logging.LEVEL)`)
+  - Create and apply formatters to both handlers (formatter = `logging.Formatter('format_string')`, then `handler.setFormatter(formatter)`)
+  - Add both handlers to the logger (use `logger.addHandler(handler)`)
+  - Test with messages at different severity levels (use `logger.level('message')`)
+
+# Question 2
+(complete this question in `chapter7.6/question2/q2.py`)
+- **Complete this logging configuration by adding formatters and handlers:**
+  - Configure console format to display logger name, level, and message (use **%(name)s**, **%(levelname)s**, **%(message)s** in format string)
+  - Configure file format to include timestamp, logger name, level, and message (add **%(asctime)s** to format string)
+  - Add handlers to the logger (use `logger.addHandler()`)
+  - Test with messages at different severity levels
+
+# Question 3
+(complete this question in `chapter7.6/question3/q3.py`)
+- **Complete the protein analysis logging system:**
+  - Create formatters for both handlers (use `logging.Formatter()`)
+  - Set appropriate levels for the handlers (use `setLevel()`)
+  - Add handlers to the logger (use `addHandler()`)
+  - Test with both warning and error messages
+
+# Question 4
+(complete this question in `chapter7.6/question4/q4.py`)
+- **Set up a logging system to monitor the provided analyze_dna function:**
+  - A logger has been created named _**'bio_pipeline'**_
+  - Set up both console and file handlers
+  - Include the function name (**%(funcName)s**), level, and message in the log format
+  - Test your setup by calling the `analyze_dna` function
+
+<br></br>
+</div>

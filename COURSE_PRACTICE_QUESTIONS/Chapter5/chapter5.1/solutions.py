@@ -1,34 +1,35 @@
 # Chapter 5: Local Development Environment Problem Set
 
-# 1. Test Script
+#* 1. Test Script
 print("hello world")
 
 
-# 2. Sequence Transformation
+
+#* 2. Sequence Transformation
 # Define initial list of DNA sequences
 sequences = ['tATGaagC', 'gGGCcaTA', 'TAGC', 'cagt', 'GGttGG']
 
 # Lambda function to convert sequences to uppercase
-uppercase_converter = # TODO: your implementation here
+#$ uppercase_converter = 
 
 # Use map() to convert sequences to uppercase
-uppercase_sequences = # TODO: your implementation here
+#$ uppercase_sequences =
 
 # function to count nucleotides
 def count_nucleotide(sequence, nucleotide):
-    # TODO: your implementation here
     pass
 
 # Use filter() to keep sequences with at least two 'G' nucleotides
-g_rich_sequence = # TODO: your implementation here
+#$ g_rich_sequence = 
 
 # Optional: print results to verify
-print("Original Sequences:", sequences)
-print("Uppercase Sequences:", uppercase_sequences)
-print("G-rich Sequences:", g_rich_sequences)
+#$ print("Original Sequences:", sequences)
+#$ print("Uppercase Sequences:", uppercase_sequences)
+#$ print("G-rich Sequences:", g_rich_sequences)
 
 
-# 3. Protein Analysis Function
+
+#* 3. Protein Analysis Function
 def analyze_proteins(protein_sequences, length_threshold=50):
     """
     Analyze protein sequences and return statistics.
@@ -40,11 +41,11 @@ def analyze_proteins(protein_sequences, length_threshold=50):
     Returns:
         dict: Dictionary containing analysis results
     """
-    # Your implementation here
     pass
 
 
-# 4. Temperature Data Analysis
+
+#* 4. Temperature Data Analysis
 def analyze_temperatures(temperatures, threshold=30):
     """
     Analyze temperature readings and return statistics.
@@ -56,5 +57,4 @@ def analyze_temperatures(temperatures, threshold=30):
     Returns:
         dict: Dictionary containing analysis results
     """
-    # Your implementation here
     pass

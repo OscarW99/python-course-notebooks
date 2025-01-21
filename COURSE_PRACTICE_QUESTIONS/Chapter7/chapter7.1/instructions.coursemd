@@ -1,0 +1,45 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 7: Error Handling and Logging</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Exception Handling with Try-Except
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+- Write a `try-except` block to handle a `FileNotFoundError` when attempting to open a file named `'data/experiment_data.txt'`. If the file is not found, print _**"File not found. Please check the file path."**_.
+<br></br>
+
+# Question 2
+- Modify the following code to handle a `PermissionError` and print a custom message when a file cannot be opened due to permission issues:
+
+```python
+try:
+    with open('data.csv', 'r') as file:
+        data = file.read()
+except FileNotFoundError:
+    print("File not found!")
+```
+<br>
+
+# Question 3
+- Create a `try-except` block that catches both `FileNotFoundError` and `ValueError`. Print different messages for each exception type. The code should attempt to open a file and process its contents, and if the content is not in the expected format, handle the error.
+<br></br>
+
+# Question 4
+- Write a `try-except` block that attempts to divide two numbers and handles `ZeroDivisionError`. The program should print __*"Cannot divide by zero!"*__ when this exception is raised.
+<br></br>
+
+# Question 5
+- Using a general `except` block with `Exception as e`, modify the following code to catch any exception and print the exception's message:
+
+```python
+try:
+    result = 10 / 0
+except:
+    print("An error occurred")
+```
+<br></br>
+</div>

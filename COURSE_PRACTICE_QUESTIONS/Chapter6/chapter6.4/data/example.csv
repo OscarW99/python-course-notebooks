@@ -1,0 +1,4 @@
+Gene ID,Expr A,Expr B,Notes
+^Gene1,2.5,3.7,Up
+^Gene2,4.2,2.0,Down
+^Gene3,1.2,1.2,Unchanged

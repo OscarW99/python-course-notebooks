@@ -1,0 +1,40 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 7: Error Handling and Logging</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Exception Logging
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+- **Create a basic exception logging setup that:**
+  - Configure logging to write to a file called `logs/errors.log` (Remember: `basicConfig(filename='logs/errors.log', level=...)`)
+  - Use `logging.exception()` to log the error message (this automatically includes stack trace)
+  - Test with a division by zero error in a try-except block
+
+# Question 2
+- **Complete this exception logging function for a sequence validator that:**
+  - Takes a DNA sequence as input
+  - Raises and logs an error if sequence contains invalid characters (use `logging.error()` with `exc_info=True`)
+  - Include a custom error message with the invalid character found
+  - Re-raises the exception after logging
+
+# Question 3
+- **Complete the process_data function to demonstrate both logging approaches:**
+  - Use `logging.exception()` for `TypeError`
+  - Use `logging.error()` with `exc_info=True` for `ValueError`
+  - Ensure each method captures the full stack trace
+  - Include custom error messages for each case
+
+# Question 4
+- **Create a logging setup for multiple error types that:**
+  - Configure one handler for type errors (type_errors.log)
+  - Configure another handler for value errors (value_errors.log)
+  - Log type errors with `logging.exception()`
+  - Log value errors with `logging.error()` and `exc_info=True`
+  - Test by raising both error types
+
+<br></br>
+</div>

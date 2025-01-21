@@ -1,0 +1,49 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 7: Error Handling and Logging</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Python Assertions
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+- Given the DNA sequence data:
+    - Write assertions to verify the sequence length matches the number of quality scores
+    - Add an assertion to check all quality scores are above 25
+    - Verify the `total_reads` is a positive number
+
+(quality scores represent the confidence level of each base call in sequencing, typically 0-40 with higher scores indicating better quality):
+<br></br>
+
+# Question 2
+- Write a function called `calculate_gc_content` that calculates the GC content of a DNA sequence.
+- Add assertions inside the function to verify the input sequence only contains valid nucleotides (A, T, G, C)
+- Add assertions to check the function returns correct values for test cases:
+    - "GCGC" should return 1.0
+    - "ATAT" should return 0.0
+    - "ATGC" should return 0.5
+<br></br>
+
+# Question 3
+- Modify the function called `validate_protein_sequence` that checks protein properties. The molecular weight is calculated by summing the weights of individual amino acids, and the isoelectric point (pI) is the pH at which a protein carries no net electrical charge:
+    - Write assertions to check all characters in sequence are valid amino acids
+    - Calculate and verify the provided `molecular_weight` matches the sum of individual amino acid weights (within 0.1 Dalton tolerance)
+    - Assert `isoelectric_point` is between 0 and 14
+    
+    Here are some test cases to use with your function:
+    
+    - `assert validate_protein_sequence("AAKK", 470.6, 9.74)`
+    - `assert not validate_protein_sequence("AAKKZ", 470.6, 9.74)`  # Invalid amino acid 'Z'
+    - `assert not validate_protein_sequence("AAKK", 400, 9.74)`  # Incorrect molecular weight
+    - `assert not validate_protein_sequence("AAKK", 470.6, -1)`  # Isoelectric point outside valid range
+<br></br>
+
+# Question 4
+- During experimental data collection:
+    - Write assertions to verify time points are in ascending order
+    - Check for equal number of replicates in control and treatment
+    - Verify missing values don't exceed 50% of measurements. (where 'NA' represents missing or failed measurements).
+<br></br>
+</div>

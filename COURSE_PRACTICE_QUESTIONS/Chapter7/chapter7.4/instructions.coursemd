@@ -1,0 +1,39 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 7: Error Handling and Logging</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Python Logging Basics
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+- Write a simple program that demonstrates all five logging severity levels with appropriate messages for each level. The messages should reflect real scenarios you might encounter when processing genetic data.
+<br></br>
+
+# Question 2
+- Create a function called `process_dna_sequence` that:
+    - Takes a DNA sequence as input
+    - Logs a debug message showing the input sequence
+    - Logs an info message showing the sequence length
+    - Logs a warning if the sequence is shorter than 10 bases
+    - Logs an error if the sequence contains invalid nucleotides (anything other than A, T, G, C)
+    - Logs a critical message if the sequence is empty
+<br></br>
+
+# Question 3
+- Modify the logging level in the following code to make all log messages visible, including `DEBUG` and `INFO`. Adjust the code so:
+
+  - The logging level is set to `DEBUG`.
+  - You can see how changing the logging level affects what messages are displayed.
+
+```python
+logging.debug("Starting DNA processing...")
+logging.info("Reading sequence file...")
+logging.warning("Sequence contains ambiguous nucleotides")
+logging.error("Failed to align sequences")
+logging.critical("Out of memory - cannot continue processing")
+```
+</br>
+</div>
