@@ -1,0 +1,23 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 9: Data Manipulation</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    BioPython Fundamentals
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+- Create a DNA sequence `"ATGCGTACG"` using BioPython's `Seq` object. Demonstrate its complement, reverse complement, and transcription to RNA.
+<br></br>
+
+# Question 2
+- Using a `Seq` object representing the DNA sequence `"CCTAGGACTG"`, perform translation to a protein sequence. Then, create a `SeqRecord` object with this sequence, giving it an ID of `"example_gene"` and a description `"Sample bacterial gene sequence"`.
+<br></br>
+
+# Question 3
+- Concatenate two `Seq` objects - one with the sequence `"ATGCTA"` and another with `"CGGATC"`. Slice the resulting combined sequence to extract a 3-base substring, and print its length.
+
+<br></br>
+</div>

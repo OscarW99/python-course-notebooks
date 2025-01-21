@@ -1,0 +1,38 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 9: Data Manipulation</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Conditional Selection in DataFrames
+</div>
+<br>
+<div style="font-size:18px;">
+
+Using the DataFrame `mutations_df` loaded from `'data/genetic_variants.csv'` which contains columns **'Variant_ID'**, **'Chromosome'**, **'Position'**, **'Reference_Allele'**, **'Mutant_Allele'**, **'Mutation_Type'**, **'Frequency'**, and **'Pathogenicity_Score'**, complete the following tasks:
+
+# Question 1
+- Create a condition to select all variants with **Pathogenicity_Score** above **0.7** AND **Frequency** above **0.05**. Store these variants in a new DataFrame called `high_impact_variants`.
+<br></br>
+
+# Question 2
+- Using the `.isin()` method, select all variants that are either **"Missense"** OR **"Frameshift"** mutation types AND are on Chromosome **"7"**. Store the result in `chr7_mutations_df`.
+<br></br>
+
+# Question 3
+- Create a complex condition to find variants with positions between **100000** and **200000** (inclusive) that have a **Reference_Allele** of **"G"**. Store these in `g_variants_region`.
+<br></br>
+
+# Question 4
+- Using string methods, find all variants whose Mutation_Type contains the word **"splice"** (case insensitive) and have **Pathogenicity_Score** above **0.6**. Store in `splice_variants`. (Hint: Use `.str.contains()` with `case=False` for the Mutation_Type)
+<br></br>
+
+# Question 5
+- Create the most comprehensive variant assessment by finding mutations that meet ALL these criteria:
+    - Pathogenicity_Score greater than **0.8**
+    - Frequency greater than **0.01**
+    - Mutation_Type is **"Missense"**
+    - Position greater than **150000**
+    Store these critical variants in `severe_variants`.
+
+<br></br>
+</div>

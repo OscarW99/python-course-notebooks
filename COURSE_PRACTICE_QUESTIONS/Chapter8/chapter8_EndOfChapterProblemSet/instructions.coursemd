@@ -1,0 +1,85 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 8: Regular Expressions</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    End of Chapter Problem Set
+</div>
+<br>
+<div style="font-size:18px;">
+
+**Note:** *In Python regex, use **'r'** before patterns (e.g., **r'\d+'**) to ensure backslashes are treated as literal characters by regex, not as Python escape sequences.*
+
+# Question 1
+**Identifying DNA Motifs with Specific Start and End:**
+- **Description:** Write a regex to find DNA motifs that start with **'GC'**, followed by any number of nucleotides, and end with **'CG'** in the given sequence **"GCATCGTAGCTTTTCGAGCAAAACG"**. Print the match group and the indices in which it spans.
+- <span style="color:#8b0153;">**Hint**</span>: Use `re.compile()` to compile the pattern, and `re.finditer()` to find all matches.
+<br></br>
+
+# Question 2
+**Finding Genes Based on Start and Stop Codons:**
+- **Description:** Use a regex to find all possible gene sequences in the DNA string **"ATGCCGTAATGCGTTGATGCCCTGA"** where genes start with **'ATG'** and end with **'TAA'**, **'TAG'**, or **'TGA'**. Print matches out.
+- <span style="color:#8b0153;">**Hint**</span>: Use a non-greedy quantifier for the middle sequence to ensure you capture each gene independently.
+<br></br>
+
+# Question 3
+**Parsing Mixed-Format Data:**
+- **Description:** Split the string **"ID001:MKLP, ID002:YKLM; ID003:KLMP ID004:PLMK"** containing ID-sequence pairs into individual components.
+- <span style="color:#8b0153;">**Hint**</span>: Use `re.split()` with a pattern that matches any delimiter (comma, semicolon, or space).
+<br></br>
+
+# Question 4
+**Cleaning DNA Sequences:**
+- **Description:** Replace all invalid nucleotides in the DNA sequence **"ATGXBYATGCRNKTAT"** with **'N'**.
+- <span style="color:#8b0153;">**Hint**</span>: Use `re.sub()` to replace characters not matching **[ACGT]**.
+<br></br>
+
+# Question 5
+**Validating Accession Numbers:**
+- **Description:** Filter accession numbers from the list `["XP_123", "XP_1234", "XM_123", "XP123"]` that follow the pattern **'X'** followed by either **'P'** or **'M'**, an underscore, and exactly three digits.
+- <span style="color:#8b0153;">**Hint**</span>: Use `re.findall()` to capture all matching accession numbers.
+<br></br>
+
+# Question 6
+**Matching Repeats in DNA Sequence:**
+- **Description:** Create a pattern to find repeated nucleotides like **'AA'**, **'GG'**, etc., in the sequence **"AATCGGTTA"**.
+- <span style="color:#8b0153;">**Hint**</span>: Use a capturing group with a back-reference.
+<br></br>
+
+# Question 7
+**FASTA File Parser using Regular Expressions:**
+- **Description:** Write a function that parses a FASTA file format using regular expressions. The function should:
+    - Extract the identifier and description from header lines (format: **">identifier description"**)
+    - Validate that each sequence only contains valid nucleotides (**A**, **C**, **G**, **T**)
+    - Return a dictionary of valid sequences with **'identifier'**, **'description'**, and **'sequence'**
+    - Raise a `ValueError` if an invalid sequence is found
+
+- **Test Cases:**
+    - Run the function with `data/valid_sequences.fasta`, which contains only valid DNA sequences.
+    - Run the function with `data/invalid_sequences.fasta`, which includes at least one sequence with invalid nucleotides. Ensure your function raises a `ValueError` for this case.
+<br></br>
+
+
+# Question 8
+**Protein Motif Identification using Regular Expressions:**
+- **Description:** Create a function that takes the protein sequence <span style="color:#808080;">"MKKLVVVGAALVLLAAATVGAAPAAQAPAPAAQAAKAAAPAAPAPAAQAAPAPAAQAPAPAAQAAKAAAPAAAPAPAAQAPAPAAQAAKAAAPAPAPAAQAAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQAAKAAAPAPAPAAQAPAPAAQ"</span> and a compiled regex pattern for the motif **'M[^P][ST][^P]'** to:
+    - Implement pattern matching for the motif
+    - Return detailed information about each motif match, specifically the exact match and start index of the match.
+<br></br>
+
+# Question 9
+**Email Validation with Regular Expressions:**
+- **Description:** Develop a comprehensive regex-based email validator for the email "user.name@example.com" that checks for:
+    - Valid username structure (alphanumeric, periods, underscores)
+    - Proper domain name formatting (alphanumeric, hyphens, periods)
+    - Comprehensive email format verification (**username@domain.tld**)
+<br></br>
+
+# Question 10
+**Chromosome Information Extraction:**
+- **Description:** Create a regex-based approach to extract chromosome information from the string **"Chromosome 1: size 249250621, genes 2000. ChrX: size 155270560, genes 800"**:
+    - Parse chromosome identifiers from various input formats (**'Chromosome 1'**, **'ChrX'**, etc.)
+    - Handle different naming conventions
+    - Extract additional metadata like size and number of genes
+<br></br>
+</div>

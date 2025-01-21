@@ -1,0 +1,38 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 8: Regular Expressions</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Python re Module Methods
+</div>
+<br>
+<div style="font-size:18px;">
+
+**Note:** *In Python regex, use **'r'** before patterns (e.g., **r'\d+'**) to ensure backslashes are treated as literal characters by regex, not as Python escape sequences.*
+
+# Question 1
+* Create a pattern for finding DNA motifs starting with **'GC'**, followed by any number of nucleotides, and ending with **'CG'**. Compile this pattern.
+* Use your compiled pattern to find all non-overlapping matches in: **"GCATCGTAGCTTTTCGAGCAAAACG"**
+* For each match, print its position in the sequence.
+<br></br>
+
+# Question 2
+Using the DNA sequence **"ATGCCGTAATGCGTTGATGCCCTGA"**, find all possible gene sequences (starting with **ATG** and ending with a stop codon **TAA**, **TAG**, or **TGA**). Use the appropriate re method.
+<br></br>
+
+# Question 3
+Test if each sequence in this list begins with the pattern **'ATG'**: `sequences = ["ATGGCT", "TATATG", "GTATTT", "ATGCCC"]`.
+<br></br>
+
+# Question 4
+Given the mixed-format string: **"ID001:MKLP, ID002:YKLM; ID003:KLMP ID004:PLMK"**, separate it into individual ID-sequence pairs.
+<br></br>
+
+# Question 5
+Replace all invalid nucleotides (anything not **A**, **T**, **G**, or **C**) in **"ATGXBYATGCRNKTAT"** with **'N'**.
+<br></br>
+
+# Question 6
+From this list of accession numbers `["XP_123", "XP_1234", "XM_123", "XP123"]`, find those that match the pattern: **X** followed by either **P** or **M**, followed by an underscore and exactly 3 digits.
+<br></br>
+</div>

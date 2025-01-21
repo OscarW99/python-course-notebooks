@@ -1,0 +1,35 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 9: Data Manipulation</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Biological Database Access with BioPython
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+- Write a Python script using `Bio.Entrez` to fetch the GenBank record for the insulin gene (ID: `"NM_000207.3"`). Print the organism name and gene description from the record.
+
+    <span style="color:#8b0153;">Hint</span>: Use `Entrez.efetch()` with `db="nucleotide"`, `rettype="gb"`, and `retmode="text"` parameters. Look for the `<Organism>` and `<Gene-description>` tags in the GenBank record.
+<br></br>
+
+# Question 2
+- Create a function that searches PubMed for articles related to `"COVID-19 variants"` published in `2024` and returns the first 5 PubMed IDs. The function should take the search term and year as parameters.
+
+    <span style="color:#8b0153;">Hint</span>: Use `Entrez.esearch()` with `db="pubmed"`. To filter by publication date, add `"[pdat]"` after the year in your search query. For example: `"COVID-19 variants AND 2024[pdat]"`. The `[pdat]` tag tells PubMed to look specifically in the publication date field. Look for the `<IdList>` tag to extract the PubMed IDs.
+<br></br>
+
+# Question 3
+- Using the `Bio.Data.CodonTable` module, write code to identify all amino acids that have different codon assignments between the Standard genetic code and the Vertebrate Mitochondrial code.
+
+    <span style="color:#8b0153;">Hint</span>: Compare the `forward_table` mappings between the two tables. Use `CodonTable.unambiguous_dna_by_id` to access the different codon tables.
+<br></br>
+
+# Question 4
+- Write a script that searches the PubMed database for articles by a specific author `"Smith J"`, filters results to only include review articles from `2020-2025`, and returns the titles of the first 3 matches. Use a single query to get both IDs and titles for efficiency.
+
+    <span style="color:#8b0153;">Hint</span>: Use `Entrez.esearch()` with appropriate field tags. Use the format `"Smith J[Author] AND review[pt] AND 2020:2025[pdat]"` for your search term. Set `retmax=3` to limit results. You can then use `Entrez.efetch()` to get the article details like titles.
+
+<br></br>
+</div>

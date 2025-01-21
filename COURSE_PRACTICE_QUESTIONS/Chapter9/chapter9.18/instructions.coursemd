@@ -1,0 +1,27 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 9: Data Manipulation</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Sequence Alignments in BioPython
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+- Create a `PairwiseAligner` object and configure it with custom scoring parameters to align two DNA sequences `"ACCGT"` and `"ACGT"`. Print out the alignment details and score. 
+
+    <span style="color:#8b0153;">Hint</span>: Use `Align.PairwiseAligner()`, set `match_score`, `mismatch_score`, `open_gap_score`, and `extend_gap_score` - play around with different scoring parameters
+<br></br>
+
+# Question 2
+- Read a multiple sequence alignment from a Clustal format file `"data/protein_alignment.clustal"` and print out the length of the alignment and the sequence for each record. 
+
+    <span style="color:#8b0153;">Hint</span>: Use `AlignIO.read()` with `"clustal"` format, iterate through records to display details
+<br></br>
+
+# Question 3
+- Identify and extract all conserved columns from a multiple sequence alignment loaded from `"data/gene_family.clustal"`.
+
+<br></br>
+</div>

@@ -1,0 +1,67 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 9: Data Manipulation</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Data Transformation in Pandas
+</div>
+<br>
+<div style="font-size:18px;">
+
+You will be working with the following DataFrames:
+
+- **mutations_df:** `Gene_ID`, `Chromosome`, `Position`, `Mutation_Type`, `Patient_ID`, `Expression_Level`
+- **clinical_df:** `Patient_ID`, `Age`, `Treatment_Group`, `Response_Status`, `Survival_Months`
+- **protein_df:** `Protein_ID`, `Length`, `Function`, `Gene_ID`, `Pathway`
+- **pathway_df:** `Pathway_ID`, `Pathway`, `Category`, `Number_of_Genes`
+
+Complete the following tasks:
+
+# Question 1
+- Using `mutations_df`, group by `Chromosome` and `Mutation_Type` to calculate the mean `Expression_Level` for each group. Then, create a separate grouping to count the number of mutations per chromosome.
+Store the results in `mean_expression` and `mutation_counts`.
+
+<span style="color:#8b0153;">Hint</span>: Use `groupby()` followed by `mean()` for the first part, and `groupby()` followed by `size()` for the count
+<br></br>
+
+# Question 2
+- Create a pivot table using `pathway_df` showing:
+    - Rows: **Category**
+    - Columns: **Pathway**
+    - Values: **Number_of_Genes**
+    Then melt this pivot table back to a long format with columns `'Category'`, `'Pathway'`, and `'Gene_Count'`.
+
+<span style="color:#8b0153;">Hint</span>: First use `pivot_table()` with `values='Number_of_Genes'`, then use `melt()` with appropriate `id_vars`
+<br></br>
+
+# Question 3
+- Merge `mutations_df` with `protein_df` using the `Gene_ID` column to create a dataset that:
+    - Includes all proteins (even those without mutations)
+    - Preserves all mutation data
+    - Contains all columns from both DataFrames
+    Store the result in `mutations_proteins`.
+
+<span style="color:#8b0153;">Hint</span>: Think about which type of merge will include all proteins but not lose any mutation data
+<br></br>
+
+# Question 4
+- Join `clinical_df` with `mutations_df` using `Patient_ID` as the key, but only include:
+    - From `clinical_df`: `'Treatment_Group'`, `'Response_Status'`
+    - From `mutations_df`: `'Mutation_Type'`, `'Gene_ID'`
+    Include only patients that exist in both DataFrames.
+
+<span style="color:#8b0153;">Hint</span>: First select the needed columns, then join. Remember to set_index if needed
+<br></br>
+
+# Question 5
+- Create a refined version of `protein_df` and `pathway_df` by:
+    - Merging them on the `Pathway` column
+    - Dropping any columns containing more than 50% NaN values
+    - Removing duplicate `Protein_IDs` (keep first occurrence)
+    - Dropping the `Category` column
+    Store the result in `refined_proteins`.
+
+<span style="color:#8b0153;">Hint</span>: Use `merge()` first, then use `dropna()` with `thresh` parameter, `drop_duplicates()`, and `drop()`
+
+<br></br>
+</div>

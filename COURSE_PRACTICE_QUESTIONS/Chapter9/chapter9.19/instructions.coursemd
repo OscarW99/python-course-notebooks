@@ -1,0 +1,29 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 9: Data Manipulation</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    BLAST Analysis with BioPython
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+- Write a Python script that performs a BLAST search using the DNA sequence `"ATGCGACTTGACCTAGATCCTAGGCTAA"` against the NCBI nucleotide database. Use BioPython's `NCBIWWW` module and print the title and score of the first alignment found.
+
+    <span style="color:#8b0153;">Hint</span>: Use `NCBIWWW.qblast()` with `"blastn"` and `"nt"` parameters, then parse results with `NCBIXML.parse()`
+<br></br>
+
+# Question 2
+- Given a BLAST XML result file `"blast_results.xml"`, write code to parse it using Bio.SearchIO and extract the following information for each hit: **hit ID**, **alignment length**, and **number of gaps**. Store these in separate lists.
+
+    <span style="color:#8b0153;">Hint</span>: Use `SearchIO.read()` with `"blast-xml"` format, then iterate through hits using `hit.id` and `hit.hsps[0]` properties
+<br></br>
+
+# Question 3
+- Create a function that performs a protein BLAST search with the sequence `"MAEGEITTFTALTEKFNLPPGNYKKPKLLYCSNG"` and saves the results to an XML file. The function should take the sequence and output filename as parameters.
+
+    <span style="color:#8b0153;">Hint</span>: Use `NCBIWWW.qblast()` with `"blastp"` and `"nr"` parameters, then write `result_handle` contents to file
+
+<br></br>
+</div>

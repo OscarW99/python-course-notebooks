@@ -1,0 +1,4 @@
+Patient_ID,Age,Treatment_Group,Response_Status,Survival_Months
+P1,45,GroupA,Responder,24
+P2,50,GroupB,Non-responder,12
+P3,35,GroupA,Responder,36

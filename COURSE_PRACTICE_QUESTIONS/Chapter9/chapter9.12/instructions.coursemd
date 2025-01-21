@@ -1,0 +1,43 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 9: Data Manipulation</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Data Extraction in Pandas
+</div>
+<br>
+<div style="font-size:18px;">
+
+Using the DataFrame loaded from `'data/patient_records.csv'` which contains columns **'Patient_ID'**, **'Age'**, **'Blood_Pressure'**, **'Cholesterol'**, **'Weight'**, and **'Height'**, complete the following tasks:
+
+# Question 1
+- Extract the **'Age'** column as a Series. Print its type and first 3 values.
+
+<span style="color:#8b0153;">Hint</span>: Use single brackets for Series extraction
+<br></br>
+
+# Question 2
+- Create a new DataFrame containing only the **'Blood_Pressure'** and **'Cholesterol'** columns.
+
+<span style="color:#8b0153;">Hint</span>: Use double brackets for DataFrame extraction
+<br></br>
+
+# Question 3
+- Extract data for patients **'P001'** to **'P003'** using `.loc[]`.
+
+<span style="color:#8b0153;">Hint</span>: Remember `.loc[]` is inclusive
+<br></br>
+
+# Question 4
+- Extract the first three rows of the DataFrame using `.iloc[]`.
+
+<span style="color:#8b0153;">Hint</span>: Remember `.iloc[]` is exclusive
+<br></br>
+
+# Question 5
+- Extract rows 2-4 and columns **'Height'** and **'Weight'** using `.iloc[]`.
+
+<span style="color:#8b0153;">Hint</span>: Use slicing for both rows and columns
+
+<br></br>
+</div>

@@ -1,0 +1,81 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 9: Data Manipulation</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Applying Functions to DataFrames
+</div>
+<br>
+<div style="font-size:18px;">
+
+**Important Note:** When applying a function that needs to access multiple columns, use `axis=1` in the `.apply()` function. This tells pandas to pass entire rows as series objects to your function instead of just single column values. You can access column values within the function using `row['column_name']` for example.
+
+```python
+# If your function needs just one column:
+df['new_col'] = df['column'].apply(your_function)
+
+# If your function needs multiple columns:
+df['new_col'] = df.apply(your_function, axis=1)  # function receives each row as a Series
+
+# To access columns within your function:
+def your_function(row):
+    value1 = row['first_column']  
+    value2 = row['second_column']
+    return # some calculation with column values 
+```
+ 
+ ---
+ <br>
+
+Using the DataFrame `protein_df` loaded from `'data/protein_analysis.csv'` which contains columns **'Protein_ID'**, **'Length'**, **'Hydrophobicity'**, **'Stability_Score'**, **'Expression_Level'**, and **'Cellular_Location'**, complete the following tasks:
+
+
+# Question 1
+- Create a function that categorizes proteins based on their length:
+    - Length < 100: **"Small"**
+    - Length 100-500: **"Medium"**
+    - Length > 500: **"Large"**
+    - If Length is **NaN**: **"Unknown"**
+    Apply this function to create a new column **'Size_Category'**.
+    
+    <span style="color:#8b0153;">Hint</span>: Check for **NaN** values first using `pd.isna(length)` as the first condition in your function - don't use an else block for **NaN** handling as it needs to be checked before making numerical comparisons
+<br></br>
+
+# Question 2
+- Write a lambda function to normalize the Hydrophobicity scores to a 0-1 scale. The scores currently range from -4.5 to 4.5. Create a new column called **'Normalized_Hydrophobicity'**.
+(Hint: Use the formula: `(x - min) / (max - min)`)
+<br></br>
+
+# Question 3
+- Create a function that combines **Stability_Score** and **Expression_Level** to determine protein viability:
+    - If either value is **NaN**: **"Insufficient Data"**
+    - If Stability_Score > 0.7 and Expression_Level > 50: **"High Viability"**
+    - If Stability_Score < 0.3 or Expression_Level < 10: **"Low Viability"**
+    - Otherwise: **"Moderate Viability"**
+    
+    <span style="color:#8b0153;">Hint</span>: Use `pd.isna(row['Stability_Score'])` or `pd.isna(row['Expression_Level'])` as your first condition. You can combine these with the OR operator.
+    Since this function needs both columns, use `df.apply(your_function, axis=1)`
+<br></br>
+
+# Question 4
+- Create a function to categorize protein locations into a new column `Location_Type` that labels proteins as:
+    - **"Nuclear"** if Cellular_Location contains **"nucleus"** (case insensitive)
+    - **"Membrane"** if Cellular_Location contains **"membrane"** (case insensitive)
+    - **"Other"** for any other location
+    - **"Unknown"** for **NaN** values
+    
+    <span style="color:#8b0153;">Hint</span>: Use `pd.isna()` to check for **NaN** first, then use `str.contains()` with `case=False` for the string matching.
+<br></br>
+
+# Question 5
+- Create a function called `classify_protein` that generates a protein quality score based on these rules:
+    - First check if any of Length, Stability_Score, or Expression_Level is **NaN**
+        - If any are **NaN**, return **"Insufficient Data"**
+    - Then calculate a quality category:
+        - **"High Quality"** if: Length > 200 AND Stability_Score > 0.6 AND Expression_Level > 40
+        - **"Medium Quality"** if: Length > 100 AND Stability_Score > 0.4 AND Expression_Level > 20
+        - **"Low Quality"** for all other cases
+        Apply this function to create a new column **'Protein_Quality'**
+
+<br></br>
+</div>

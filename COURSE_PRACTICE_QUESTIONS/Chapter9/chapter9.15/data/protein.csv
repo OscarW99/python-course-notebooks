@@ -1,0 +1,4 @@
+Protein_ID,Length,Function,Gene_ID,Pathway
+Pro1,150,Enzyme,Gene1,Metabolism
+Pro2,200,Transporter,Gene2,Signaling
+Pro3,100,Receptor,Gene3,Metabolism

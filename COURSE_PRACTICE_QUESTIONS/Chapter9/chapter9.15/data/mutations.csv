@@ -1,0 +1,4 @@
+Gene_ID,Chromosome,Position,Mutation_Type,Patient_ID,Expression_Level
+Gene1,1,1000,Missense,P1,0.5
+Gene2,2,2000,Frameshift,P2,0.7
+Gene1,1,1000,Missense,P3,0.6

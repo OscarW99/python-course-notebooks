@@ -1,0 +1,36 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 9: Data Manipulation</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Handling Missing Data in Pandas
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+- Load `'data/medical_records.csv'` and identify which columns have missing values. Print the count of missing values for each column.
+<span style="color:#8b0153;">Hint</span>: Use `.isnull()` or `.isna()` followed by `.sum()`.
+<br></br>
+
+# Question 2
+- Convert the `data2` dictionary into a DataFrame, remove all rows that contain missing values:
+
+<br>
+
+# Question 3
+- Load `'data/patient_vitals.csv'` and fill all missing numerical values with the mean of their respective columns.
+
+<span style="color:#8b0153;">Hint</span>: Use `select_dtypes(exclude=['object'])` to get numerical columns
+<br></br>
+
+# Question 4
+- Replace all missing values in the categorical column `'Blood_Type'` with its mode in the DataFrame loaded from `'data/blood_samples.csv'`. 
+
+<span style="color:#8b0153;">Hint</span>: Use `.mode()[0]` to get the single most frequent value
+<br></br>
+
+# Question 5
+- Print the shape of the DataFrame from `'data/test_results.csv'` before and after dropping rows with missing values to see how many rows were removed.
+<br></br>
+</div>

@@ -1,0 +1,6 @@
+Patient_ID,Age,Blood_Pressure,Cholesterol,Outcome
+1,45,120/80,200,Success
+2,30,130/90,220,Failure
+3,55,,180,Success
+4,40,110/70,,Failure
+5,60,140/90,230,Success

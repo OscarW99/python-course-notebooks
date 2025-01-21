@@ -1,0 +1,4 @@
+>seq1 Valid Sequence
+ACGTACGT
+>seq2 Invalid Sequence
+ACGTNACGT

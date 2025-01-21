@@ -1,0 +1,35 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 9: Data Manipulation</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Understanding DataFrame Statistics
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+- Load `'data/health_records.csv'` and compute basic statistics for numeric columns.
+
+<span style="color:#8b0153;">Hint</span>: Use `.describe()` for numeric columns.
+<br></br>
+
+# Question 2
+- Using the provided data, find the count of each condition in the **'Condition'** column.
+<br></br>
+
+# Question 3
+- Load `'data/blood_type_records.csv'` and get the frequency of each blood type.
+
+<span style="color:#8b0153;">Hint</span>: Use `.value_counts()`.
+<br></br>
+
+# Question 4
+- Load `'data/health_metrics.csv'` and compute the correlation between **'Height'**, **'Weight'**, and **'Cholesterol'**. (Hint: Use `.corr()` on numeric columns).
+<br></br>
+
+# Question 5
+- Load `'data/health_records.csv'` and find the most frequent category (top) and its frequency (freq) in the **'smoking_status'** column.
+
+<br></br>
+</div>

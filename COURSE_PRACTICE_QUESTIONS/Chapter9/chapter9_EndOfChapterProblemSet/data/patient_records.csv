@@ -1,0 +1,6 @@
+Patient_ID,Age,Treatment,Response
+1,45,A,Yes
+2,30,B,No
+3,55,A,Yes
+4,40,B,Yes
+5,60,A,No

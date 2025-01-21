@@ -1,0 +1,6 @@
+Protein_ID,Length,Hydrophobicity,Stability_Score,Expression_Level,Cellular_Location
+1,150,-2.0,0.8,60,cytoplasm
+2,500,4.5,0.6,45,Nucleus
+3,90,-3.5,0.4,25,membrane
+4,200,1.5,0.2,15,endoplasmic reticulum
+5,,0.0,0.7,50,

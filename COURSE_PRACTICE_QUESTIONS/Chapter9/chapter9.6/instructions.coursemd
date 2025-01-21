@@ -1,0 +1,26 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 9: Data Manipulation</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Reading Data into Pandas DataFrames
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+- Write the code to read a CSV file named `'data/gene_expression.csv'` into a pandas DataFrame and display the first few rows.
+<br></br>
+
+# Question 2
+- Load a TSV file named `'data/protein_data.tsv'` into a DataFrame and display the first few rows. The file is tab-delimited.
+<br></br>
+
+# Question 3
+- Read a JSON file named `'data/experiment.json'` into a pandas DataFrame and display the first few rows.
+<br></br>
+
+# Question 4
+- Save thr DataFrame `df4` to both CSV and JSON formats, naming them `output/output.csv` and `output/output.json` respectively.
+<br></br>
+</div>

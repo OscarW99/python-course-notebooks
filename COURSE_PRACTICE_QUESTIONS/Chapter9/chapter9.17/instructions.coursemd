@@ -1,0 +1,41 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 9: Data Manipulation</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    BioPython SeqIO
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+- Using `SeqIO`, read a single sequence from the file `"data/mouse_gene.fasta"`. Print out the sequence's ID and full sequence content.
+    
+    <span style="color:#8b0153;">Hint</span>: Use `SeqIO.read()` with the `"fasta"` format specifier
+<br></br>
+
+# Question 2
+- Create a `SeqRecord` object with a DNA sequence `"ATGCGATCGATCGATCG"`, assign it an ID of `"sample_sequence"`, and write this record to a new file `"output/output_sequence.fasta"`.
+    
+    <span style="color:#8b0153;">Hint</span>: You'll need to import both `Seq` and `SeqRecord` classes, use `SeqIO.write()` to save the file
+<br></br>
+
+# Question 3
+- Convert the file `"data/raw_reads.fastq"` to a FASTA file named `"data/processed_reads.fasta"` using `SeqIO`'s conversion method.
+    
+    <span style="color:#8b0153;">Hint</span>: `SeqIO.convert()` takes source file, source format, destination file, and destination format
+<br></br>
+
+# Question 4
+- Use `SeqIO` to index the multi-sequence file `"data/genome_sequences.fasta"`, then retrieve and print out a specific sequence by its identifier. Demonstrate how to access a single sequence without loading the entire file into memory.
+    
+    <span style="color:#8b0153;">Hint</span>: Use `SeqIO.index()` to create an index, then access a sequence using its ID like a dictionary
+<br></br>
+
+# Question 5
+- Write a script that reads the file `"data/gene_annotations.gb"`, extracts and prints out all feature annotations (like gene names, locations) for each sequence record in the file.
+    
+    <span style="color:#8b0153;">Hint</span>: Use `SeqIO.parse()` to read the GenBank file, then iterate through records and their features
+
+<br></br>
+</div>

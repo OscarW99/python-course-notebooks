@@ -1,0 +1,62 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 8: Regular Expressions</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Advanced Regular Expression Techniques
+</div>
+<br>
+<div style="font-size:18px;">
+
+**Note:** *In Python regex, use **'r'** before patterns (e.g., **r'\d+'**) to ensure backslashes are treated as literal characters by regex, not as Python escape sequences.*
+
+# Question 1
+Using `re.compile()` with the `re.IGNORECASE` flag, create a pattern to find **'atg'** in the sequence **"ATGCTATGC"**.
+Print: Each match found and its position (start-end).
+<br></br>
+
+# Question 2
+Create a pattern that matches DNA sequences across multiple lines using `re.MULTILINE`. Test it on:
+
+```
+ATGC
+TAGC
+ATGC
+```
+
+Print: Each match and which line number it appears on.
+
+*Note for Question 2: To find which line a match is on, you can count how many newline characters (\\n) appear before the match position:*
+
+```python
+line_number = multiline_seq[0:match.start()].count('\\n') + 1
+```
+<br>
+
+# Question 3
+Write a verbose pattern (using `re.VERBOSE`) that matches a sequence starting with **ATG**, followed by any nucleotides, ending with **TAA**. For each match found in **"ATGCCCTAACATGGGGTAA"**, print both the full match and its length.
+<br></br>
+
+# Question 4
+Create a pattern with a back-reference (use **\\1** to reference first group) that finds repeated nucleotides (like **'AA'** or **'GG'**) in **"AATCGGTTA"**. Print each match and the repeated nucleotide.
+<br></br>
+
+# Question 5
+Using named groups **(?P\<name\>pattern)**, create a pattern to capture a start codon (**ATG**), middle sequence, and end codon (**TAA**, **TAG**, or **TGA**) in **"ATGCCCTAA"**. Print: Each named group separately - the start codon, middle sequence, and end codon.
+<br></br>
+
+# Question 6
+Use a non-capturing group **(?:pattern)** to find all sequences that start with either **'ATG'** or **'GTG'** in **"ATGCCGTGCGTGCC"**.
+Print: Each match found and its starting position.
+<br></br>
+
+# Question 7
+Write a pattern with a positive lookahead **(?=pattern)** to find **'ATG'** only when it's followed by **'CG'** in **"ATGCGATGTAA"**.
+Print: Each **ATG** match that's followed by **CG**.
+<br></br>
+
+# Question 8
+Create a pattern with a negative lookbehind **(?<!pattern)** to find **'TAA'** sequences that are not preceded by **'ATG'** in **"CCCTAATGCCCTAA"**.
+Print: Each matching **TAA** and the three nucleotides before it.
+<br></br>
+</div>

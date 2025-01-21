@@ -1,0 +1,117 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 9: Data Manipulation</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    End of Chapter Problem Set
+</div>
+<br>
+<div style="font-size:18px;">
+
+### **1. Using NumPy for Gene Expression Analysis**
+
+- **Description:** Create a NumPy array with gene expression values `[2.1, 4.2, 1.5, 3.8, 2.9]`.
+    - Calculate the mean expression.
+    - Identify values above this mean.
+    - Normalize these values to a 0-1 scale using min-max normalization.
+- **Hint:** Use `np.mean()` for mean calculation, boolean indexing for values above the mean, and `(x - min) / (max - min)` for normalization.
+
+---
+
+### **2. Analyzing Patient Response Data with Pandas**
+
+- **Description:** Read the CSV file `'data/patient_records.csv'` with columns `['Patient_ID', 'Age', 'Treatment', 'Response']`.
+    - Calculate the percentage of positive responses (`'Yes'` in the Response column) for each treatment type.
+    - Sort these percentages in descending order.
+- **Hint:** Use `groupby('Treatment')` followed by `value_counts(normalize=True)` for percentages, then `sort_values()`.
+
+---
+
+### **3. Processing DNA Sequences with BioPython**
+
+- **Description:** Given the file `'data/dna_sequences.fasta'` containing 5 DNA sequences:
+    - Read all sequences using BioPython.
+    - Calculate their lengths.
+    - Print sequence IDs with their lengths.
+    - Identify the longest sequence.
+- **Hint:** Use `SeqIO.parse()` to read sequences, a dictionary to track lengths, and `max()` with a key function for the longest sequence.
+
+---
+
+### **4. Protein Expression Analysis with Pandas**
+
+- **Description:** Read `'data/protein_expression.csv'` with columns `['Protein_ID', 'Control_1', 'Control_2', 'Treatment_1', 'Treatment_2']`.
+    - Calculate mean expressions for control and treatment groups.
+    - Identify proteins with a fold change > 1.5 between conditions.
+- **Hint:** Use `mean()` across columns for group means, and calculate fold change as `treatment_mean / control_mean` or vice versa.
+
+---
+
+### **5. Gene Expression Statistics with NumPy**
+
+- **Description:** Load the NumPy array from `'data/expression_matrix.txt'` containing gene expression data (rows=genes, columns=samples).
+    - Compute row-wise means, column-wise means, standard deviations for each gene, and z-scores for each value.
+- **Hint:** Use `np.mean(axis=0)` for column means, `np.mean(axis=1)` for row means, `np.std()` for standard deviation, and `(x - mean) / std` for z-scores.
+
+---
+
+### **6. Protein Sequence Analysis with BioPython**
+
+- **Description:** Read `'data/protein_sequences.fasta'` and:
+    - Convert each protein sequence to RNA.
+    - Calculate their molecular weights.
+    - Save sequences with a molecular weight > 10,000 Da to `'output/high_mass_proteins.fasta'`.
+- **Hint:** Use `Seq.transcribe()` for RNA conversion, `Seq.molecular_weight()` for weight calculation, and `SeqIO.write()` for output.
+
+---
+
+### **7. Clinical Trials Data Analysis with Pandas**
+
+- **Description:** Read `'data/clinical_trials.csv'` with columns `['Patient_ID', 'Age', 'Blood_Pressure', 'Cholesterol', 'Outcome']`:
+    - Handle missing values.
+    - Create age groups (`0-30`, `31-50`, `51-70`, `71+`).
+    - Calculate success rates (`'Success'` in Outcome) for each group.
+    - Export results to `'output/age_group_analysis.csv'`.
+- **Hint:** Use `fillna()` for missing values, `pd.cut()` for grouping ages, `groupby()` and `mean()` for success rates, and `to_csv()` for exporting.
+
+---
+
+### **8. Sequence BLAST Analysis with BioPython**
+
+- **Description:** Use BioPython's BLAST to analyze the sequence in `'data/query.fasta'`.
+    - Perform a BLAST search against the nr database.
+    - Parse the results to find the top 5 hits.
+    - Create a Pandas DataFrame with columns `['Hit_ID', 'E-value', 'Identity', 'Coverage']`.
+- **Hint:** Use `NCBIWWW.qblast()` to perform the search, `NCBIXML.parse()` to read results, collect data into lists, and convert to a DataFrame.
+
+---
+
+### **9. Time Series Gene Expression Analysis**
+
+- **Description:** Read `'data/time_series_expression.csv'` containing gene expression data over time points `[0h, 2h, 4h, 8h, 12h, 24h]`:
+    - Calculate the rate of change between each time point.
+    - Identify genes with monotonic increase/decrease.
+    - Create a summary DataFrame with trend classifications.
+- **Hint:** Use `diff()` for rate of change, compare with `np.all()` for monotonic trends, and use `np.where()` for classification.
+
+---
+
+### **10. Statistical Analysis with SciPy:**
+
+- **Description:** You're going to explore SciPy for the first time, focusing on its statistical tools. Your task is to:
+    1. Read sequence data from `'data/variants.fasta'`.
+    2. Load patient data from `'data/patient_data.csv'`.
+    3. Merge these datasets using `'Patient_ID'`.
+    4. Calculate the GC content of each sequence.
+    5. Use SciPy to perform an independent t-test to check if there's a significant difference in GC content between `'Control'` and `'Treatment'` groups from the patient data.
+- **Hint:**
+    - Import SciPy's stats module with `from scipy import stats`.
+    - Use `SeqIO.parse()` for reading sequences.
+    - Use `pd.read_csv()` for the patient data.
+    - Merge data using `pd.merge()` with `'Patient_ID'` as the key.
+    - Calculate GC content with `Seq.gc()`.
+    - Split your data into groups for comparison.
+    - Perform the t-test with `stats.ttest_ind()`.
+
+<br></br>
+</div>

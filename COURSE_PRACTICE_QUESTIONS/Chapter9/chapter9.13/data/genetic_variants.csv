@@ -1,0 +1,6 @@
+Variant_ID,Chromosome,Position,Reference_Allele,Mutant_Allele,Mutation_Type,Frequency,Pathogenicity_Score
+1,7,100001,G,A,Missense,0.06,0.75
+2,7,150001,T,C,Frameshift,0.02,0.85
+3,1,120000,G,T,Splice,0.01,0.65
+4,7,200000,A,G,Missense,0.03,0.7
+5,7,175000,G,A,Missense,0.04,0.9
