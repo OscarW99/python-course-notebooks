@@ -1,0 +1,43 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 11: Object-Orientated Programming</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Encapsulation and Data Protection
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+**Encapsulated Protein Class**
+
+**Description:** Create a `Protein` class that encapsulates protein properties with proper data validation:
+* Private attributes for `name`, `molecular_weight`, and `stability_score`
+* **Molecular weight** must be positive
+* **Stability score** must be between 0 and 1
+* Include getters and setters for all attributes with appropriate validation
+
+<span style="color:#8b0153;">Hint</span>:
+* Use double underscores (__) for private attributes
+* Implement validation in setter methods
+* Raise `ValueError` with descriptive messages for invalid inputs
+
+<br>
+
+# Question 2
+**Protected Genetic Sequence Class**
+
+**Description:** Design a `GeneticSequence` class that protects its sequence data:
+* Private attribute for DNA sequence
+* Private attribute for sequence quality scores (0-100 for each base)
+* Getter method that returns the sequence
+* Setter method that validates the sequence (only **A,T,C,G** allowed)
+* Method to update quality scores with validation
+
+<span style="color:#8b0153;">Hint</span>:
+* Validate that quality scores list length matches sequence length
+* Ensure all quality scores are within valid range
+* Include method to display sequence with quality scores
+
+<br>
+</div>

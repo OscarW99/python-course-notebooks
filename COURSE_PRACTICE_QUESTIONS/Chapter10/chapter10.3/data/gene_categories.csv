@@ -1,0 +1,6 @@
+gene_id,functional_category,expression_0h,expression_2h,expression_4h,expression_8h,expression_12h,expression_24h
+BRCA1,DNA_Repair,100,150,300,450,420,380
+TP53,Cell_Cycle,50,75,125,200,180,160
+EGFR,Signaling,200,400,800,1200,1100,900
+GAPDH,Metabolism,500,510,505,495,500,505
+IL6,Immune_Response,10,100,400,800,600,300

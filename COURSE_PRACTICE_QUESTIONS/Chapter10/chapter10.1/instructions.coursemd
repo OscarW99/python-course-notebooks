@@ -1,0 +1,33 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 10: Data Visualization</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Data Visualization with Matplotlib
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+- Read the temperature data from `"data/temperature_data.csv"` into a pandas DataFrame. Create a scatter plot comparing **Temperature** (x-axis) and **Humidity** (y-axis). Add appropriate labels and title. Then enhance the plot by:
+* Making the points semi-transparent blue with `alpha=0.5`
+* Adding a grid with dashed lines
+    
+    <span style="color:#8b0153;">Hint</span>: Use `plt.scatter()`. For the grid, use `plt.grid(linestyle='--')`
+<br></br>
+
+# Question 2
+- Create a diverging bar plot showing each city's temperature deviation from the mean temperature. Color the bars based on whether they are above (green) or below (red) the mean.
+    
+    <span style="color:#8b0153;">Hint</span>: Calculate mean temperature first, then subtract it from each city's temperature to get deviations. Use `plt.hlines()` with different colors based on deviation values
+<br></br>
+
+# Question 3
+- Using the same DataFrame, create a lollipop chart showing the average humidity for each climate zone. Sort the values in descending order. Then:
+    a) Make the stems red and the markers blue
+    b) Add horizontal gridlines
+    
+    <span style="color:#8b0153;">Hint</span>: Use `plt.stem()` for the basic plot, and sort the DataFrame using `.sort_values(by='column_name', ascending=True/False)` before plotting.
+
+<br></br>
+</div>

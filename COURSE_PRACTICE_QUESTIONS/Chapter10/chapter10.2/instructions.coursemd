@@ -1,0 +1,38 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 10: Data Visualization</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Distribution Analysis in Bioinformatics
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+- Read `"data/protein_levels.csv"` and create a histogram showing the distribution of protein expression levels. Use 30 bins and add:
+* x-label **"Protein Expression Level"**, y-label **"Frequency"**, and title
+* Make bars semi-transparent blue (alpha=0.6)
+* Add a grid with dashed lines
+    
+    <span style="color:#8b0153;">Hint</span>: Use `plt.hist()` with `expression_level` column. Set `bins=30`
+<br></br>
+
+# Question 2
+- Using the same dataset, create a density plot comparing expression levels between **Control** and **Treatment** groups. Then:
+* Use blue for Control and red for Treatment
+* Make both plots semi-transparent (alpha=0.7)
+* Add a legend and appropriate labels
+    
+    <span style="color:#8b0153;">Hint</span>: Split the data by treatment group, then use `sns.kdeplot()` for each
+<br></br>
+
+# Question 3
+- Create a boxplot comparing protein expression levels between **Control** and **Treatment** groups. Then:
+* Add title **"Protein Expression by Treatment"**
+* Add appropriate axis labels
+* Color the boxes using blue for Control and red for Treatment
+    
+    <span style="color:#8b0153;">Hint</span>: Use `sns.boxplot()` with `treatment` on x-axis and `expression_level` on y-axis
+
+<br></br>
+</div>

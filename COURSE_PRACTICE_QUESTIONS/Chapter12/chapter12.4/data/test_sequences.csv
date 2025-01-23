@@ -1,0 +1,6 @@
+SequenceID,DNASequence,Type
+seq1,ATCGATCG,coding
+seq2,GCTAGCTA,non-coding
+seq3,TTTTAAAA,coding
+seq4,GCGCGCGC,non-coding
+seq5,ATATATAT,coding

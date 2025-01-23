@@ -1,0 +1,20 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 10: Data Visualization</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Plot Customization and Saving
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+Create a scatter plot comparing **`Age`** vs **`BMI`** from the provided dataset, customize it with specific visual elements, and save it in different formats:
+* Add a title, axis labels, and a grid with dashed lines
+* Make points semi-transparent blue (alpha=0.5)
+* Save the plot in both PNG format (300 dpi) and PDF format, with tight bounding box
+    
+    <span style="color:#8b0153;">Hint</span>: Use `plt.savefig()` with appropriate parameters for each format
+
+<br></br>
+</div>

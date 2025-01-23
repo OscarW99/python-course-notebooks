@@ -1,0 +1,54 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 12: Creating Executable Python Scripts</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Advanced Command Line Input/Output with sys Module
+</div>
+<br>
+<div style="font-size:18px;">
+
+**Note:** _Each question will be answered in its own file to better illustrate command-line script functionality and to keep each script independent for testing and learning purposes._
+
+
+# Question 1
+**Answer this question in the following file:** `question1/q1.py`
+
+**Description:** Write a script that reads DNA sequences from `sys.stdin` until the user types **'END'**. For each sequence entered, use `sys.stdout.write()` to print **"Valid sequence: "** if it only contains **A**, **T**, **G**, **C**, or **"Invalid sequence: "** followed by the sequence.
+
+<span style="color:#8b0153;">Hint</span>: Remember to handle line endings with `rstrip()`. 
+
+<br>
+
+# Question 2
+**Answer this question in the following file:** `question2/q2.py`
+
+**Description:** Create a script that processes a list of gene names. Use `sys.stderr.write()` to report any gene names shorter than 4 characters as warnings. Use `sys.stdout.write()` to print valid gene names.
+
+<span style="color:#8b0153;">Hint</span>: Separate error messages and valid output using different `sys` streams.
+
+<br>
+
+# Question 3
+**Answer this question in the following file:** `question3/q3.py`
+
+**Description:** Write a script that reads command-line arguments for minimum gene length. If no argument is provided, use `sys.stderr.write()` to print an error message and end the script with a non-zero exit code. This indicates to the system or any calling process that an error occurred. For valid input, print **"Processing genes with minimum length: [length]"** using `sys.stdout.write()`.
+
+As this script needs to be run from the command line (as it reads command-line arguments), you need to provide the correct path to the Python script (`q3.py`). This could be the relative path or absolute path. Examples are provided below, where **'4'** represents an example argument for the minimum gene length.
+
+- **Running the Script:**
+  - **Using relative path from the <span style="color:#4d9950;">COURSE_PRACTICE_QUESTIONS</span> directory:**
+    ```bash
+    python Chapter12\chapter12.2\question3\q3.py 4
+    ```
+  - **Using Full Path (<span style="color:#3d82ba;">Windows</span>):**
+    ```bash
+    python "C:\Users\name\example\path\coding\COURSE_PRACTICE_QUESTIONS\Chapter12\chapter12.2\question3\q3.py" 4
+    ```
+  - **Using Full Path (<span style="color:#3d82ba;">macOS/Linux</span>):**
+    ```bash
+    python3 "/home/user/example/path/coding/COURSE_PRACTICE_QUESTIONS/Chapter12/chapter12.2/question3/q3.py" 4
+    ```
+
+<br>
+</div>

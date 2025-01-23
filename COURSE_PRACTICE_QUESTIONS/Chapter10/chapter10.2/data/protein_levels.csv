@@ -1,0 +1,6 @@
+protein_id,expression_level,treatment
+P1,150.2,Control
+P2,245.7,Control
+P3,180.4,Treatment
+P4,210.9,Control
+P5,170.5,Treatment

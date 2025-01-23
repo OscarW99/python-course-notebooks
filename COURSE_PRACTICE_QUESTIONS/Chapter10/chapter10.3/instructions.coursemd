@@ -1,0 +1,38 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 10: Data Visualization</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Other Plot Types in Bioinformatics (Composition, Change, Groups)
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+- Read `"data/gene_categories.csv"` and create a pie chart showing the number of genes in each functional category. Add:
+* Percentage labels for each slice (e.g., "DNA Repair: 22.5%")
+* A title **"Distribution of Gene Numbers by Functional Category"**
+* Use distinct colors for each category
+    
+    <span style="color:#8b0153;">Hint</span>: Use `value_counts()` on the `functional_category` column to count genes in each category, then `plt.pie()` with `autopct='%1.1f%%'`
+<br></br>
+
+# Question 2
+- Using the same dataset, create a bar chart showing the number of genes in each functional category. Then:
+* Add x-label **"Functional Category"**, y-label **"Number of Genes"**
+* Rotate x-axis labels 45 degrees for better readability
+* Add a grid with dashed lines
+    
+    <span style="color:#8b0153;">Hint</span>: Use `plt.bar()` with category names and their counts
+<br></br>
+
+# Question 3
+- Create a line graph showing expression levels of a `'TP53'` across different time points (0h, 2h, 4h, 8h, 12h, 24h). Then:
+* Add markers at each data point
+* Make the line green and dashed
+* Add appropriate labels and title
+    
+    <span style="color:#8b0153;">Hint</span>: Use `plt.plot()` with `marker='o'` and `linestyle='--'`
+
+<br></br>
+</div>

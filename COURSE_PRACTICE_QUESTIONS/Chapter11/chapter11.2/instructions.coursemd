@@ -1,0 +1,55 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 11: Object-Orientated Programming</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Classes and Methods in Python
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+**Gene Class with Initialization**
+
+**Description:** Create a `Gene` class with an **`__init__`** method that takes `name` and `sequence` as parameters. Add a `display()` method that prints both the `name` and `sequence`.
+
+<span style="color:#8b0153;">Hint</span>: Remember to use `self` to access instance attributes in your methods.
+    
+<br>
+
+# Question 2
+**DNA Class with Sequence Operations**
+
+**Description:** Create a `DNA` class that initializes with a sequence and includes three methods:
+* `display()` that prints the sequence
+* `get_length()` that returns the length of the sequence
+* `mutate(position, base)` that changes a specific position in the sequence to a new base
+
+<span style="color:#8b0153;">Hint</span>: Use string slicing in the `mutate()` method.
+    
+<br>
+
+# Question 3
+**Protein Class for Amino Acid Sequences**
+
+**Description:** Create a `Protein` class that:
+* Initializes with a `name` and `sequence`
+* Has a `mutate(position, new_residue)` method that changes a specific amino acid at the given position
+* Has an `is_valid()` method that checks if the sequence contains only valid amino acid letters (A-Z)
+
+<span style="color:#8b0153;">Hint</span>: Initialize with `self.name` and `self.sequence`, use string slicing for mutation, and use string methods to check if characters are alphabetic.
+    
+<br>
+
+# Question 4
+**Cell Class for Protein Storage**
+
+**Description:** Create a `Cell` class that can store multiple proteins. It should:
+* Initialize with a `name`
+* Have an `add_protein(protein)` method that adds a `Protein` object to a list
+* Have a `display_proteins()` method that prints all stored protein names
+
+<span style="color:#8b0153;">Hint</span>: Initialize an empty list in **`__init__`** to store proteins.
+
+<br>
+</div>

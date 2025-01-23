@@ -1,0 +1,7 @@
+gene_id,time_point,expression_level,condition
+BRCA1,0,100.5,control
+BRCA1,24,150.2,treatment
+TP53,0,50.2,control
+TP53,24,75.4,treatment
+EGFR,0,200.1,control
+EGFR,24,250.8,treatment

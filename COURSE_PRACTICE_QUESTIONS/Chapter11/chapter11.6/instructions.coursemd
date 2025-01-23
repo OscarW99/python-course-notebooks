@@ -1,0 +1,49 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 11: Object-Orientated Programming</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Python Dunder Methods
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+**Temperature Class with Dunder Methods**
+
+**Description:** Create a class called `Temperature` that uses dunder methods to enable temperature arithmetic and comparisons:
+* Store temperature **value** and **unit** (C or F)
+* Implement **`__str__()`** for readable output
+* Implement **`__add__()`** to add temperatures (convert if units differ)
+* Implement **`__eq__()`** to compare temperatures (consider unit conversions)
+<br>
+
+**Conversion Formulas:**
+- **Celsius to Fahrenheit**: **F = (C * 9/5) + 32**
+- **Fahrenheit to Celsius**: **C = (F - 32) * 5/9**
+
+<span style="color:#8b0153;">Hint</span>:
+* Consider creating a helper method for unit conversion
+* **`__str__()`** should return **"X°C"** or **"X°F"** format
+* For addition, convert everything to Celsius, add, then return result in original unit
+* For equality, temperatures like **0°C** and **32°F** should be equal
+
+<br>
+
+# Question 2
+**Genetic Marker Class with Dunder Methods**
+
+**Description:** Design a `GeneticMarker` class that implements appropriate dunder methods for genetic marker analysis:
+* Store marker **sequence** and **position**
+* Implement **`__len__()`** to return sequence length
+* Implement **`__getitem__()`** to enable sequence indexing
+* Implement **`__eq__()`** to compare markers
+
+<span style="color:#8b0153;">Hint</span>:
+* **`__len__()`** should work with the `len()` function
+* **`__getitem__()`** should handle both single indices and slices
+* **`__eq__()`** should compare both sequence and position
+* Consider what should happen for invalid indices
+
+<br>
+</div>

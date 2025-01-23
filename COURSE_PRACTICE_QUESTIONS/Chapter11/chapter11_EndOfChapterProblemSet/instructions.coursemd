@@ -1,0 +1,100 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 11: Object-Orientated Programming</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    End of Chapter Problem Set
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+**Basic Cell Class**
+
+**Description:** a `Cell` class has been defined with attributes `cell_type` (e.g., **"neuron"**, **"muscle"**) and `size`. It includes a `describe` method that prints these attributes.
+* Create at least two instances of the class and call the `describe` method on each.
+
+<br>
+
+# Question 2
+**Inheritance with Species**
+
+**Description:** Create a `Species` class with attributes `name` and `habitat`. Then, create a `Mammal` class that inherits from `Species`, adding an `is_warm_blooded` attribute. Override the `describe` method to include all attributes. Create an instance of `Mammal` and demonstrate how to access and modify the `is_warm_blooded` attribute.
+
+<span style="color:#8b0153;">Hint</span>:
+- Use `super()` in the `Mammal` class's **`__init__`** method to call the `Species` constructor for initializing `name` and `habitat`.
+
+<br>
+
+# Question 3
+**Polymorphism in Microorganisms**
+
+**Description:** Design a base `Microorganism` class with a `grow` method that prints **"Growing"**. Then, create `Bacteria` and `Virus` subclasses with their own `grow` method implementations. Write a function `cultivate(microbe)` that calls `grow` on any microorganism object. Create instances of both subclasses and demonstrate the polymorphic behavior of `cultivate`.
+
+<span style="color:#8b0153;">Hint</span>: Use `isinstance` to check the type of `microbe` for additional behavior if needed.
+
+<br>
+
+# Question 4
+**Encapsulation for Enzyme Properties**
+
+**Description:** Implement an `Enzyme` class with private attributes for `activity` and `substrate`. Include methods to get and set these attributes, ensuring the `activity` is between 0 and 100. Create an instance of `Enzyme`, set its activity to **50**, and then try to set it to **150** to show error handling.
+
+<span style="color:#8b0153;">Hint</span>: Use double underscores for private attributes and raise `ValueError` for invalid inputs.
+
+<br>
+
+# Question 5
+**String Representation for Molecules**
+
+**Description:** Create a `Molecule` class with `name`, `molecular_formula`, and `mass`. Add **`__str__`** for a user-friendly string like **"Water (H2O) - 18.01528 g/mol"** and **`__repr__`** for a technical representation like **"Molecule('Water', 'H2O', 18.01528)"**. Create a molecule object and demonstrate both string representations.
+
+<span style="color:#8b0153;">Hint</span>: **`__str__`** should be human-readable, while **`__repr__`** should be programmatically useful.
+
+<br>
+
+# Question 6
+**Arithmetic Operations on DNA Molecules**
+
+**Description:** Define a `DNAMolecule` class where you can add two molecules together (concatenate their sequences) using the `+` operator. Create two DNA molecule instances and demonstrate their concatenation.
+
+<span style="color:#8b0153;">Hint</span>: Implement the **`__add__`** method to return a new `DNAMolecule` instance.
+
+<br>
+
+# Question 7
+**Comparing Protein Sequences**
+
+**Description:** Develop a `Protein` class with a `sequence` attribute. Implement **`__eq__`** to compare protein sequences, considering sequence length and content. Create two protein objects with the same sequence and compare them, then create one with a different sequence to show it's not equal.
+
+<span style="color:#8b0153;">Hint</span>: Compare sequences ignoring case for equality.
+
+<br>
+
+# Question 8
+**Indexing in RNA Sequences**
+
+**Description:** Create an `RNA` class that allows indexing into its `sequence` attribute, similar to how you would index a string. Demonstrate accessing individual nucleotides and slicing of sequences.
+
+<span style="color:#8b0153;">Hint</span>: Implement the **`__getitem__`** method to handle both single indices and slices.
+
+<br>
+
+# Question 9
+**Mutation in Genes**
+
+**Description:** Build a `Gene` class with methods for initializing with a `name` and `sequence`, and another method `mutate(position, new_nucleotide)` that changes a nucleotide at a specified position. Demonstrate creating a gene, mutating it, and then printing the updated sequence.
+
+<span style="color:#8b0153;">Hint</span>: Use string slicing to replace a nucleotide.
+
+<br>
+
+# Question 10
+**A Class System for Biological Pathways**
+
+**Description:** Design a `Pathway` class with steps of biochemical reactions. Include subclasses `MetabolicPathway` with an `energy_change` attribute and `SignalingPathway` with a `signal_molecule` attribute. Each should have methods to describe their unique characteristics. Create instances of both subclasses, set specific values for their unique attributes, and demonstrate accessing these attributes.
+
+<span style="color:#8b0153;">Hint</span>: Use inheritance to share common attributes and methods, and polymorphism to distinguish between pathways.
+
+<br>
+</div>

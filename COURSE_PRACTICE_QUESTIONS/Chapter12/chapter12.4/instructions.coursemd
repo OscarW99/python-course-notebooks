@@ -1,0 +1,101 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 12: Creating Executable Python Scripts</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Create a DNA Sequence Analysis Pipeline
+</div>
+<br>
+<div style="font-size:18px;">
+
+**Overview:**  
+You will complete a command-line script, `sequence_analyzer.py`, designed to analyze DNA sequences from a CSV file. The script includes some implemented functions and placeholders marked with **TODO** comments for sections you need to complete.
+
+---
+
+### **Input File Format**
+The input file should be a CSV file structured as follows:
+
+```
+SequenceID,DNASequence,Type
+seq1,ATCGATCG,coding
+seq2,GCTAGCTA,non-coding
+seq3,TTTTAAAA,coding
+```
+
+A sample test file, `data/test_sequences.csv`, is provided with additional sequences for testing.  
+
+---
+
+### **Tasks to Complete**
+1. **File Handling and Validation:** (`read_sequences()` function)
+   - Implement functionality to check if the input file exists.
+   - Validate the file structure, ensuring it includes the columns: `SequenceID`, `DNASequence`, and `Type`.
+   - Verify that all DNA sequences contain valid bases (A, T, G, C).
+
+2. **DNA Sequence Analysis:** (`analyze_sequences()` function)
+   - Add a `Length` column to calculate the length of each DNA sequence.
+   - Add a `GC_Content` column to calculate the percentage of G and C bases in each sequence, rounded to two decimal places.
+
+3. **Data Visualization:** (`create_visualizations()` function)
+   - Create a boxplot to display the distribution of GC content by sequence type.  
+     **Plot Details:**  
+     - Title: `GC Content Distribution by Sequence Type`  
+     - x-axis: `Type`  
+     - y-axis: `GC Content (%)`  
+   - Create a scatter plot showing sequence length vs GC content, with points colored by sequence type.  
+     **Plot Details:**  
+     - Title: `Sequence Length vs GC Content`  
+     - x-axis: `Sequence Length (bp)`  
+     - y-axis: `GC Content (%)`  
+
+4. **Output Results:** (`create_visualizations()` & `main()` functions)
+   - Save both plots in the specified output folder.
+   - Save a CSV file, `sequence_analysis.csv`, containing the original data plus the new `Length` and `GC_Content` columns.
+
+---
+
+### **Testing Your Implementation**
+1. **Error Cases:**
+   - Run the script without arguments:
+     ```bash
+     python sequence_analyzer.py
+     ```
+   - Run with a non-existent file:
+     ```bash
+     python sequence_analyzer.py missing.csv output
+     ```
+   - Test with an invalid sequence file (e.g., containing invalid bases or missing columns).
+
+2. **Successful Execution:**
+   - Run the script with the provided test file:
+     ```bash
+     python sequence_analyzer.py data/test_sequences.csv results
+     ```
+   - Verify the results:
+     - Ensure the `results/` folder contains:
+       - `gc_content_boxplot.png`
+       - `length_vs_gc_scatter.png`
+       - `sequence_analysis.csv`
+     - Confirm `sequence_analysis.csv` includes the columns:
+       - `SequenceID`
+       - `DNASequence`
+       - `Type`
+       - `Length`
+       - `GC_Content`
+     - Check that error messages are clear and informative for invalid inputs.
+
+---
+
+**Directory Structure Example:**
+   
+   ```
+   results/
+   ├── gc_content_boxplot.png
+   ├── length_vs_gc_scatter.png
+   └── sequence_analysis.csv
+   ```
+
+---
+
+**Good Luck!**

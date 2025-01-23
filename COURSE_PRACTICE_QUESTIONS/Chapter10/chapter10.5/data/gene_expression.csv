@@ -1,0 +1,10 @@
+gene_id,tissue_type,time_point,expression_level,condition
+BRCA1,liver,0,100.5,control
+BRCA1,liver,2,150.2,control
+BRCA1,liver,4,200.8,control
+BRCA1,kidney,0,80.3,control
+BRCA1,kidney,2,120.5,control
+TP53,liver,0,50.2,treated
+TP53,liver,2,75.4,treated
+TP53,kidney,0,45.6,treated
+EGFR,liver,0,300.1,control

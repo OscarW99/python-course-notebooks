@@ -1,0 +1,103 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 12: Creating Executable Python Scripts</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Creating Your First Executible Scripts
+</div>
+<br>
+<div style="font-size:18px;">
+
+**Note:** _Each question will be answered in its own file to better illustrate command-line script functionality and to keep each script independent for testing and learning purposes._
+
+# Question 1
+**Answer this question in the following file:** `question1/hello.py`
+
+**Description:** Create a file called `hello.py` that prints **"Hello from my first script!"** when run. Test running it both ways:
+
+```bash
+# 1
+python hello.py
+
+# 2
+./hello.py  # macOS/Linux after making file executable
+hello.py  # Windows after setting file associations
+```
+
+<span style="color:#8b0153;">Hint</span>:
+
+For Unix/Linux/Mac users, remember to:
+
+- Add the shebang line: `#!/usr/bin/env python3`
+- Make it executable: `chmod +x hello.py`
+
+For Windows users:
+
+- Still add the shebang line: `#!/usr/bin/env python3` for cross-platform compatibility (though not required for Windows execution).
+- To run with just `hello.py`, ensure .py files are associated with Python in Windows settings.
+
+As with previous questions, if your current directory is not the same as where the Python script is located, you'll need to specify the script's location. You can do this by using either the full path or the relative path:
+
+
+
+- **Full Path Example (<span style="color:#3d82ba;">Windows</span>):**
+  ```bash
+  python "C:\Users\name\example\path\coding\COURSE_PRACTICE_QUESTIONS\Chapter12\chapter12.3\question1\hello.py"
+  ```
+
+- **Full Path Example (<span style="color:#3d82ba;">macOS/Linux</span>):**
+  ```bash
+  python3 "/home/user/example/path/coding/COURSE_PRACTICE_QUESTIONS/Chapter12/chapter12.3/question1/hello.py"
+  ```
+
+
+- **Relative Path Example (from <span style="color:#4d9950;">COURSE_PRACTICE_QUESTIONS</span> - <span style="color:#3d82ba;">Windows</span>):**
+  ```bash
+  python Chapter12\chapter12.3\question1\hello.py
+  ```
+
+- **Relative Path Example (from <span style="color:#4d9950;">COURSE_PRACTICE_QUESTIONS</span> - <span style="color:#3d82ba;">macOS/Linux</span>):**
+  ```bash
+  python3 Chapter12/chapter12.3/question1/hello.py
+  ```
+
+
+<br>
+
+# Question 2
+**Answer this question in the following file:** `question2/greet.py`
+
+**Description:** Create a script called `greet.py` that prints three lines:
+- The first line should say **"This script is: [script_name]"**
+- The second line should say **"It was run at: [current_time]"**
+- The third line should say **"Hello [your_name]!"**
+- Call the script with your name as a command line argument - test it with different names.
+
+<span style="color:#8b0153;">Hints</span>:
+- Use `sys.argv[0]` to get the script name and the `datetime` module for the time.
+- After importing `datetime`, you can get the current time using:
+  ```python
+  current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+  ```
+  This will format the time like this: **"2025-03-16 14:30:45"**
+
+If your current directory differs from where the Python script resides, you'll need to specify its location. You can do this using either the full path or the relative path, as demonstrated in the previous question.
+ 
+# Question 3
+**Answer this question in the following file:** `question3/count_args.py`
+
+**Description:** Create a script called `count_args.py` that prints out:
+- The name of the script
+- How many additional arguments were provided
+- All the arguments that were provided
+
+Test it by running:
+
+```bash
+python count_args.py
+python count_args.py arg1
+python count_args.py arg1 arg2 arg3
+```
+
+Remember to run the script with the full path or the relative path if your current directory is not the same as the Python file.
+<br>

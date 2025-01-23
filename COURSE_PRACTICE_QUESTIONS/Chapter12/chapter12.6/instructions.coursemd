@@ -1,0 +1,136 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 12: Creating Executable Python Scripts</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Importing Custom Modules into Scripts
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+**Walkthrough: Importing from a Custom Module**
+
+**Description:** We'll explore how to import a function from a custom module using the `gene_analysis` project structure. Here's the directory layout:
+
+```
+gene_analysis/
+├── __init__.py
+├── sequence/
+│   ├── __init__.py
+│   └── dna_tools.py  # Contains calculate_a_freq function
+└── main.py
+```
+In this walkthrough, you'll write the `calculate_a_freq` function in `dna_tools.py` to calculate the frequency of **'A'** bases in a DNA sequence. Then, you'll import and use this function in `main.py`.
+
+## Step-by-Step Guide
+
+**Understand the Directory Structure:**
+* `main.py` is located in the `gene_analysis` directory.
+* `dna_tools.py` is inside the `sequence` subdirectory.
+
+**Write the `calculate_a_freq` Function:**
+* Open `"gene_analysis/sequence/dna_tools.py"` and complete the `calculate_a_freq` so it calculates the frequency of **'A'** bases in a DNA sequence.
+
+```python
+# dna_tools.py
+def calculate_a_freq(sequence):
+    # TODO: Count 'A' bases in the sequence
+    # TODO: Calculate the frequency of 'A' bases
+    # TODO: return the frequency of 'A' bases as a percentage
+```
+
+**Import the Function in `main.py`:**
+* Open `gene_analysis/main.py` and add the import statement using absolute import:
+
+```python
+# main.py
+from sequence.dna_tools import calculate_a_freq
+```
+
+**Test the Import:**
+* Below the import in `main.py`, add this test code to verify your function:
+
+```python
+# Test the import:
+sequence = "ATCGCC"
+a_freq = calculate_a_freq(sequence)
+print(f"A frequency: {a_freq}")
+```
+
+**Run `main.py`:**
+* You can do this by clicking the **"Run"** button in VSCode or by running the script from the terminal (remembering to specify where the Python script is located by using either the full path or the relative path)
+<br>
+---
+**Additional Notes:**
+
+If you encounter issues with imports, remember:
+* Ensure you're specifying the correct path to the script.
+* Check if all **`__init__.py`** files are present in the necessary directories to make them packages.
+* In VSCode, ensure your project structure is correctly recognized as a Python package.
+* When running scripts from within their package directory, use relative imports like `from sequence.dna_tools import calculate_a_freq` to access modules within the same package.
+
+**Expected Output:**
+After implementing the function and running `main.py`, you should see:
+
+__A frequency: 0.3333333333333333__
+
+This exercise helps you practice writing and importing custom functions within a project structure.
+
+<br>
+
+# Question 2
+**Creating a Package Structure**
+
+**Description:** You are given a folder named `biotools` with the following package structure:
+
+```
+biotools/
+├── __init__.py                  
+├── sequence_analysis/
+│   ├── __init__.py             
+│   └── dna_tools.py       # Create with a simple function
+└── data_processing/
+    ├── __init__.py             
+    └── file_parser.py     # Create with a simple function
+```
+
+## Step-by-Step Guide
+
+
+**Implement `dna_tools.py`:**
+* Open `biotools/sequence_analysis/dna_tools.py` and complete the `count_bases` function:
+
+**Implement `file_parser.py`:**
+* Open `biotools/data_processing/file_parser.py` and complete the `read_fasta` function:
+
+
+**Test the Package:**
+
+To test if everything is set up correctly, you can create a test script in the `biotools` directory. Here's an example of how you might test these functions:
+
+- First create a `test_script.py` in the `biotools` directory. Then run the following:
+
+```python
+# test_script.py
+from sequence_analysis.dna_tools import count_bases
+from data_processing.file_parser import read_fasta
+
+# Test dna_tools
+dna_sequence = "ATCGATCG"
+print("Base Counts:", count_bases(dna_sequence))
+
+# Test file_parser
+read_fasta("example.fasta")
+```
+
+
+**Expected Output:**
+After running the test script, you should see:
+
+__Base Counts: {'A': 2, 'T': 2, 'G': 2, 'C': 2}__  
+__Reading example.fasta__
+
+This exercise helps you understand how to organize and import from multiple modules within a package structure.
+
+</div>

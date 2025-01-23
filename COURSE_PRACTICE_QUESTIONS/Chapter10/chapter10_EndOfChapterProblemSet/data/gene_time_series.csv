@@ -1,0 +1,5 @@
+gene_id,time_point,expression_level
+TP53,0,50.2
+TP53,6,60.1
+TP53,12,70.3
+TP53,24,75.4

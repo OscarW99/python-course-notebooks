@@ -1,0 +1,71 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 12: Creating Executable Python Scripts</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Understanding if __name__ == "__main__":
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+**Restructuring Code with `if __name__ == "__main__":`**
+
+**Description:** In a file named `dna_tools.py`, convert this basic DNA sequence analysis script to use the `if __name__ == "__main__":` structure:
+
+* Create a `main()` function that:   
+     * Takes a sequence   
+     * Calls `count_gc()`  
+     * Prints the result
+* Add the `if __name__ == "__main__":` statement
+* Move the sequence analysis code into `main()`
+
+<br>
+
+**Test the Script:**
+* Run the script directly by either:
+    * Clicking run button in VSCode
+    * Running `dna_tools.py` in the terminal
+
+
+* To test importing the script, try importing the `count_gc` function into solutions.py:
+
+    ```python
+    # solutions.py
+    from dna_tools import count_gc
+    count_gc("ATCGCGTA")
+    ```
+
+**Expected Output:**
+
+* When run directly, you should see: __GC content: 50.0%__
+* When imported, `count_gc` should work without executing `main()`.
+
+<br>
+
+# Question 2
+**Examining and Fixing Script Structure**
+
+**Description:** In a file named `sequence_analyzer.py`, examine the script structure and identify what needs to be fixed:
+
+* Add the `if __name__ == "__main__":` statement
+* Make sure the `main()` function is called correctly
+* Add error checking for empty sequences
+
+Test the script both ways:
+* Run directly
+* Import the `analyze_sequence` function into `solutions.py`
+    ```python
+    # solutions.py
+    from sequence_analyzer import analyze_sequence
+    analyze_sequence("ATCG")
+    analyze_sequence("") # Should raise an error
+    ```
+
+**Expected Output:**
+
+* When run directly, you should see: __Sequence length: 4__
+* When imported, `analyze_sequence` should work for valid sequences and raise an error for empty ones.
+
+
+</div>

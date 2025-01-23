@@ -1,0 +1,41 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 11: Object-Orientated Programming</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Polymorphism in Biological Data Analysis
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+**Enzyme Polymorphism**
+
+**Description:** Create a base class `Enzyme` with a method `calculate_activity()`, then create two derived classes `Kinase` and `Phosphatase` that implement different activity calculations. Each enzyme should store its reaction rate and substrate concentration. The activity calculation should vary based on enzyme type:
+* **Kinase**: `activity = reaction_rate * substrate_concentration`
+* **Phosphatase**: `activity = reaction_rate * (1 / substrate_concentration)`
+
+<span style="color:#8b0153;">Hint</span>:
+* Base `Enzyme` class should have `__init__(self, reaction_rate, substrate_conc)`
+* Both derived classes should use `super().__init__()`
+* Include a polymorphic function `analyze_enzyme(enzyme)` that works with either type
+* Add input validation for positive values of `reaction_rate` and `substrate_conc`
+
+<br>
+
+# Question 2
+**Sample Analysis Polymorphism**
+
+**Description:** Design a class hierarchy for analyzing experimental samples. Create a base class `Sample` with a method `process_data()`, then create derived classes `BloodSample` and `TissueSample` that implement different processing methods. Include these requirements:
+* Blood samples require temperature and cell count data
+* Tissue samples require weight and preservation method
+* Both should implement a `quality_check()` method that returns different criteria
+
+<span style="color:#8b0153;">Hint</span>:
+* Base `Sample` class should have `__init__(self, sample_id, collection_date)`
+* Each derived class should add its specific attributes
+* `quality_check()` should return `True`/`False` based on class-specific criteria
+* Include a polymorphic `analyze_sample(sample)` function that works with both types
+
+<br>
+</div>

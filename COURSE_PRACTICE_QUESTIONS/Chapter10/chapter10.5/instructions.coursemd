@@ -1,0 +1,42 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 10: Data Visualization</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Creating Subplots
+</div>
+<br>
+<div style="font-size:18px;">
+
+
+# Question 1
+Create a figure with two subplots arranged horizontally (1 row, 2 columns) using the gene expression dataset `"data/gene_expression.csv"`:
+
+* **Left subplot**: Bar plot showing mean expression levels by tissue type
+* **Right subplot**: Line plot showing expression over time for BRCA1 gene, with different colored lines for each tissue type
+* Add appropriate titles, labels, and use `plt.tight_layout()`
+    
+<span style="color:#8b0153;">Hint</span>: For the time series, first filter for **BRCA1**, then use `pivot_table` or `groupby` to get expression levels by tissue and time. Use different colors for each tissue's time series
+    
+<span style="color:#8b0153;">Hint</span>: Use `plt.subplots(1, 2, figsize=(12, 6))` to create the subplots
+<br></br>
+
+# Question 2
+Create a 2x2 grid of subplots showing different aspects of the gene expression data. Include:
+* A bar plot in [0,0]
+* A scatter plot in [0,1]
+* A pie chart in [1,0]
+* A line plot in [1,1]
+
+<span style="color:#8b0153;">Hint</span>: Access each subplot using axs[row, column] indexing
+<br></br>
+
+# Question 3
+Using GridSpec, create a figure where one plot spans the entire first row, and two smaller plots share the second row:
+* Make the top plot span all columns
+* Create two equal-sized plots in the bottom row
+* Add appropriate titles and labels
+    
+<span style="color:#8b0153;">Hint</span>: Use `GridSpec` from `matplotlib.gridspec` to define the layout. Start by creating a figure with `fig = plt.figure(figsize=(x, y))`, then define the grid layout with `gs = GridSpec(2, 2, figure=fig)`. Use `gs[0, :]` to span all columns for the top plot and `gs[1, 0]` and `gs[1, 1]` for the two bottom-row plots. Assign subplots to specific regions using `plt.subplot(gs[row, column])`. Adjust `figsize` to improve visualization.**
+<br></br>
+</div>

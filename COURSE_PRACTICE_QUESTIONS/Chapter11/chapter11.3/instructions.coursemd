@@ -1,0 +1,48 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 11: Object-Orientated Programming</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Inheritance and Method Overriding
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+**Cell and StemCell Inheritance**
+
+**Description:** Create a base class called `Cell` with attributes for cell type and size, then create a derived class (child class) `StemCell` that adds functionality for cell differentiation. The `StemCell` class should include a method called `get_differentiation_options()` that returns a list of possible cell types it can differentiate into. Use these cell types:
+* **"neural"**: Can become neurons or glial cells
+* **"blood"**: Can become red blood cells or white blood cells
+* **"muscle"**: Can become cardiac or skeletal muscle cells
+* **"epithelial"**: Can become skin or organ lining cells
+
+**Differentiation Capabilities:**
+* **Totipotent**: Can differentiate into all cell types - **"neural"**, **"blood"**, **"muscle"**, **"epithelial"**
+* **Pluripotent**: Can differentiate into most cell types - **"neural"**, **"blood"**, **"muscle"**
+* **Multipotent**: Can differentiate into a limited number of cell types - **"neural"**, **"blood"**
+
+<span style="color:#8b0153;">Hint</span>:
+* Store the differentiation options as a class attribute (dictionary)
+* The base `Cell` class should have **`__init__`(self, cell_type, size)**
+* `StemCell` should add a `potency_type` parameter (either **"totipotent"**, **"pluripotent"**, or **"multipotent"**)
+* `get_differentiation_options()` should return different options based on `potency_type`
+
+<br>
+
+# Question 2
+**Experiment Class Hierarchy**
+
+**Description:** Design a class hierarchy for modeling different types of laboratory experiments. Start with a base `Experiment` class that tracks basic information like duration and temperature, then create a derived class `PCRExperiment` that adds specific PCR-related attributes and methods.
+
+<span style="color:#8b0153;">Hint</span>:
+* Base `Experiment` class should have:
+    - Attributes: `name`, `duration` (minutes), `temperature` (Celsius)
+    - Method: `get_status()` that returns **"Running"** if duration > 0, **"Completed"** otherwise
+* `PCRExperiment` should add:
+    - Attributes: `num_cycles`, `denaturation_temp` (default 95°C)
+    - Method: `calculate_total_duration()` that multiplies cycle time by `num_cycles`
+* All temperature values should be validated (between 0 and 100°C)
+
+<br>
+</div>

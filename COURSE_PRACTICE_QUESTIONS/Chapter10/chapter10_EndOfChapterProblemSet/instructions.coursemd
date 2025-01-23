@@ -1,0 +1,124 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 10: Data Visualization</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    End of Chapter Problem Set
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+**Scatter Plot Visualization of Gene Expression**
+
+**Description:** Create a scatter plot from `"data/gene_expression.csv"` to visualize the relationship between gene expression levels at two different time points (0 hours vs 24 hours).
+* Use semi-transparent markers for clarity when points overlap.
+* Add labels and a title to your plot.
+* Save this plot in PNG format to the `'output'` folder.
+    
+<span style="color:#8b0153;">Hint</span>: Use `plt.scatter()` with alpha for transparency. Filter your dataframe for the two time points. Use `plt.savefig('output/scatter_plot.png', dpi=300)` to save the plot.
+
+<br>
+
+# Question 2
+**Diverging Bar Plot for Disease Outcomes**
+
+**Description:** Plot a diverging bar plot to show how each treatment response varies from the average response for diseases in `"data/clinical_data.csv"`.
+* Use green for above-average outcomes and red for below-average.
+* Save this plot in PDF format to the `'output'` folder.
+    
+<span style="color:#8b0153;">Hint</span>: Calculate the mean response rate, then compute deviations for each disease. Use `plt.hlines()`. Save with `plt.savefig('output/diverging_bar.pdf', bbox_inches='tight')`.
+
+<br>
+
+# Question 3
+**Lollipop Chart for Gene Frequency**
+
+**Description:** Create a lollipop chart showing the frequency of each gene across different samples from `"data/gene_counts.csv"`.
+* Order genes by frequency in descending order. Use blue markers and red stems.
+* Add a custom background color to enhance aesthetics.
+* Save this plot in both PNG and SVG formats to the `'output'` folder.
+    
+<span style="color:#8b0153;">Hint</span>: Sort your data before plotting, use `plt.stem()` for lollipop visuals. To add a background color, use `plt.gca().set_facecolor('lightgrey')`. Use `plt.savefig('output/lollipop_chart.png', format='png')` and `plt.savefig('output/lollipop_chart.svg', format='svg')`.
+
+<br>
+
+# Question 4
+**Histogram of Protein Lengths**
+
+**Description:** Draw a histogram to represent the distribution of protein lengths from `"data/protein_lengths.csv"`.
+* Use 20 bins and color the bars with a gradient from blue to red.
+* Adjust the histogram to include a custom title font for an aesthetic enhancement.
+    
+<span style="color:#8b0153;">Hint</span>: Use `plt.hist()`; for gradient, consider using cmap parameter. Use `plt.title('Histogram of Protein Lengths', fontdict={'fontsize': 16, 'fontweight': 'bold'})` for the title.
+
+<br>
+
+# Question 5
+**Density Plot for Patient Ages**
+
+**Description:** Create a density plot to examine the distribution of patient ages in `"data/clinical_data.csv"`.
+* Overlay density plots for different disease groups in different colors.
+* Include a legend with custom marker styles for each group for clarity.
+    
+<span style="color:#8b0153;">Hint</span>: Use `sns.kdeplot()` for each group, set different colors. Use `plt.legend(['Disease A', 'Disease B'], markerscale=2)` to add the legend.
+
+<br>
+
+# Question 6
+**Boxplot for Gene Expression by Condition**
+
+**Description:** Construct a boxplot to compare gene expression levels under control and treatment conditions from `"data/gene_expression.csv"`.
+* Highlight any outliers and add a custom color palette.
+* Save this plot in PNG format to the `'output'` folder.
+    
+<span style="color:#8b0153;">Hint</span>: Use `sns.boxplot()` with condition on the x-axis and expression on y-axis. Use `palette="Set2"` for a custom palette. Save with `plt.savefig('output/boxplot_gene_expression.png')`.
+
+<br>
+
+# Question 7
+**Pie Chart for Disease Distribution**
+
+**Description:** Visualize the proportion of each disease type in `"data/clinical_data.csv"` using a pie chart.
+* Include labels for each slice with the percentage and add an exploded effect for the largest slice.
+* Save this plot in PNG format to the `'output'` folder.
+    
+<span style="color:#8b0153;">Hint</span>: Use `plt.pie()` with autopct for percentage display. For explosion, use `explode=[0.1 if i == index_of_largest else 0 for i in range(len(sizes))]`. Save with `plt.savefig('output/disease_distribution.png')`.
+
+<br>
+
+# Question 8
+**Bar Chart of Treatment Responses**
+
+**Description:** Generate a bar chart showing the number of patients with different treatment responses from `"data/clinical_data.csv"`.
+* Use distinct colors for each response type and add horizontal grid lines for better readability.
+    
+<span style="color:#8b0153;">Hint</span>: Group by response type, use `plt.bar()`. Add grid lines with `plt.grid(axis='y', linestyle='--')`.
+
+<br>
+
+# Question 9
+**Line Graph for Time Series Data**
+
+**Description:** From `"data/gene_time_series.csv"`, plot a line graph showing how expression levels of a specific gene (`'TP53'`) change over time.
+* Mark each data point with a circle and add a `fill_between` to highlight areas above/below a threshold.
+    
+<span style="color:#8b0153;">Hint</span>: Use `plt.plot()` with marker='o'. For the fill between, use `plt.fill_between(x, y, where=y>threshold, alpha=0.3, color='green')` where threshold is your defined value.
+
+<br>
+
+# Question 10
+**Heatmap Visualization of Gene Expression**
+
+**Description:** Follow the code that creates a heatmap to visualize gene expression across samples from `"data/gene_expression.csv"`.
+* Introduce clustering for both rows and columns to group similar patterns, which is not covered in the text.
+* Use a custom color scheme and add annotations for high expression values.
+* Save this plot in PDF format to the `'output'` folder for high-quality output.
+    
+<span style="color:#8b0153;">Hint</span>:
+    - Import seaborn and use `sns.clustermap()` for clustering. `clustermap` automatically performs hierarchical clustering on both axes.
+    - Use `cmap="YlOrRd"` for a color scheme and `annot=True` for annotations, but consider `annot_kws={'size': 8}` to keep it readable.
+    - Save with `plt.savefig('output/gene_expression_heatmap.pdf', bbox_inches='tight')`.
+
+<br>
+</div>

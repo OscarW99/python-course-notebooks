@@ -1,0 +1,5 @@
+disease,treatment_response,age
+Disease A,0.8,45
+Disease A,0.7,50
+Disease B,0.9,60
+Disease B,0.6,55

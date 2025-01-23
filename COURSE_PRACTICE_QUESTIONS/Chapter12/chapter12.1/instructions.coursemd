@@ -1,0 +1,74 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 12: Creating Executable Python Scripts</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Command Line Python Scripts and User Input
+</div>
+<br>
+<div style="font-size:18px;">
+
+**Note:** _Each question will be answered in its own file to better illustrate command-line script functionality and to keep each script independent for testing and learning purposes._
+
+# Question 1
+**Answer this question in the following file:** `question1/q1.py`
+
+**Description:** Write a simple script that uses `input()` to ask for a DNA sequence and prints whether it's valid (contains only A, T, G, C) or invalid.
+
+<br>
+
+# Question 2
+**Answer this question in the following file:** `question2/q2.py`
+
+**Description:** Write a script with two `input()` functions: one asking for a file format (fasta/fastq/sam) and another for minimum sequence length. Print a message showing the selected parameters.
+
+<span style="color:#8b0153;">Hint</span>: Remember to convert numeric input to the correct type.
+
+<br>
+
+# Question 3
+**Answer this question in the following file:** `question3/q3.py`
+
+**Description:** Using `sys.argv`, write a script that accepts multiple FASTA filenames as arguments and prints how many files will be processed. If no files are provided, print an error message.
+
+<span style="color:#8b0153;">Hint</span>: To run this script, you will need to call it from the command line. We learned how to do this by calling something like the following:
+
+  ```bash
+  python script.py arg1 arg2
+  ```
+
+In practice, this only works if the script you want to run is in your current working directory. 
+
+The chances are your current working directory is <span style="color:#4d9950;">COURSE_PRACTICE_QUESTIONS</span> since you were instructed to open this in VSCode. We have to tell the terminal where the script is located. We can either do this relative to the <span style="color:#4d9950;">COURSE_PRACTICE_QUESTIONS</span> directory (if this is your current directory - you can check where the folder prompt ends in your terminal) or you can provide the full path to the file. You can get either of these by right-clicking on the `q3.py` file in the file explorer and selecting **'Copy Path'** or **'Copy Relative Path'**. Once you have them, you can type the following, replacing the paths accordingly:
+
+
+- **Full Path Example (<span style="color:#3d82ba;">Windows</span>):**
+  ```bash
+  python "C:\Users\name\example\path\coding\COURSE_PRACTICE_QUESTIONS\Chapter12\chapter12.1\question3\q3.py" file1.fasta file2.fasta
+  ```
+
+- **Full Path Example (<span style="color:#3d82ba;">macOS/Linux</span>):**
+  ```bash
+  python3 "/home/user/example/path/coding/COURSE_PRACTICE_QUESTIONS/Chapter12/chapter12.1/question3/q3.py" file1.fasta file2.fasta
+  ```
+
+- **Relative Path Example (from <span style="color:#4d9950;">COURSE_PRACTICE_QUESTIONS</span> - <span style="color:#3d82ba;">Windows</span>):**
+  ```bash
+  python Chapter12\chapter12.1\question3\q3.py file1.fasta file2.fasta
+  ```
+
+- **Relative Path Example (from <span style="color:#4d9950;">COURSE_PRACTICE_QUESTIONS</span> - <span style="color:#3d82ba;">macOS/Linux</span>):**
+  ```bash
+  python3 Chapter12/chapter12.1/question3/q3.py file1.fasta file2.fasta
+  ```
+
+<br>
+
+# Question 4
+**Answer this question in the following file:** `question4/q4.py`
+
+**Description:** Create a sequence processing script that takes exactly two arguments: an input FASTA file and a minimum sequence length. Use `sys.argv` to access these arguments and print an error if the wrong number of arguments is provided. If the arguments are valid, print: **"Processing [filename] with minimum length of [length]"**.
+
+<span style="color:#8b0153;">Hint</span>: To run this script, you'll need to specify its location in the command line. Use the same process as explained in **question 3** to get either the full path or relative path to `q4.py`. Remember, the script should be called with exactly two arguments:
+
+</div>
