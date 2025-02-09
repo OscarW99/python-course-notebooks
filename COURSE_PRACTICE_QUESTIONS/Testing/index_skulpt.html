@@ -113,6 +113,10 @@
   <div class="exercise">
     <h3 class="exercise-title">Exercise 1: Incrementing x by 1 until it equals 12</h3>
     <div id="editor" class="editor"></div>
+    <textarea id="code" style="display: none;">
+# Write your Python code here
+print("Hello, World!")
+</textarea>
     <div class="button-group">
       <button class="button run-button" onclick="runit()">Run Code</button>
       <button class="button clear-button" onclick="clearOutput()">Clear Output</button>
@@ -122,54 +126,57 @@
   </div>
 
   <script>
-    // ======================
-    // Skulpt Initialization
-    // ======================
-
-    // Initialize Skulpt's built-in files
-    Sk.builtinFiles = {
-      "files": {
-        "builtin": {},
-        "sys": {}
-      }
-    };
-
-    // Proper builtinRead implementation
-    function builtinRead(x) {
-      if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined) {
-        throw new Error(`File not found: '${x}'`);
-      }
-      return Sk.builtinFiles["files"][x];
-    }
-
-    // Configure Skulpt before first use
-    Sk.configure({
-      output: outf,
-      read: builtinRead,
-      __future__: Sk.python3
+    // Initialize CodeMirror editor
+    let editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        mode: "python",
+        theme: "dracula",
+        lineNumbers: true,
+        indentUnit: 4
     });
 
-    // ======================
-    // Run Code (Updated)
-    // ======================
-    async function runit() {
-      const code = editor.getValue();
-      const output = document.getElementById("output");
-      output.innerHTML = '';
-      
-      try {
-        // Reset execution environment
-        Sk.execLimit = 10000; // Increase execution limit if needed
-        Sk.pre = "output";
+    // Configure Skulpt
+    function outf(text) {
+        document.getElementById("output").innerHTML += text;
+    }
+
+    function builtinRead(x) {
+        if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+            throw "File not found: '" + x + "'";
+        return Sk.builtinFiles["files"][x];
+    }
+
+    // Function to run Python code
+    function runit() {
+        const output = document.getElementById("output");
+        const loading = document.getElementById("loading");
         
-        // Execute code
-        await Sk.misceval.asyncToPromise(() => 
-          Sk.importMainWithBody("<stdin>", false, code, true)
-        );
+        // Clear previous output
+        output.innerHTML = '';
+        loading.style.display = "block";
+
+        // Configure Skulpt
+        Sk.configure({
+            output: outf,
+            read: builtinRead,
+            __future__: Sk.python3
+        });
+
+        // Get the code from CodeMirror
+        const prog = editor.getValue();
+
+        // Run the code
+        try {
+            Sk.importMainWithBody("<stdin>", false, prog, true);
+        } catch (e) {
+            output.innerHTML = '🚨 Error: ' + e.toString();
+        }
         
-      } catch (err) {
-        output.innerHTML = `<div class="error-message">🚨 Error: ${err.toString()}</div>`;
-      }
+        loading.style.display = "none";
+    }
+
+    // Function to clear output
+    function clearOutput() {
+        document.getElementById("output").innerHTML = '';
     }
   </script>
 </body>
