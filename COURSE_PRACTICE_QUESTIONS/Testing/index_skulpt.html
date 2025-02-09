@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Python Exercises</title>
+  <!-- CodeMirror -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/mode/python/python.min.js"></script>
+  <!-- Skulpt (local files) -->
+  <script src="../../skulpt-dist-master/skulpt.min.js"></script>
+  <script src="../../skulpt-dist-master/skulpt-stdlib.js"></script>
+  <style>
+    .editor { border: 1px solid #ccc; margin: 10px 0; }
+    .output { background:rgb(255, 255, 255); padding: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Exercise 1: While Loop</h2>
+  <div id="editor" class="editor"></div>
+  <button onclick="runit()">Run Code</button>
+  <pre id="output" class="output"></pre>
+
+  <script>
+    // Initialize CodeMirror
+    const editor = CodeMirror(document.getElementById('editor'), {
+      lineNumbers: true,
+      mode: 'python',
+      value: 'x = 0\nwhile x <= 12:\n    print(x)\n    x += 1',
+    });
+
+    // Skulpt Functions
+    function outf(text) { 
+      document.getElementById("output").innerHTML += text; 
+    }
+
+    function builtinRead(x) {
+      if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined) {
+        throw "File not found: '" + x + "'";
+      }
+      return Sk.builtinFiles["files"][x];
+    }
+
+    // Run Code
+    function runit() {
+      const code = editor.getValue();
+      const output = document.getElementById("output");
+      output.innerHTML = '';
+
+      Sk.configure({ output: outf, read: builtinRead });
+      Sk.misceval.asyncToPromise(() => Sk.importMainWithBody("<stdin>", false, code))
+        .catch(err => output.innerHTML = err.toString());
+    }
+  </script>
+</body>
+</html>
