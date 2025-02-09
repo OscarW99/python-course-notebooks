@@ -11,19 +11,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up GitHub Pages
+      - name: Prepare deployment
         run: |
-          mkdir -p public/COURSE_PRACTICE_QUESTIONS/Testing
-          cp -r COURSE_PRACTICE_QUESTIONS/Testing/* public/COURSE_PRACTICE_QUESTIONS/Testing/
-          cp -r skulpt-dist-master public/skulpt-dist-master
+          # Create .nojekyll in target directory
+          touch COURSE_PRACTICE_QUESTIONS/Testing/.nojekyll
+          
+          # Ensure Skulpt files are in correct location
+          cp -r skulpt-dist-master COURSE_PRACTICE_QUESTIONS/Testing/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./COURSE_PRACTICE_QUESTIONS/Testing
           publish_branch: gh-pages
           force_orphan: true
