@@ -14,10 +14,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Set up GitHub Pages
+        run: |
+          mkdir -p public/COURSE_PRACTICE_QUESTIONS/Testing
+          cp -r COURSE_PRACTICE_QUESTIONS/Testing/* public/COURSE_PRACTICE_QUESTIONS/Testing/
+          cp -r skulpt-dist-master public/skulpt-dist-master
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./COURSE_PRACTICE_QUESTIONS/Testing
+          publish_dir: ./public
           publish_branch: gh-pages
           force_orphan: true
