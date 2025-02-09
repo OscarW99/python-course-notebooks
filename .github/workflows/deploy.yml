@@ -16,16 +16,23 @@ jobs:
 
       - name: Prepare deployment
         run: |
-          # Create .nojekyll in target directory
-          touch COURSE_PRACTICE_QUESTIONS/Testing/.nojekyll
+          # Create temporary directory for deployment
+          mkdir -p temp_deploy
           
-          # Ensure Skulpt files are in correct location
-          cp -r skulpt-dist-master COURSE_PRACTICE_QUESTIONS/Testing/
+          # Copy the HTML file
+          cp COURSE_PRACTICE_QUESTIONS/Testing/index_skulpt.html temp_deploy/
+          
+          # Copy Skulpt files maintaining relative paths
+          mkdir -p temp_deploy/skulpt-dist-master
+          cp -r skulpt-dist-master/* temp_deploy/skulpt-dist-master/
+          
+          # Create .nojekyll file
+          touch temp_deploy/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./COURSE_PRACTICE_QUESTIONS/Testing
+          publish_dir: ./temp_deploy
           publish_branch: gh-pages
           force_orphan: true
