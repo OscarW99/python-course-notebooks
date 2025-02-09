@@ -48,15 +48,21 @@
       border: 2px solid #ddd;
       border-radius: 4px;
       margin: 15px 0;
-      max-height: 200px;  /* Set maximum height */
-      overflow: auto;     /* Enable scrolling */
     }
 
-    /* Add style for CodeMirror instance */
+    /* Update CodeMirror instance styles */
     .CodeMirror {
-      height: auto !important;      /* Start with auto height */
-      min-height: 100px;           /* Minimum height for few lines */
-      max-height: 200px;           /* Maximum height before scrolling */
+      height: auto !important;
+      min-height: 100px;
+      max-height: 300px;           /* Increased max height */
+      overflow-y: auto !important; /* Force vertical scrolling */
+      font-size: 14px;            /* Adjust font size if needed */
+    }
+
+    .CodeMirror-scroll {
+      min-height: 100px;          /* Match CodeMirror min-height */
+      max-height: 300px;          /* Match CodeMirror max-height */
+      overflow-y: auto !important; /* Force vertical scrolling */
     }
 
     .button-group {
