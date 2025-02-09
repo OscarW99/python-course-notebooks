@@ -48,6 +48,15 @@
       border: 2px solid #ddd;
       border-radius: 4px;
       margin: 15px 0;
+      max-height: 200px;  /* Set maximum height */
+      overflow: auto;     /* Enable scrolling */
+    }
+
+    /* Add style for CodeMirror instance */
+    .CodeMirror {
+      height: auto !important;      /* Start with auto height */
+      min-height: 100px;           /* Minimum height for few lines */
+      max-height: 200px;           /* Maximum height before scrolling */
     }
 
     .button-group {
@@ -84,7 +93,9 @@
       padding: 15px;
       border-radius: 4px;
       border: 1px solid #ddd;
-      min-height: 100px;
+      height: 150px;               /* Fixed height */
+      max-height: 150px;          /* Maximum height */
+      overflow-y: auto;           /* Enable vertical scrolling */
       white-space: pre-wrap;
       font-family: 'Courier New', monospace;
     }
@@ -126,12 +137,15 @@ print("Hello, World!")
   </div>
 
   <script>
-    // Initialize CodeMirror editor
+    // Initialize CodeMirror editor with adjusted settings
     let editor = CodeMirror.fromTextArea(document.getElementById("code"), {
         mode: "python",
         theme: "dracula",
         lineNumbers: true,
-        indentUnit: 4
+        indentUnit: 4,
+        viewportMargin: Infinity,    // Enables auto-height
+        lineWrapping: true,          // Enables line wrapping
+        extraKeys: {"Ctrl-Space": "autocomplete"}  // Optional: Enable autocomplete
     });
 
     // Configure Skulpt
