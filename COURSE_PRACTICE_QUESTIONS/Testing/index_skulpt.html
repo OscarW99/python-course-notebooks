@@ -122,76 +122,55 @@
   </div>
 
   <script>
-    // Initialize CodeMirror with better configuration
-    const editor = CodeMirror(document.getElementById('editor'), {
-      lineNumbers: true,
-      mode: 'python',
-      theme: 'dracula',
-      indentUnit: 4,
-      smartIndent: true,
-      matchBrackets: true,
-      autoCloseBrackets: true,
-      value: 'x = 0\n\n# Write your while loop here\n',
-      extraKeys: {
-        "Tab": function(cm) {
-          if (cm.somethingSelected()) {
-            cm.indentSelection("add");
-          } else {
-            cm.replaceSelection(cm.getOption("indentWithTabs") ? "\t" : 
-              Array(cm.getOption("indentUnit") + 1).join(" "), "end", "+input");
-          }
-        }
+    // ======================
+    // Skulpt Initialization
+    // ======================
+
+    // Initialize Skulpt's built-in files
+    Sk.builtinFiles = {
+      "files": {
+        "builtin": {},
+        "sys": {}
       }
-    });
+    };
 
-    // Skulpt Configuration
-    function outf(text) { 
-      const output = document.getElementById("output");
-      output.innerHTML += text; 
-    }
-
+    // Proper builtinRead implementation
     function builtinRead(x) {
       if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined) {
-        throw "File not found: '" + x + "'";
+        throw new Error(`File not found: '${x}'`);
       }
       return Sk.builtinFiles["files"][x];
     }
 
-    // Run Code with loading state
+    // Configure Skulpt before first use
+    Sk.configure({
+      output: outf,
+      read: builtinRead,
+      __future__: Sk.python3
+    });
+
+    // ======================
+    // Run Code (Updated)
+    // ======================
     async function runit() {
+      const code = editor.getValue();
       const output = document.getElementById("output");
-      const loading = document.getElementById("loading");
-      const runButton = document.querySelector('.run-button');
+      output.innerHTML = '';
       
       try {
-        output.innerHTML = '';
-        loading.style.display = 'block';
-        runButton.disabled = true;
+        // Reset execution environment
+        Sk.execLimit = 10000; // Increase execution limit if needed
+        Sk.pre = "output";
         
-        const code = editor.getValue();
-        
+        // Execute code
         await Sk.misceval.asyncToPromise(() => 
-          Sk.importMainWithBody("<stdin>", false, code)
+          Sk.importMainWithBody("<stdin>", false, code, true)
         );
         
       } catch (err) {
         output.innerHTML = `<div class="error-message">🚨 Error: ${err.toString()}</div>`;
-      } finally {
-        loading.style.display = 'none';
-        runButton.disabled = false;
       }
     }
-
-    // Clear output function
-    function clearOutput() {
-      document.getElementById("output").innerHTML = '';
-    }
-
-    // Auto-resize editor
-    editor.setSize("100%", "auto");
-    editor.on("change", function() {
-      editor.save();
-    });
   </script>
 </body>
 </html>
