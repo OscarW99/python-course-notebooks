@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter 1: Variables, Data Types, and Operators - f-strings</title>
+  <!-- CodeMirror Assets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/theme/dracula.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/mode/python/python.min.js"></script>
+  <!-- Skulpt Assets -->
+  <script src="/python-course-notebooks/skulpt-dist-master/skulpt.min.js"></script>
+  <script src="/python-course-notebooks/skulpt-dist-master/skulpt-stdlib.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    .chapter-header {
+      background-color: #226c61;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      margin: 30px 0;
+    }
+    .exercise {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 15px;
+    }
+    .exercise-title {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #226c61;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+    .editor {
+      border: 2px solid #ddd;
+      border-radius: 4px;
+      margin: 15px 0;
+    }
+    /* CodeMirror styling */
+    .CodeMirror {
+      height: auto !important;
+      min-height: 50px;
+      max-height: 300px;
+      font-size: 14px;
+      overflow: hidden !important;
+    }
+    .CodeMirror-scroll {
+      min-height: 50px;
+      max-height: 300px;
+      overflow-y: auto !important;
+      padding-right: 0 !important;
+      margin-right: 0 !important;
+    }
+    .button-group {
+      margin: 15px 0;
+      display: flex;
+      gap: 10px;
+    }
+    .button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .run-button {
+      background-color: #226c61;
+      color: white;
+    }
+    .clear-button {
+      background-color: #6c2222;
+      color: white;
+    }
+    .button:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+    .output {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      height: 150px;
+      max-height: 150px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      font-family: 'Courier New', monospace;
+    }
+    .loading {
+      display: none;
+      color: #226c61;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+    <!-- Chapter Header -->
+    <div class="chapter-header">
+        <strong>Chapter 1: Variables, Data Types, and Operators</strong>
+    </div>
+    <!-- Section Title -->
+    <div class="section-title">End of Chapter Problems</div>
+    
+    <!-- Exercise 1: Basic Variable Creation and Printing -->
+    <div class="exercise">
+        <h3 class="exercise-title">1. Basic Variable Creation and Printing</h3>
+        <p>Create two variables, one called <code>dna_sequence</code> with the value "ATGC" and another called <code>organism_name</code> with the value "E. coli". Print both variables in a single print statement separated by a space.</p>
+        <div id="editor1" class="editor"></div>
+        <textarea id="code1" style="display: none;">dna_sequence = 
+organism_name = 
+print()</textarea>
+        <div class="button-group">
+            <button class="button run-button" onclick="runit(1)">Run Code</button>
+            <button class="button clear-button" onclick="clearOutput(1)">Clear Output</button>
+        </div>
+        <div id="loading1" class="loading">⏳ Running code...</div>
+        <pre id="output1" class="output"></pre>
+    </div>
+    
+    <!-- Exercise 2: Working with Different Data Types -->
+    <div class="exercise">
+        <h3 class="exercise-title">2. Working with Different Data Types</h3>
+        <p>Create four variables demonstrating each data type covered in this chapter:</p>
+        <ul>
+            <li>An integer called <code>number_of_genes</code> with value 50</li>
+            <li>A float called <code>mutation_rate</code> with value 0.15</li>
+            <li>A string called <code>protein_name</code> with value "Hemoglobin"</li>
+            <li>A boolean called <code>is_prokaryote</code> with value True</li>
+        </ul>
+        <p>Print the type of each variable.</p>
+        <div id="editor2" class="editor"></div>
+        <textarea id="code2" style="display: none;">number_of_genes = 
+mutation_rate = 
+protein_name = 
+is_prokaryote = 
+
+print(type())  # Print type of each variable</textarea>
+        <div class="button-group">
+            <button class="button run-button" onclick="runit(2)">Run Code</button>
+            <button class="button clear-button" onclick="clearOutput(2)">Clear Output</button>
+        </div>
+        <div id="loading2" class="loading">⏳ Running code...</div>
+        <pre id="output2" class="output"></pre>
+    </div>
+    
+    <!-- Exercise 3: Arithmetic Operations -->
+    <div class="exercise">
+        <h3 class="exercise-title">3. Arithmetic Operations</h3>
+        <p>Given two variables <code>sequence_a_count = 20</code> and <code>sequence_b_count = 12</code>, calculate and print:</p>
+        <ul>
+            <li>The sum of both counts</li>
+            <li>The difference between counts</li>
+            <li>The product of both counts</li>
+            <li><code>sequence_a_count</code> divided by <code>sequence_b_count</code> (keep decimal points)</li>
+            <li><code>sequence_a_count</code> divided by <code>sequence_b_count</code> (floor division)</li>
+            <li>The remainder when <code>sequence_a_count</code> is divided by <code>sequence_b_count</code></li>
+            <li><code>sequence_a_count</code> raised to the power of 2</li>
+        </ul>
+        <div id="editor3" class="editor"></div>
+        <textarea id="code3" style="display: none;">sequence_a_count = 20
+sequence_b_count = 12
+
+# Calculate and print each operation
+sum_result = 
+difference_result = 
+product_result = 
+division_result = 
+floor_division_result = 
+remainder_result = 
+power_result = 
+
+print()  # Print all results</textarea>
+        <div class="button-group">
+            <button class="button run-button" onclick="runit(3)">Run Code</button>
+            <button class="button clear-button" onclick="clearOutput(3)">Clear Output</button>
+        </div>
+        <div id="loading3" class="loading">⏳ Running code...</div>
+        <pre id="output3" class="output"></pre>
+    </div>
+</body>
+<!-- Exercise 4: String Operations -->
+<div class="exercise">
+    <h3 class="exercise-title">4. String Operations</h3>
+    <p>Given three nucleotides stored in variables: <code>nucleotide1 = "A"</code>, <code>nucleotide2 = "T"</code>, and <code>nucleotide3 = "G"</code>, use string operators to:</p>
+    <ul>
+        <li>Combine all nucleotides into one string</li>
+        <li>Create a sequence that repeats nucleotide1 three times</li>
+    </ul>
+    <div id="editor4" class="editor"></div>
+    <textarea id="code4" style="display: none;">nucleotide1 = "A"
+nucleotide2 = "T"
+nucleotide3 = "G"
+
+combined_sequence = 
+repeated_sequence = 
+
+print()
+print()</textarea>
+    <div class="button-group">
+        <button class="button run-button" onclick="runit(4)">Run Code</button>
+        <button class="button clear-button" onclick="clearOutput(4)">Clear Output</button>
+    </div>
+    <div id="loading4" class="loading">⏳ Running code...</div>
+    <pre id="output4" class="output"></pre>
+</div>
+
+<!-- Exercise 5: Comparison Operators -->
+<div class="exercise">
+    <h3 class="exercise-title">5. Comparison Operators</h3>
+    <p>Given two temperature readings (<code>temp1 = 37.5</code> and <code>temp2 = 37.0</code>), use comparison operators to check and print:</p>
+    <ul>
+        <li>If temp1 equals temp2</li>
+        <li>If temp1 is greater than temp2</li>
+        <li>If temp1 is less than or equal to 40.0</li>
+    </ul>
+    <div id="editor5" class="editor"></div>
+    <textarea id="code5" style="display: none;">temp1 = 37.5
+temp2 = 37.0
+
+equal_result = 
+greater_result = 
+less_equal_result = 
+
+print()
+print()
+print()</textarea>
+    <div class="button-group">
+        <button class="button run-button" onclick="runit(5)">Run Code</button>
+        <button class="button clear-button" onclick="clearOutput(5)">Clear Output</button>
+    </div>
+    <div id="loading5" class="loading">⏳ Running code...</div>
+    <pre id="output5" class="output"></pre>
+</div>
+
+<!-- Exercise 6: Logical Operators -->
+<div class="exercise">
+    <h3 class="exercise-title">6. Logical Operators</h3>
+    <p>Given two boolean variables: <code>is_bacteria = True</code> and <code>has_nucleus = False</code>, use logical operators to check and print:</p>
+    <ul>
+        <li>If both conditions are True</li>
+        <li>If either condition is True</li>
+        <li>If is_bacteria is not True</li>
+    </ul>
+    <div id="editor6" class="editor"></div>
+    <textarea id="code6" style="display: none;">is_bacteria = True
+has_nucleus = False
+
+both_true = 
+either_true = 
+not_bacteria = 
+
+print()
+print()
+print()</textarea>
+    <div class="button-group">
+        <button class="button run-button" onclick="runit(6)">Run Code</button>
+        <button class="button clear-button" onclick="clearOutput(6)">Clear Output</button>
+    </div>
+    <div id="loading6" class="loading">⏳ Running code...</div>
+    <pre id="output6" class="output"></pre>
+</div>
+
+<!-- Exercise 7: F-strings -->
+<div class="exercise">
+    <h3 class="exercise-title">7. F-strings</h3>
+    <p>Create an f-string that prints the following sentence using variables <code>species = "H. sapiens"</code> and <code>chromosome_count = 23</code>:</p>
+    <p>"The species H. sapiens has 23 pairs of chromosomes"</p>
+    <div id="editor7" class="editor"></div>
+    <textarea id="code7" style="display: none;">species = "H. sapiens"
+chromosome_count = 23
+
+result_string = 
+print()</textarea>
+    <div class="button-group">
+        <button class="button run-button" onclick="runit(7)">Run Code</button>
+        <button class="button clear-button" onclick="clearOutput(7)">Clear Output</button>
+    </div>
+    <div id="loading7" class="loading">⏳ Running code...</div>
+    <pre id="output7" class="output"></pre>
+</div>
+
+<!-- Exercise 8: Membership Operators -->
+<div class="exercise">
+    <h3 class="exercise-title">8. Membership Operators</h3>
+    <p>Given the DNA sequence "ATGCTA" stored in a variable called <code>dna</code>, use the in/not in operators to check and print:</p>
+    <ul>
+        <li>If "ATG" is in dna</li>
+        <li>If "TTT" is not in dna</li>
+    </ul>
+    <div id="editor8" class="editor"></div>
+    <textarea id="code8" style="display: none;">dna = "ATGCTA"
+
+has_atg = 
+no_ttt = 
+
+print()
+print()</textarea>
+    <div class="button-group">
+        <button class="button run-button" onclick="runit(8)">Run Code</button>
+        <button class="button clear-button" onclick="clearOutput(8)">Clear Output</button>
+    </div>
+    <div id="loading8" class="loading">⏳ Running code...</div>
+    <pre id="output8" class="output"></pre>
+</div>
+
+<!-- Exercise 9: Escape Sequences -->
+<div class="exercise">
+    <h3 class="exercise-title">9. Escape Sequences</h3>
+    <p>Print three DNA sequences first on separate lines using a single print statement with an escape sequence, then print them separated by tabs.</p>
+    <div id="editor9" class="editor"></div>
+    <textarea id="code9" style="display: none;">sequence1 = "ATGC"
+sequence2 = "GCTA"
+sequence3 = "TATA"
+
+# Print with newlines
+print()
+
+# Print with tabs
+print()</textarea>
+    <div class="button-group">
+        <button class="button run-button" onclick="runit(9)">Run Code</button>
+        <button class="button clear-button" onclick="clearOutput(9)">Clear Output</button>
+    </div>
+    <div id="loading9" class="loading">⏳ Running code...</div>
+    <pre id="output9" class="output"></pre>
+</div>
+
+<!-- Exercise 10: Combined Operations -->
+<div class="exercise">
+    <h3 class="exercise-title">10. Combined Operations</h3>
+    <p>Create a variable <code>result</code> that performs the following operations:</p>
+    <ul>
+        <li>Adds 25 and 5</li>
+        <li>Multiplies the sum by 2</li>
+        <li>Divides the product by 10</li>
+    </ul>
+    <p>Print the final result in an f-string saying "The final result is {result}"</p>
+    <div id="editor10" class="editor"></div>
+    <textarea id="code10" style="display: none;"># Perform calculations
+result = 
+
+# Print using f-string
+print()</textarea>
+    <div class="button-group">
+        <button class="button run-button" onclick="runit(10)">Run Code</button>
+        <button class="button clear-button" onclick="clearOutput(10)">Clear Output</button>
+    </div>
+    <div id="loading10" class="loading">⏳ Running code...</div>
+    <pre id="output10" class="output"></pre>
+</div>
+
+  <script>
+    // Initialize CodeMirror editors for each code block
+    document.querySelectorAll('textarea[id^="code"]').forEach(textarea => {
+      let id = textarea.id.replace('code', '');
+      CodeMirror.fromTextArea(document.getElementById("code" + id), {
+        mode: "python",
+        theme: "dracula",
+        lineNumbers: true,
+        indentUnit: 4,
+        viewportMargin: Infinity,
+        lineWrapping: true,
+        extraKeys: {"Ctrl-Space": "autocomplete"}
+      }).setCursor({ line: 0, ch: 0 });
+    });
+
+    // Skulpt configuration functions
+    function builtinRead(x) {
+      if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+        throw "File not found: '" + x + "'";
+      return Sk.builtinFiles["files"][x];
+    }
+
+    function runit(id) {
+      const output = document.getElementById("output" + id);
+      const loading = document.getElementById("loading" + id);
+      output.innerHTML = '';
+      loading.style.display = "block";
+
+      Sk.configure({
+        output: function(text) { output.innerHTML += text; },
+        read: builtinRead,
+        __future__: Sk.python3
+      });
+
+      // Retrieve the current code value from the corresponding CodeMirror instance.
+      const editorInstance = CodeMirror.fromTextArea(document.getElementById("code" + id));
+      const prog = editorInstance.getValue();
+
+      Sk.misceval.asyncToPromise(function() {
+        return Sk.importMainWithBody("<stdin>", false, prog, true);
+      }).then(function(mod) {
+          loading.style.display = "none";
+      }, function(err) {
+          output.innerHTML += err.toString();
+          loading.style.display = "none";
+      });
+    }
+
+    function clearOutput(id) {
+      document.getElementById("output" + id).innerHTML = '';
+    }
+  </script>
+</body>
+</html>

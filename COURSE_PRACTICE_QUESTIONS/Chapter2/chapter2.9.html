@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter 2: Conditional Statements and Loops - End of Chapter Problem Set</title>
+  <!-- CodeMirror Assets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/theme/dracula.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/mode/python/python.min.js"></script>
+  <!-- Skulpt Assets -->
+  <script src="/python-course-notebooks/skulpt-dist-master/skulpt.min.js"></script>
+  <script src="/python-course-notebooks/skulpt-dist-master/skulpt-stdlib.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    .chapter-header {
+      background-color: #226c61;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      margin: 30px 0;
+    }
+    .exercise {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 15px;
+    }
+    .exercise-title {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #226c61;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+    .editor {
+      border: 2px solid #ddd;
+      border-radius: 4px;
+      margin: 15px 0;
+    }
+    /* CodeMirror styling */
+    .CodeMirror {
+      height: auto !important;
+      min-height: 50px;
+      max-height: 300px;
+      font-size: 14px;
+      overflow: hidden !important;
+    }
+    .CodeMirror-scroll {
+      min-height: 50px;
+      max-height: 300px;
+      overflow-y: auto !important;
+      padding-right: 0 !important;
+      margin-right: 0 !important;
+    }
+    .button-group {
+      margin: 15px 0;
+      display: flex;
+      gap: 10px;
+    }
+    .button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .run-button {
+      background-color: #226c61;
+      color: white;
+    }
+    .clear-button {
+      background-color: #6c2222;
+      color: white;
+    }
+    .button:hover {
+      opacity: 0.9;
+    }
+    .output {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      height: 150px;
+      max-height: 150px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      font-family: 'Courier New', monospace;
+    }
+    .loading {
+      display: none;
+      color: #226c61;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Chapter Header -->
+  <div class="chapter-header">
+    <strong>Chapter 2: Conditional Statements and Loops</strong>
+  </div>
+<!-- Section Title -->
+<div class="section-title">Combining While Loops with Conditional Statements</div>
+
+<!-- Exercise 1: Number classification -->
+<div class="exercise">
+  <h3 class="exercise-title">1. Number classification</h3>
+  <p>
+    Write a while loop that counts from 1 to 15 and prints each number. Inside the loop, use an if-else statement to print "Even number" if the number is even and "Odd number" if the number is odd.
+  </p>
+  <div id="editor1" class="editor"></div>
+  <textarea id="code1" style="display: none;">
+# Initialize your variables here
+count = 1
+max_count = 15
+
+# Write your while loop with an if-else statement here
+
+</textarea>
+  <div class="button-group">
+    <button class="button run-button" onclick="runit(1)">Run Code</button>
+    <button class="button clear-button" onclick="clearOutput(1)">Clear Output</button>
+  </div>
+  <div id="loading1" class="loading">⏳ Running code...</div>
+  <pre id="output1" class="output"></pre>
+</div>
+
+<!-- Exercise 2: Sum of even numbers -->
+<div class="exercise">
+  <h3 class="exercise-title">2. Sum of even numbers</h3>
+  <p>
+    Create a while loop that sums all the even numbers between 1 and 50. Print the sum after the loop completes.
+  </p>
+  <div id="editor2" class="editor"></div>
+  <textarea id="code2" style="display: none;">
+# Initialize your variables here
+number = 1
+sum_even = 0
+
+# Write your while loop here
+
+</textarea>
+  <div class="button-group">
+    <button class="button run-button" onclick="runit(2)">Run Code</button>
+    <button class="button clear-button" onclick="clearOutput(2)">Clear Output</button>
+  </div>
+  <div id="loading2" class="loading">⏳ Running code...</div>
+  <pre id="output2" class="output"></pre>
+</div>
+
+<!-- Exercise 3: Finding square numbers -->
+<div class="exercise">
+  <h3 class="exercise-title">3. Finding square numbers</h3>
+  <p>
+    You want to find all the square numbers between 1 and 200. Write a while loop that checks each number, and if it’s a square number, print it out.
+  </p>
+  <div id="editor3" class="editor"></div>
+  <textarea id="code3" style="display: none;">
+# Initialize your variables here
+number = 1
+
+# Write your while loop to find and print square numbers here
+
+</textarea>
+  <div class="button-group">
+    <button class="button run-button" onclick="runit(3)">Run Code</button>
+    <button class="button clear-button" onclick="clearOutput(3)">Clear Output</button>
+  </div>
+  <div id="loading3" class="loading">⏳ Running code...</div>
+  <pre id="output3" class="output"></pre>
+</div>
+
+<!-- Exercise 4: Countdown -->
+<div class="exercise">
+  <h3 class="exercise-title">4. Countdown</h3>
+  <p>
+    Write a while loop that starts at 10 and decrements to 0. Inside the loop, use a conditional statement to print "Countdown: x" where x is the current number.
+  </p>
+  <div id="editor4" class="editor"></div>
+  <textarea id="code4" style="display: none;">
+# Initialize your variables here
+count = 10
+
+# Write your while loop with a conditional statement here
+
+</textarea>
+  <div class="button-group">
+    <button class="button run-button" onclick="runit(4)">Run Code</button>
+    <button class="button clear-button" onclick="clearOutput(4)">Clear Output</button>
+  </div>
+  <div id="loading4" class="loading">⏳ Running code...</div>
+  <pre id="output4" class="output"></pre>
+</div>
+
+<script>
+    // Initialize CodeMirror editors for each code block
+    document.querySelectorAll('textarea[id^="code"]').forEach(textarea => {
+      let id = textarea.id.replace('code', '');
+      CodeMirror.fromTextArea(document.getElementById("code" + id), {
+        mode: "python",
+        theme: "dracula",
+        lineNumbers: true,
+        indentUnit: 4,
+        viewportMargin: Infinity,
+        lineWrapping: true,
+        extraKeys: {"Ctrl-Space": "autocomplete"}
+      }).setCursor({ line: 0, ch: 0 });
+    });
+
+    // Skulpt configuration functions
+    function builtinRead(x) {
+      if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+        throw "File not found: '" + x + "'";
+      return Sk.builtinFiles["files"][x];
+    }
+
+    function runit(id) {
+      const output = document.getElementById("output" + id);
+      const loading = document.getElementById("loading" + id);
+      output.innerHTML = '';
+      loading.style.display = "block";
+
+      Sk.configure({
+        output: function(text) { output.innerHTML += text; },
+        read: builtinRead,
+        __future__: Sk.python3
+      });
+
+      // Retrieve the current code value from the corresponding CodeMirror instance.
+      const editorInstance = CodeMirror.fromTextArea(document.getElementById("code" + id));
+      const prog = editorInstance.getValue();
+
+      Sk.misceval.asyncToPromise(function() {
+        return Sk.importMainWithBody("<stdin>", false, prog, true);
+      }).then(function(mod) {
+          loading.style.display = "none";
+      }, function(err) {
+          output.innerHTML += err.toString();
+          loading.style.display = "none";
+      });
+    }
+
+    function clearOutput(id) {
+      document.getElementById("output" + id).innerHTML = '';
+    }
+  </script>
+</body>
+</html>

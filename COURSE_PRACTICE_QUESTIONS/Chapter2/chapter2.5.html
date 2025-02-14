@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter 2: Conditional Statements and Loops - End of Chapter Problem Set</title>
+  <!-- CodeMirror Assets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/theme/dracula.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/mode/python/python.min.js"></script>
+  <!-- Skulpt Assets -->
+  <script src="/python-course-notebooks/skulpt-dist-master/skulpt.min.js"></script>
+  <script src="/python-course-notebooks/skulpt-dist-master/skulpt-stdlib.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    .chapter-header {
+      background-color: #226c61;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      margin: 30px 0;
+    }
+    .exercise {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 15px;
+    }
+    .exercise-title {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #226c61;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+    .editor {
+      border: 2px solid #ddd;
+      border-radius: 4px;
+      margin: 15px 0;
+    }
+    /* CodeMirror styling */
+    .CodeMirror {
+      height: auto !important;
+      min-height: 50px;
+      max-height: 300px;
+      font-size: 14px;
+      overflow: hidden !important;
+    }
+    .CodeMirror-scroll {
+      min-height: 50px;
+      max-height: 300px;
+      overflow-y: auto !important;
+      padding-right: 0 !important;
+      margin-right: 0 !important;
+    }
+    .button-group {
+      margin: 15px 0;
+      display: flex;
+      gap: 10px;
+    }
+    .button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .run-button {
+      background-color: #226c61;
+      color: white;
+    }
+    .clear-button {
+      background-color: #6c2222;
+      color: white;
+    }
+    .button:hover {
+      opacity: 0.9;
+    }
+    .output {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      height: 150px;
+      max-height: 150px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      font-family: 'Courier New', monospace;
+    }
+    .loading {
+      display: none;
+      color: #226c61;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Chapter Header -->
+  <div class="chapter-header">
+    <strong>Chapter 2: Conditional Statements and Loops</strong>
+  </div>
+  <!-- Section Title -->
+  <div class="section-title">Looping Over Strings</div>
+  
+  <!-- Single Combined Exercise -->
+  <div class="exercise">
+    <h3 class="exercise-title">Combined Exercises</h3>
+    <ol>
+      <li>
+        Define a string variable <code>protein_sequence</code> and assign it the value <code>'ALYSERG'</code>.
+      </li>
+      <li>
+        Write a <i>for</i> loop that prints each amino acid in <code>protein_sequence</code> one by one.
+      </li>
+    </ol>
+    <div id="editor" class="editor"></div>
+    <textarea id="code" style="display: none;">
+# Define protein_sequence
+protein_sequence =
+
+# Print each amino acid one by one
+</textarea>
+    <div class="button-group">
+      <button class="button run-button" onclick="runit()">Run Code</button>
+      <button class="button clear-button" onclick="clearOutput()">Clear Output</button>
+    </div>
+    <div id="loading" class="loading">⏳ Running code...</div>
+    <pre id="output" class="output"></pre>
+  </div>
+  
+  <script>
+    // Initialize the CodeMirror editor for the combined code block
+    let editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+      mode: "python",
+      theme: "dracula",
+      lineNumbers: true,
+      indentUnit: 4,
+      viewportMargin: Infinity,
+      lineWrapping: true,
+      extraKeys: {"Ctrl-Space": "autocomplete"}
+    });
+  
+    // Skulpt configuration functions
+    function builtinRead(x) {
+      if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+        throw "File not found: '" + x + "'";
+      return Sk.builtinFiles["files"][x];
+    }
+  
+    function runit() {
+      const output = document.getElementById("output");
+      const loading = document.getElementById("loading");
+      output.innerHTML = '';
+      loading.style.display = "block";
+  
+      Sk.configure({
+        output: function(text) { output.innerHTML += text; },
+        read: builtinRead,
+        __future__: Sk.python3
+      });
+  
+      const prog = editor.getValue();
+  
+      Sk.misceval.asyncToPromise(function() {
+        return Sk.importMainWithBody("<stdin>", false, prog, true);
+      }).then(function(mod) {
+          loading.style.display = "none";
+      }, function(err) {
+          output.innerHTML += err.toString();
+          loading.style.display = "none";
+      });
+    }
+  
+    function clearOutput() {
+      document.getElementById("output").innerHTML = '';
+    }
+  </script>
+</body>
+</html>
