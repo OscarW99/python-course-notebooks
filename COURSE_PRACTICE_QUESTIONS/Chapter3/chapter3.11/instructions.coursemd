@@ -1,0 +1,52 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 3: Data Structures</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Sets and Set Operations
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Creating a Set
+
+Create a set named `dna_bases` containing the following elements: `'adenine'`, `'cytosine'`, `'guanine'`, `'thymine'`.
+<br>
+
+# Question 2
+### Converting a List to a Set
+
+Given the list `rna_bases_list = ['adenine', 'cytosine', 'guanine', 'uracil', 'adenine']`, convert it into a set and store it in a variable named `unique_rna_bases`.
+<br></br>
+
+# Question 3
+### Adding and Removing Elements
+
+Create a set named `test_bases` containing the elements `'A'`, `'T'`, `'C'`, `'G'`. Then, add the element `'U'` to the set and remove the element `'T'`.
+<br></br>
+
+# Question 4
+### Using `discard()`
+
+Create a set named `sample_bases` with the elements `'adenine'`, `'cytosine'`, `'guanine'`, `'thymine'`. Use the `discard()` method to remove `'guanine'` from the set. Attempt to discard `'nonsense'` and observe the result.
+<br></br>
+
+# Question 5
+### Clearing a Set
+
+Create a set named `protein_bases` containing the elements `'arginine'`, `'lysine'`, `'methionine'`. Clear the set and verify that it is empty.
+<br></br>
+
+# Question 6
+### Set Operations with Lists
+
+Given the list `sequence_bases = ['A', 'C', 'G', 'T', 'A', 'G']`, remove duplicates by converting it into a set and print the result.
+<br></br>
+
+# Question 7
+### Set Uniqueness in Bioinformatics
+
+Given a list of DNA sequences: `sequences = ['ATCG', 'ATCG', 'GCTA', 'CGAT', 'ATCG']`, remove duplicates by converting it into a set and print the result.
+<br></br>
+</div>

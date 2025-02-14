@@ -1,0 +1,54 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 3: Data Structures</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Nested Dictionary Structure and Access
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Creating a Nested Protein Dictionary
+
+Create a nested dictionary called `protein_info` with the following structure for three proteins:
+* Insulin: mass = 5.8, function = "hormone", location = "pancreas"
+* Albumin: mass = 66.5, function = "transport", location = "blood"
+* Hemoglobin: mass = 64.5, function = "oxygen transport", location = "blood cells"
+<br>
+
+# Question 2
+### Accessing Cell Data
+
+Given the nested dictionary `cell_data`, access and print:
+* The shape of mitochondria
+* The count of ribosomes
+* The complete data for the nucleus
+<br></br>
+
+# Question 3
+### Modifying Cell Data
+
+Using the `cell_data` dictionary from question 2:
+* Add a new organelle "lysosome" with size = 0.5, shape = "spherical", count = 100
+* Modify the count of mitochondria to 400
+* Add a new property "function" to the nucleus with value "genetic material storage"
+<br></br>
+
+# Question 4
+### Creating Experiment Results Dictionary
+
+Create a nested dictionary `experiment_results` that stores information about three experiments:
+* Each experiment should have: date, temperature, and outcome
+* Include at least one failed experiment
+<br></br>
+
+# Question 5
+### Working with Gene Families
+
+Given the nested dictionary `gene_families`, write code to:
+* Add a new member to the kinases family using the dictionary `.append()` method
+* Print all members of the receptors family
+* Change the studied status of phosphatases to True
+<br></br>
+</div>

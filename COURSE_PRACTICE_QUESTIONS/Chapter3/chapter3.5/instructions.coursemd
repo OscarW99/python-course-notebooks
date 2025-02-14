@@ -1,0 +1,34 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 3: Data Structures</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Unpacking with Lists
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Simple Unpacking
+
+Given the list **`amino_acids = ['Alanine', 'Cysteine', 'Glycine']`**, unpack the list into three separate variables named **`ala`**, **`cys`**, and **`gly`**.
+<br>
+
+# Question 2
+### Nested List Unpacking
+
+Consider a nested list **`gene_info = [['Gene1', 150], ['Gene2', 200], ['Gene3', 250]]`**. Write a loop that unpacks each sublist and prints the gene name and its expression value separately.
+<br></br>
+
+# Question 3
+### Unpacking with Star Expressions
+
+Given a list **`gene_details = ['GeneX', 'Regulatory', 'Human', 120, 'Chromosome 1']`**, use a star expression to unpack the list into variables **`gene`**, **`gene_type`**, and a list called **`details`**.
+<br></br>
+
+# Question 4
+### Unpacking a String
+
+Given a string **`dna_sequence = "AGTC"`**, unpack it into four separate variables **`a`**, **`t`**, **`c`**, **`g`**, representing each nucleotide.
+<br></br>
+</div>

@@ -1,0 +1,42 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 3: Data Structures</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Dictionary Comprehensions
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Converting Protein Weights
+
+Given the `protein_weights` dictionary, write a dictionary comprehension to create a new dictionary where all weights are converted from kDa to Da (multiply by 1000).
+<br>
+
+# Question 2
+### Processing Gene Expression Data
+
+Using the `expression_data` dictionary, create dictionary comprehensions to:
+* Keep only genes with expression > 100
+* Create a new dictionary where all values are normalized (divided by the maximum value)
+<br></br>
+
+# Question 3
+### Filtering DNA Sequences
+
+Using the `sequences` dictionary, write a dictionary comprehension to create a dictionary containing only sequences with length > 3.
+<br></br>
+
+# Question 4
+### Filtering Amino Acids
+
+Using the `amino_acids` dictionary, create a dictionary comprehension that keeps only the basic amino acids.
+<br></br>
+
+# Question 5
+### Temperature Conversion
+
+Using the `celsius_temps` dictionary, write a dictionary comprehension to convert all temperatures to Fahrenheit (°F = °C * 9/5 + 32).
+<br></br>
+</div>

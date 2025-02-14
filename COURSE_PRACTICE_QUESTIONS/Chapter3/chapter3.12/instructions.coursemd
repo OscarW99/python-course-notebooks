@@ -1,0 +1,59 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 3: Data Structures</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Set Theory Operations
+</div>
+<br>
+<div style="font-size:18px;">
+
+For questions 1-4, use the sets of amino acids provided below:
+```
+# Sets for practice problems
+amino_acids_set1 = {'glycine', 'alanine', 'valine', 'serine', 'leucine', 'phenylalanine'}
+amino_acids_set2 = {'proline', 'glutamine', 'asparagine', 'valine', 'histidine', 'phenylalanine'}
+```
+
+# Question 1
+### Union of Two Sets
+
+Calculate the union of `amino_acids_set1` and `amino_acids_set2` using the `union()` method.
+<br>
+
+# Question 2
+### Intersection of Two Sets
+
+Find the intersection of `amino_acids_set1` and `amino_acids_set2`, i.e., the common elements between both sets.
+<br></br>
+
+# Question 3
+### Difference Between Two Sets
+
+Find the difference between `amino_acids_set1` and `amino_acids_set2`, i.e., the elements that are in `amino_acids_set1` but not in `amino_acids_set2`.
+<br></br>
+
+# Question 4
+### Symmetric Difference of Two Sets
+
+Find the symmetric difference between `amino_acids_set1` and `amino_acids_set2`. This should give you the elements that are unique to each set.
+<br></br>
+
+# Question 5
+### Disjoint Sets Check
+
+Using `amino_acids_set3` and `amino_acids_set4`, check if these sets are disjoint (i.e., if they have no common elements).
+<br></br>
+
+# Question 6
+### Superset and Subset Check
+
+Using `amino_acids_set5` and `amino_acids_set6`, check if `amino_acids_set5` is a superset of `amino_acids_set6`, and if `amino_acids_set6` is a subset of `amino_acids_set5`.
+<br></br>
+
+# Question 7
+### Handling Missing Elements
+
+Using `amino_acids_set7` and `amino_acids_set8`, identify which elements in `amino_acids_set7` are missing from `amino_acids_set8`.
+<br></br>
+</div>

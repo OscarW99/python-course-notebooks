@@ -1,0 +1,22 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 3: Data Structures</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Tuple Methods
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Counting Elements
+
+Given the tuple **`dna_sequence = ('A', 'T', 'G', 'C', 'A', 'T', 'G', 'C')`**, write a Python statement to count and print how many times 'C' appears in the sequence.
+<br>
+
+# Question 2
+### Finding the Index
+
+With the tuple **`amino_acids = ('Alanine', 'Cysteine', 'Glycine', 'Alanine', 'Valine')`**, write a Python statement to find and print the index of the first occurrence of 'Cysteine'.
+<br></br>
+</div>

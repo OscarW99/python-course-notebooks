@@ -1,0 +1,54 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 3: Data Structures</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    String Methods
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Case Manipulation and Counting
+
+Given the DNA sequence `"agctTAGCta"`, use string methods to:
+* Convert it to all uppercase
+* Convert it to all lowercase
+* Count how many times 'a' appears (case-insensitive)
+<br>
+
+# Question 2
+### Character Type Checking
+
+Use appropriate string methods to:
+* Check if `"ATCG123"` contains only letters
+* Check if `"12345"` contains only numbers
+* Check if `"ATCG"` contains only letters
+<br></br>
+
+# Question 3
+### Splitting and Joining
+
+Given the string `"ATCG-TAGC-GCTA"`, use string methods to:
+* Split the sequence at each dash
+* Join the resulting sequences with '|' instead of dashes
+<br></br>
+
+# Question 4
+### Pattern Checking
+
+Using the string methods covered, write code to:
+* Check if `"ATATATCG"` starts with `"ATA"`
+* Check if `"GCGCTAT"` ends with `"TAT"`
+* Find the position of `"GC"` in `"ATGCTA"`
+<br></br>
+
+# Question 5
+### Advanced Counting
+
+Use the string method `count()` with different start and end parameters on `"ATAGATAGATAG"` to:
+* Count total occurrences of `"TAG"`
+* Count occurrences of `"TAG"` in first 6 characters only
+* Count occurrences of `"TAG"` between positions 3 and 9
+<br></br>
+</div>

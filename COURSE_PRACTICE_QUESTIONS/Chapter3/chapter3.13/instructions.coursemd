@@ -1,0 +1,56 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 3: Data Structures</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Set Comprehensions, Nested Structures, and Unpacking
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Set Comprehension for Unique Nucleotides
+
+Create a set comprehension that takes the following DNA sequence list and returns only unique nucleotides:
+```python
+dna_sequences = ['ATCG', 'GCTA', 'ATCG', 'TAGC']
+```
+<br>
+
+# Question 2
+### Set Comprehension for Heavy Proteins
+
+Given the following protein data, create a set comprehension that includes only proteins with molecular weights greater than 50:
+```python
+protein_data = [('Albumin', 66.5), ('Insulin', 5.8), ('Hemoglobin', 64.5), ('Lysozyme', 14.3)]
+```
+<br></br>
+
+# Question 3
+### Creating Nested Data Structures
+
+Create three different nested data structures using the following amino acid data:
+```python
+data = (('Alanine', 89.1), ('Lysine', 146.2), ('Alanine', 89.1), ('Histidine', 155.2))
+```
+- A list of tuples
+- A tuple of sets
+- A set of tuples
+<br></br>
+
+# Question 4
+### Gene Expression Analysis
+
+Given the following list of gene expression data, use tuple unpacking in a for loop to print each gene's name and whether it's highly expressed (>100) or lowly expressed (≤100):
+```python
+gene_data = [('BRCA1', 120), ('TP53', 85), ('KRAS', 95), ('EGFR', 150)]
+```
+
+<br></br>
+
+# Question 5
+### Set Comprehension for Low Expression Genes
+
+Create a set comprehension using tuple unpacking that extracts only the gene names from `gene_data` that have expression levels less than 100.
+<br></br>
+</div>

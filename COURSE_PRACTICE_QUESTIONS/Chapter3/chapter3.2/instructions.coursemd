@@ -1,0 +1,34 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 3: Data Structures</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Indexing Lists
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Accessing a Nucleotide
+
+Given the list **`bases = ['A', 'T', 'C', 'G']`**, write a Python statement to print the nucleotide at the second position in the list.
+<br>
+
+# Question 2
+### Finding Function of a Gene
+
+Consider the list **`research_genes = [['GeneM', 200, 'Metabolic'], ['GeneN', 300, 'Developmental'], ['GeneO', 400, 'Signal']]`**. Write a Python statement to print the function of 'GeneO'.
+<br></br>
+
+# Question 3
+### Accessing Nested List Elements
+
+Using a new list **`patient_data = [['Patient1', 37, 'A+'], ['Patient2', 45, 'B-']]`**, write a Python statement to print the age of 'Patient1'.
+<br></br>
+
+# Question 4
+### Negative Indexing
+
+With the list **`bases = ['A', 'T', 'C', 'G']`**, write a Python statement to print the nucleotide at the last position using negative indexing.
+<br></br>
+</div>

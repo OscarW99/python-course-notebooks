@@ -1,0 +1,58 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 3: Data Structures</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Tuples
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Creating a Tuple
+
+Create a tuple named **`codon`** containing the following nucleotides: 'A', 'U', 'G'.
+<br>
+
+# Question 2
+### Accessing Tuple Elements
+
+Given the tuple **`amino_acids = ('Alanine', 'Glycine', 'Serine')`**, write Python code to print the second amino acid in the tuple.
+<br></br>
+
+# Question 3
+### Tuple to List Conversion
+
+Create a tuple named **`bases`** containing the nucleotides 'A', 'T', 'C', 'G'. Convert this tuple into a list and store it in a variable named **`base_list`**.
+<br></br>
+
+# Question 4
+### Nested Tuple Access
+
+Given the nested tuple `rna_codons = (('AUG', 'Methionine'), ('UUU', 'Phenylalanine'), ('GGA', 'Glycine'))`, write a Python program to print the amino acid corresponding to the codon `'UUU'`. Use an `if` statement to check for the codon and access its corresponding amino acid using indexing.
+<br></br>
+
+# Question 5
+### Tuple Iteration
+
+Create a tuple named **`proteins`** containing the names 'Actin', 'Myosin', 'Tubulin'. Use a for loop to print each protein name in the tuple.
+<br></br>
+
+# Question 6
+### Tuple Unpacking
+
+Given the tuple **`gene_info = ('GeneA', 'Chromosome 1', 'Human')`**, unpack the tuple and assign the elements to variables named **`gene_name`**, **`chromosome`**, and **`species`**, respectively.
+<br></br>
+
+# Question 7
+### Tuple Unpacking with Ignored Element
+
+Given the tuple **`lab_results = ('Sample123', 'Positive', 10.5, 'mg/dL')`**, unpack the tuple and assign the first three elements to variables named **`sample_id`**, **`result`**, and **`value`**, respectively. Ignore the last element.
+<br></br>
+
+# Question 8
+### Converting and Modifying
+
+Given the tuple `amino_acids = ('Alanine', 'Cysteine', 'Glycine')`. Convert the tuple of amino acids into a list, modify it by adding the amino acid 'Serine', then convert it back to a tuple.
+<br></br>
+</div>

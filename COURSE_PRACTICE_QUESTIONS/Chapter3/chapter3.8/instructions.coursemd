@@ -1,0 +1,28 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 3: Data Structures</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Working with Tuples
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Accessing Tuple Elements
+
+Given the tuple **`amino_acid_pair = ('lysine', 'arginine')`**, write a Python statement to print the first element in the tuple.
+<br>
+
+# Question 2
+### Creating a Tuple
+
+Create a tuple representing a pair of complementary DNA bases and print it.
+<br></br>
+
+# Question 3
+### Trying to Modify
+
+Write a Python code snippet to attempt changing an element in a tuple and handle the resulting error.
+<br></br>
+</div>

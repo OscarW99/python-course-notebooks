@@ -1,0 +1,82 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 3: Data Structures</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    List Methods
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Appending to a List
+
+Given the list **`enzymes = ['EcoRI', 'HindIII', 'BamHI']`**, write a Python statement to append the enzyme 'SmaI' to the list.
+<br>
+
+# Question 2
+### Extending a List
+
+Consider the list **`nucleotides = ['A', 'T', 'C']`**. Extend this list by adding the nucleotides 'G', 'U', and 'A' from another list **`additional_nucleotides`**.
+<br></br>
+
+# Question 3
+### Inserting into a List
+
+Using the list **`amino_acids = ['Alanine', 'Cysteine', 'Glycine']`**, write a Python statement to insert 'Isoleucine' at the second position.
+<br></br>
+
+# Question 4
+### Removing from a List
+
+With the list **`genes = ['GeneA', 'GeneB', 'GeneC', 'GeneD']`**, write a Python statement to remove 'GeneC' from the list.
+<br></br>
+
+# Question 5
+### Popping from a List
+
+Consider the list **`experimental_results = [32, 45, 22, 38, 55]`**. Write a Python statement to pop and print the result at the third position.
+<br></br>
+
+# Question 6
+### Using `del` with Lists
+
+Given a list **`dna_sequence = ['A', 'T', 'G', 'C', 'A', 'T', 'G', 'C', 'A', 'T']`**, remove a slice from index 3 to 6 using **`del`**.
+<br></br>
+
+# Question 7
+### Clearing a List
+
+For a list **`dna_sequences = ['ATG', 'CGT', 'TAC', 'GCA']`**, write a Python statement to clear the list.
+<br></br>
+
+# Question 8
+### Finding Index in a List
+
+With the list **`patient_ids = ['P100', 'P101', 'P102', 'P103']`**, find the index of 'P102'.
+<br></br>
+
+# Question 9
+### Counting Occurrences in a List
+
+Given the list **`protein_sequence = ['Ala', 'Gly', 'Ala', 'Ser', 'Val', 'Ala', 'Ser']`**, count how many times 'Ala' appears.
+<br></br>
+
+# Question 10
+### Sorting a List
+
+Use the **`sort()`** method to sort the list **`amino_acid_frequencies = [120, 200, 80, 150, 90]`** in descending order.
+<br></br>
+
+# Question 11
+### Reversing a List
+
+Reverse the order of the list **`dna_sequence = ['A', 'T', 'G', 'C', 'A', 'T']`** using the **`reverse()`** method.
+<br></br>
+
+# Question 12
+### Copying a List
+
+Create a shallow copy of the list **`dna_sequence = ['A', 'T', 'G', 'C', 'A', 'T']`** using the **`copy()`** method.
+<br></br>
+</div>
