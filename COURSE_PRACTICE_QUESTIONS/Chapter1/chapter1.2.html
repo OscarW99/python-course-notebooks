@@ -187,9 +187,18 @@ print(gc_content)
 
     // Configure Skulpt output function with exercise-specific ID
     function outf(text, id) {
-        console.log(`Output received for ${id}:`, text);  // Debugging log
-        document.getElementById(`output${id}`).innerHTML += text + "\n";
+        let outputEl = document.getElementById(`output${id}`);
+        
+        // Always append the new output, ensure it's on a new line
+        outputEl.innerHTML += text + "\n";
+        
+        // Ensure the scroll is always at the bottom of the output div
+        outputEl.scrollTop = outputEl.scrollHeight;
+
+        // Log the text to the console for debugging
+        console.log(`Flushed output for ${id}:`, text);
     }
+
 
 
     function builtinRead(x) {
