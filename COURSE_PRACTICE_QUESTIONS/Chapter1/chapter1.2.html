@@ -204,30 +204,31 @@ print(gc_content)
         const output = document.getElementById(`output${strId}`);
         const loading = document.getElementById(`loading${strId}`);
 
-        output.innerHTML = '';  // Clear previous output
-        loading.style.display = "block";  // Show loading animation
+        output.innerHTML = '';  
+        loading.style.display = "block";  
 
         Sk.configure({
-            output: (text) => outf(text, strId), // Set output function
+            output: (text) => outf(text, strId),
             read: builtinRead,
             __future__: Sk.python3
         });
 
         let prog = editors[strId].getValue();
         
-        // Ensure we flush stdout to avoid print issues
-        prog += "\nimport sys\nsys.stdout.flush()";
+        console.log(`Executing code for ${id}:\n`, prog);  // Debugging log
 
         Sk.misceval.asyncToPromise(() => 
             Sk.importMainWithBody("<stdin>", false, prog, true)
         ).then(
             () => { loading.style.display = "none"; },
             (err) => {
+                console.error("Skulpt error:", err);
                 output.innerHTML = `🚨 Error: ${err}`;
                 loading.style.display = "none";
             }
         );
     }
+
 
     function clearOutput(id) {
         document.getElementById(`output${id}`).innerHTML = '';
