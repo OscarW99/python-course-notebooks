@@ -184,55 +184,60 @@ codon =
   </div>
   
 <script>
-    // Initialize CodeMirror editors for each code block
-    document.querySelectorAll('textarea[id^="code"]').forEach(textarea => {
-      let id = textarea.id.replace('code', '');
-      CodeMirror.fromTextArea(document.getElementById("code" + id), {
+    // Initialize CodeMirror editor with adjusted settings
+    let editor = CodeMirror.fromTextArea(document.getElementById("code"), {
         mode: "python",
         theme: "dracula",
         lineNumbers: true,
         indentUnit: 4,
-        viewportMargin: Infinity,
-        lineWrapping: true,
-        extraKeys: {"Ctrl-Space": "autocomplete"}
-      }).setCursor({ line: 0, ch: 0 });
+        viewportMargin: Infinity,    // Enables auto-height
+        lineWrapping: true,          // Enables line wrapping
+        extraKeys: {"Ctrl-Space": "autocomplete"}  // Optional: Enable autocomplete
     });
 
-    // Skulpt configuration functions
+    // Configure Skulpt
+    function outf(text) {
+        document.getElementById("output").innerHTML += text;
+    }
+
     function builtinRead(x) {
-      if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-        throw "File not found: '" + x + "'";
-      return Sk.builtinFiles["files"][x];
+        if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+            throw "File not found: '" + x + "'";
+        return Sk.builtinFiles["files"][x];
     }
 
-    function runit(id) {
-      const output = document.getElementById("output" + id);
-      const loading = document.getElementById("loading" + id);
-      output.innerHTML = '';
-      loading.style.display = "block";
+    // Function to run Python code
+    function runit() {
+        const output = document.getElementById("output");
+        const loading = document.getElementById("loading");
+        
+        // Clear previous output
+        output.innerHTML = '';
+        loading.style.display = "block";
 
-      Sk.configure({
-        output: function(text) { output.innerHTML += text; },
-        read: builtinRead,
-        __future__: Sk.python3
-      });
+        // Configure Skulpt
+        Sk.configure({
+            output: outf,
+            read: builtinRead,
+            __future__: Sk.python3
+        });
 
-      // Retrieve the current code value from the corresponding CodeMirror instance.
-      const editorInstance = CodeMirror.fromTextArea(document.getElementById("code" + id));
-      const prog = editorInstance.getValue();
+        // Get the code from CodeMirror
+        const prog = editor.getValue();
 
-      Sk.misceval.asyncToPromise(function() {
-        return Sk.importMainWithBody("<stdin>", false, prog, true);
-      }).then(function(mod) {
-          loading.style.display = "none";
-      }, function(err) {
-          output.innerHTML += err.toString();
-          loading.style.display = "none";
-      });
+        // Run the code
+        try {
+            Sk.importMainWithBody("<stdin>", false, prog, true);
+        } catch (e) {
+            output.innerHTML = '🚨 Error: ' + e.toString();
+        }
+        
+        loading.style.display = "none";
     }
 
-    function clearOutput(id) {
-      document.getElementById("output" + id).innerHTML = '';
+    // Function to clear output
+    function clearOutput() {
+        document.getElementById("output").innerHTML = '';
     }
   </script>
 </body>
