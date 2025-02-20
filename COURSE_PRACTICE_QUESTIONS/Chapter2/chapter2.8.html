@@ -201,20 +201,31 @@ sequences = ['ATG', 'CGT', 'TTA', 'ACG', 'GCT']
 </div>
 
 <script>
-    // Initialize CodeMirror editor with adjusted settings
-    let editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-        mode: "python",
-        theme: "dracula",
-        lineNumbers: true,
-        indentUnit: 4,
-        viewportMargin: Infinity,    // Enables auto-height
-        lineWrapping: true,          // Enables line wrapping
-        extraKeys: {"Ctrl-Space": "autocomplete"}  // Optional: Enable autocomplete
+    // Initialize CodeMirror editors for all textareas with ids starting with "code"
+    const editors = {};
+    document.querySelectorAll('textarea[id^="code"]').forEach(textarea => {
+        const id = textarea.id.replace('code', '');
+        editors[id] = CodeMirror.fromTextArea(textarea, {
+            mode: "python",
+            theme: "dracula",
+            lineNumbers: true,
+            indentUnit: 4,
+            viewportMargin: Infinity,
+            lineWrapping: true,
+            extraKeys: {"Ctrl-Space": "autocomplete"}
+        });
     });
 
-    // Configure Skulpt
-    function outf(text) {
-        document.getElementById("output").innerHTML += text;
+    function outf(text, id) {
+        let outputEl = document.getElementById(`output${id}`);
+        
+        // Escape < and > to prevent them from being misinterpreted as HTML
+        text = text.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+        outputEl.innerHTML += text;  
+        outputEl.scrollTop = outputEl.scrollHeight;
+
+        console.log(`Flushed output for ${id}:`, text);
     }
 
     function builtinRead(x) {
@@ -223,39 +234,41 @@ sequences = ['ATG', 'CGT', 'TTA', 'ACG', 'GCT']
         return Sk.builtinFiles["files"][x];
     }
 
-    // Function to run Python code
-    function runit() {
-        const output = document.getElementById("output");
-        const loading = document.getElementById("loading");
-        
-        // Clear previous output
-        output.innerHTML = '';
-        loading.style.display = "block";
+    // Function to run Python code with proper ID handling
+    function runit(id) {
+        const strId = String(id);
+        const output = document.getElementById(`output${strId}`);
+        const loading = document.getElementById(`loading${strId}`);
 
-        // Configure Skulpt
+        output.innerHTML = '';  
+        loading.style.display = "block";  
+
         Sk.configure({
-            output: outf,
+            output: (text) => outf(text, strId),
             read: builtinRead,
             __future__: Sk.python3
         });
 
-        // Get the code from CodeMirror
-        const prog = editor.getValue();
-
-        // Run the code
-        try {
-            Sk.importMainWithBody("<stdin>", false, prog, true);
-        } catch (e) {
-            output.innerHTML = '🚨 Error: ' + e.toString();
-        }
+        let prog = editors[strId].getValue();
         
-        loading.style.display = "none";
+        console.log(`Executing code for ${id}:\n`, prog);  // Debugging log
+
+        Sk.misceval.asyncToPromise(() => 
+            Sk.importMainWithBody("<stdin>", false, prog, true)
+        ).then(
+            () => { loading.style.display = "none"; },
+            (err) => {
+                console.error("Skulpt error:", err);
+                output.innerHTML = `🚨 Error: ${err}`;
+                loading.style.display = "none";
+            }
+        );
     }
 
-    // Function to clear output
-    function clearOutput() {
-        document.getElementById("output").innerHTML = '';
+
+    function clearOutput(id) {
+        document.getElementById(`output${id}`).innerHTML = '';
     }
-  </script>
+</script>
 </body>
 </html>
