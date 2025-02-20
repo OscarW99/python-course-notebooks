@@ -187,9 +187,10 @@ print(gc_content)
 
     // Configure Skulpt output function with exercise-specific ID
     function outf(text, id) {
-        // Append text with explicit newline to ensure proper formatting
+        console.log(`Output received for ${id}:`, text);  // Debugging log
         document.getElementById(`output${id}`).innerHTML += text + "\n";
     }
+
 
     function builtinRead(x) {
         if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
