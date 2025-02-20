@@ -196,16 +196,16 @@ print(gc_content)
         return Sk.builtinFiles["files"][x];
     }
 
-    // Function to run Python code with proper ID handling
+    // Function to run Python code with improved error handling
     function runit(id) {
-        const strId = String(id); // Ensure ID is a string
+        const strId = String(id);
         const output = document.getElementById(`output${strId}`);
         const loading = document.getElementById(`loading${strId}`);
 
         output.innerHTML = '';
         loading.style.display = "block";
 
-        // Capture the current ID for Skulpt's output closure
+        // Configure Skulpt to capture output and errors
         Sk.configure({
             output: (text) => outf(text, strId),
             read: builtinRead,
@@ -219,11 +219,17 @@ print(gc_content)
         ).then(
             () => { loading.style.display = "none"; },
             (err) => {
-                output.innerHTML = `🚨 Error: ${err}`;
+                // Capture Skulpt's error traceback
+                let errorMsg = err.toString();
+                if (err.traceback) {
+                    errorMsg = err.traceback.join('\n');
+                }
+                outf(`🚨 Error:\n${errorMsg}\n`, strId); // Append to output
                 loading.style.display = "none";
             }
         );
     }
+
 
     function clearOutput(id) {
         document.getElementById(`output${id}`).innerHTML = '';
