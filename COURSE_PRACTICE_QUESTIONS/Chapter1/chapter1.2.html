@@ -126,9 +126,8 @@
 <body>
   <div class="chapter-header">
     <h1>Chapter 1: Variables, Data Types, and Operators</h1>
-    </div>
-    <h2 style="text-align: center;">Variables and Basic Print Statements</h2>
   </div>
+  <h2 style="text-align: center;">Variables and Basic Print Statements</h2>
   <div class="exercise">
     <h3 class="exercise-title">Assign and print a variable</h3>
     <p><code>my_dna</code> is currently assigned to an empty string. Complete the following tasks:</p>
@@ -171,11 +170,11 @@ print(gc_content)
     <pre id="output2" class="output"></pre>
   </div>
 <script>
-    // Initialize CodeMirror editor with adjusted settings
     // Initialize CodeMirror editors for all textareas with ids starting with "code"
+    const editors = {};
     document.querySelectorAll('textarea[id^="code"]').forEach(textarea => {
         let id = textarea.id.replace('code', '');
-        CodeMirror.fromTextArea(document.getElementById("code" + id), {
+        editors[id] = CodeMirror.fromTextArea(document.getElementById("code" + id), {
             mode: "python",
             theme: "dracula",
             lineNumbers: true,
@@ -208,28 +207,29 @@ print(gc_content)
 
         // Configure Skulpt
         Sk.configure({
-            output: function(text) { output.innerHTML += text; },
+            output: function(text) { outf(text, id); },
             read: builtinRead,
             __future__: Sk.python3
         });
 
         // Get the code from CodeMirror
-        const prog = CodeMirror.fromTextArea(document.getElementById("code" + id)).getValue();
+        const prog = editors[id].getValue();
 
         // Run the code
-        try {
-            Sk.importMainWithBody("<stdin>", false, prog, true);
-        } catch (e) {
-            output.innerHTML = '🚨 Error: ' + e.toString();
-        }
-        
-        loading.style.display = "none";
+        Sk.misceval.asyncToPromise(function() {
+            return Sk.importMainWithBody("<stdin>", false, prog, true);
+        }).then(function() {
+            loading.style.display = "none";
+        }, function(err) {
+            output.innerHTML = '🚨 Error: ' + err.toString();
+            loading.style.display = "none";
+        });
     }
 
     // Function to clear output
     function clearOutput(id) {
         document.getElementById("output" + id).innerHTML = '';
     }
-  </script>
+</script>
 </body>
 </html>
