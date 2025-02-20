@@ -2,77 +2,77 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Chapter 1: Variables, Data Types, and Operators - Escape Sequences</title>
-  <!-- CodeMirror Assets -->
+  <title>Python Exercises</title>
+  <!-- CodeMirror -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/theme/dracula.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/mode/python/python.min.js"></script>
-  <!-- Skulpt Assets -->
+  <!-- Skulpt -->
   <script src="/python-course-notebooks/skulpt-dist-master/skulpt.min.js"></script>
   <script src="/python-course-notebooks/skulpt-dist-master/skulpt-stdlib.js"></script>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Arial',s ans-serif;
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
       background-color: #f5f5f5;
     }
+
     .chapter-header {
       background-color: #226c61;
       color: white;
-      padding: 10px;
+      padding: 15px;
       text-align: center;
-      font-size: 20px;
-      margin-bottom: 20px;
       border-radius: 5px;
+      margin-bottom: 30px;
     }
-    .section-title {
-      text-align: center;
-      font-size: 28px;
-      font-weight: bold;
-      margin: 30px 0;
-    }
+
     .exercise {
       background-color: white;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      margin-bottom: 25px;
+      margin-bottom: 15px;
     }
+
     .exercise-title {
-      margin-bottom: 10px;
-      font-size: 20px;
       color: #226c61;
       border-bottom: 2px solid #eee;
       padding-bottom: 10px;
+      margin-bottom: 15px;
     }
+
     .editor {
       border: 2px solid #ddd;
       border-radius: 4px;
       margin: 15px 0;
     }
-    /* CodeMirror styling */
+
+    /* Update CodeMirror instance styles */
     .CodeMirror {
       height: auto !important;
-      min-height: 50px;
-      max-height: 500px;
-      font-size: 14px;
-      overflow: hidden !important;
+      min-height: 100px;
+      max-height: 300px;           /* Increased max height */
+      font-size: 14px;            /* Adjust font size if needed */
+      overflow: hidden !important;  /* Hide the initial scrollbar */
     }
+
     .CodeMirror-scroll {
-      min-height: 50px;
-      max-height: 500px;
-      overflow-y: auto !important;
-      padding-right: 0 !important;
-      margin-right: 0 !important;
+      min-height: 100px;          /* Match CodeMirror min-height */
+      max-height: 300px;          /* Match CodeMirror max-height */
+      overflow-y: auto !important; /* Force vertical scrolling */
+      padding-right: 0 !important;  /* Remove extra padding that creates space for scrollbar */
+      margin-right: 0 !important;   /* Remove margin that creates space for scrollbar */
     }
+
     .button-group {
       margin: 15px 0;
       display: flex;
       gap: 10px;
     }
+
     .button {
       padding: 10px 20px;
       border: none;
@@ -80,33 +80,46 @@
       cursor: pointer;
       transition: all 0.3s ease;
     }
+
     .run-button {
       background-color: #226c61;
       color: white;
     }
+
     .clear-button {
       background-color: #6c2222;
       color: white;
     }
+
     .button:hover {
       opacity: 0.9;
       transform: translateY(-1px);
     }
+
     .output {
       background-color: #fff;
       padding: 15px;
       border-radius: 4px;
       border: 1px solid #ddd;
-      height: 150px;
-      max-height: 150px;
-      overflow-y: auto;
+      height: 150px;               /* Fixed height */
+      max-height: 150px;          /* Maximum height */
+      overflow-y: auto;           /* Enable vertical scrolling */
       white-space: pre-wrap;
       font-family: 'Courier New', monospace;
     }
+
     .loading {
       display: none;
       color: #226c61;
       margin: 10px 0;
+    }
+
+    .error-message {
+      color: #dc3545;
+      background-color: #ffe6e6;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
     }
   </style>
 </head>
