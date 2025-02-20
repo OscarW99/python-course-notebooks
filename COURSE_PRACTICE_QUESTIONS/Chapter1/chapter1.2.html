@@ -173,21 +173,21 @@ print(gc_content)
     // Initialize CodeMirror editors for all textareas with ids starting with "code"
     const editors = {};
     document.querySelectorAll('textarea[id^="code"]').forEach(textarea => {
-        let id = textarea.id.replace('code', '');
-        editors[id] = CodeMirror.fromTextArea(document.getElementById("code" + id), {
+        const id = textarea.id.replace('code', '');
+        editors[id] = CodeMirror.fromTextArea(textarea, {
             mode: "python",
             theme: "dracula",
             lineNumbers: true,
             indentUnit: 4,
-            viewportMargin: Infinity,    // Enables auto-height
-            lineWrapping: true,          // Enables line wrapping
-            extraKeys: {"Ctrl-Space": "autocomplete"}  // Optional: Enable autocomplete
+            viewportMargin: Infinity,
+            lineWrapping: true,
+            extraKeys: {"Ctrl-Space": "autocomplete"}
         });
     });
 
-    // Configure Skulpt
+    // Configure Skulpt output function with exercise-specific ID
     function outf(text, id) {
-        document.getElementById("output" + id).innerHTML += text;
+        document.getElementById(`output${id}`).innerHTML += text;
     }
 
     function builtinRead(x) {
@@ -196,39 +196,37 @@ print(gc_content)
         return Sk.builtinFiles["files"][x];
     }
 
-    // Function to run Python code
+    // Function to run Python code with proper ID handling
     function runit(id) {
-        const output = document.getElementById("output" + id);
-        const loading = document.getElementById("loading" + id);
-        
-        // Clear previous output
+        const strId = String(id); // Ensure ID is a string
+        const output = document.getElementById(`output${strId}`);
+        const loading = document.getElementById(`loading${strId}`);
+
         output.innerHTML = '';
         loading.style.display = "block";
 
-        // Configure Skulpt
+        // Capture the current ID for Skulpt's output closure
         Sk.configure({
-            output: function(text) { outf(text, id); },
+            output: (text) => outf(text, strId),
             read: builtinRead,
             __future__: Sk.python3
         });
 
-        // Get the code from CodeMirror
-        const prog = editors[id].getValue();
+        const prog = editors[strId].getValue();
 
-        // Run the code
-        Sk.misceval.asyncToPromise(function() {
-            return Sk.importMainWithBody("<stdin>", false, prog, true);
-        }).then(function() {
-            loading.style.display = "none";
-        }, function(err) {
-            output.innerHTML = '🚨 Error: ' + err.toString();
-            loading.style.display = "none";
-        });
+        Sk.misceval.asyncToPromise(() => 
+            Sk.importMainWithBody("<stdin>", false, prog, true)
+        ).then(
+            () => { loading.style.display = "none"; },
+            (err) => {
+                output.innerHTML = `🚨 Error: ${err}`;
+                loading.style.display = "none";
+            }
+        );
     }
 
-    // Function to clear output
     function clearOutput(id) {
-        document.getElementById("output" + id).innerHTML = '';
+        document.getElementById(`output${id}`).innerHTML = '';
     }
 </script>
 </body>
