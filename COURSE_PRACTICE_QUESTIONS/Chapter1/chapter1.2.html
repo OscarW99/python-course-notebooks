@@ -187,8 +187,16 @@ print(gc_content)
 
     // Configure Skulpt output function with exercise-specific ID
     function outf(text, id) {
-        document.getElementById(`output${id}`).innerHTML += text;
+    // Convert any object to string representation if needed
+    if (typeof text !== 'string') {
+        try {
+            text = String(text);
+        } catch (e) {
+            text = "[Object cannot be displayed]";
+        }
     }
+    document.getElementById(`output${id}`).innerHTML += text;
+}
 
     function builtinRead(x) {
         if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
@@ -207,10 +215,18 @@ print(gc_content)
 
         // Capture the current ID for Skulpt's output closure
         Sk.configure({
-            output: (text) => outf(text, strId),
-            read: builtinRead,
-            __future__: Sk.python3
-        });
+    output: function(text) {
+        // Ensure text is properly stringified before passing to outf
+        if (text && text.$r) {
+            // Handle Skulpt objects with repr method
+            outf(text.$r().v, strId);
+        } else {
+            outf(text, strId);
+        }
+    },
+    read: builtinRead,
+    __future__: Sk.python3
+});
 
         const prog = editors[strId].getValue();
 
