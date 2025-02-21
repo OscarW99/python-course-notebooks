@@ -1,0 +1,56 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 4: Functions and Libraries</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Understanding Libraries and Importing Modules
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Using the Math Module
+
+Import the math module and write code to:
+* Calculate the square root of 64 using `math.sqrt()`
+* Find the Euclidean distance between points (0,0) and (3,4) using `math.dist()`
+* Calculate π² (`math.pi` squared)
+<br>
+
+# Question 2
+### Introduction to the Random Module
+
+The random module provides functions for generating random numbers and making random selections. This is particularly useful in bioinformatics for creating test data or sampling. Here are some example functions from the random module as well as their syntax and use case:
+* `random.choice(sequence)`: Returns a randomly selected item
+* `random.sample(sequence, k)`: Returns k unique random items
+* `random.randint(a, b)`: Returns a random integer between a and b
+
+Using the provided list of amino acids and the random module functions, complete the following tasks:
+* Select a random amino acid from the list
+* Select 3 unique amino acids
+* Generate a random integer between 1 and 100
+<br>
+
+# Question 3
+### Using the Datetime Module
+
+The datetime module helps you work with dates and times. This is essential for tracking experiment timestamps, calculating durations, and managing time-series data. Here are some example features of this library:
+- **`datetime.datetime`**:
+    - **Description**: Class for creating and manipulating date and time objects.
+    - **Parameters**: `year, month, day, hour, minute, second, microsecond, tzinfo`
+    - **Example**: `dt = datetime.datetime(2025, 2, 15, 14, 30)` creates a `datetime` object for February 15, 2025, at 2:30 PM.
+- **`datetime.datetime.now()`**:
+    - **Description**: Returns the current local date and time.
+    - **Parameters**: `tz` (optional) – time zone info to localize the result.
+    - **Example**: `current_time = datetime.datetime.now()` returns the current date and time.
+- **`datetime.timedelta()`**:
+    - **Description**: Represents the difference between two `datetime` objects.
+    - **Parameters**: `days, seconds, microseconds, milliseconds, minutes, hours, weeks` (any combination).
+    - **Example**: `delta = datetime.timedelta(days=10)` creates a `timedelta` object representing 10 days.
+
+Using the datetime module functions:
+* Create a datetime object for December 25, 2025, at 2:30 PM
+* Calculate the difference in days between your created date and the current time (datetime.datetime.now())
+* Add 30 days to your datetime object using timedelta
+<br></br>
+</div>

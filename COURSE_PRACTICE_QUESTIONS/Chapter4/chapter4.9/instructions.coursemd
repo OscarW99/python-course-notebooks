@@ -1,0 +1,16 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 4: Functions and Libraries</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Recursion
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Power Calculation Function
+
+Complete the recursive function named `power` that takes two parameters: `num` (the base number) and `topwr` (the exponent). The function should return the result of raising `num` to the power of `topwr`. Remember, the breaking condition for the recursion is when `topwr` is zero, in which case the function should return 1.
+<br></br>
+</div>

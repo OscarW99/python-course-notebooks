@@ -1,0 +1,49 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 4: Functions and Libraries</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Importing Functions and Constants
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Importing a Single Function
+
+Import the `sqrt()` function from the `math` module and use it to calculate the square root of 144.
+<br>
+
+# Question 2
+### Importing a Constant
+
+Import the `pi` constant from the `math` module and use it to calculate the area of a circle with a radius of 7 units. Use the formula: A=πr².
+<br>
+
+# Question 3
+### Importing Multiple Functions
+
+Import multiple functions from the `math` module (`log()`, `factorial()`, and `pi`) and use them to:
+* Calculate the logarithm of 1000 with base 10
+* Calculate the factorial of 4
+* Print the value of `pi`
+<br>
+
+# Question 4
+### Importing All Functions
+
+Use the `from math import *` syntax to import all functions from the `math` module. Then, use the `ceil()` function to find the smallest integer greater than or equal to 4.2 and print it.
+<br>
+
+# Question 5
+### Using Function Aliases
+
+Import the `remainder()` function from the `math` module using the alias `rm`, and calculate the remainder of 30 divided by 7.
+<br>
+
+# Question 6
+### Module Aliases
+
+Use the `as` keyword to abbreviate the `datetime` module to `dt`. Then, print the current date and time using `dt.datetime.now()`.
+<br></br>
+</div>

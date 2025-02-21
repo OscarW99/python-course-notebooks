@@ -1,0 +1,42 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 4: Functions and Libraries</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Understanding Variable Scope
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Global Variable Modification
+
+Create a global variable named `total_sequences_processed` and set it to 0. Write a function named `process_sequence` that increments this global variable by 1 each time it's called, and print the value of `total_sequences_processed` after several function calls.
+<br>
+
+# Question 2
+### Using Global Inside a Function
+
+Define a global variable `enzyme` with the value "DNA Polymerase". Write a function `display_enzyme` that prints the value of `enzyme`. Then, reassign a new value to `enzyme` inside the function using the `global` keyword and print the value of `enzyme` both inside and outside the function.
+<br>
+
+# Question 3
+### Global List Modification
+
+Create a global list `dna_sequences` and write two functions:
+* First function adds a sequence to the list (without using global keyword)
+* Second function clears the list (using global keyword to reassign an empty list)
+<br>
+
+# Question 4
+### Multiple Global Variables
+
+Create a function that takes a sequence as an argument and tracks both sequence count and total length. Call this function on a few sequences.
+<br>
+
+# Question 5
+### Local vs Global Conflict
+
+Write a function that demonstrates the difference between local and global scope, then modify it to update the global variable instead of creating a local variable.
+<br></br>
+</div>

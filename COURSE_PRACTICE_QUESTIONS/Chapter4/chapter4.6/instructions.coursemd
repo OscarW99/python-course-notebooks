@@ -1,0 +1,39 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 4: Functions and Libraries</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Introduction to Python Functions
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Creating a Greeting Function
+
+Complete the `greet` function to print a greeting. Call the function to display the message.
+<br>
+
+# Question 2
+### DNA Sequence Printer
+
+Complete the function that prints a DNA sequence. Call the function with different DNA sequences.
+<br>
+
+# Question 3
+### Sequence Length Calculator
+
+Complete the function to print a sequence length. Call the function with different sequences.
+<br>
+
+# Question 4
+### Nucleotide Counter
+
+Write a function to count nucleotides:
+* Create a function named `count_a` that takes a DNA sequence as a parameter
+* Count the total number of 'A' nucleotides using the string `count()` method
+* Print the 'A' count
+* Call this function with different sequences
+<br>
+</br>
+</div>

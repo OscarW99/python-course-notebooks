@@ -1,0 +1,36 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 4: Functions and Libraries</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Python Built-in Functions
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Using any() and all()
+
+Working with enzyme activity and sample quality data:
+* Check if ANY enzyme shows significant activity
+* Determine if ALL samples pass quality control
+<br>
+
+# Question 2
+### Formatting Numbers
+
+Using `format()` function, process these biological measurements:
+* Format protein concentration to 2 decimal places (Hint: Use `.2f`)
+* Convert mutation rate to a percentage with 1 decimal place (Hint: Use `.1%`)
+* Format gene expression value to scientific notation (Hint: Use `.2E`)
+<br>
+
+# Question 3
+### Working with Fragment Lengths
+
+Given a list of DNA fragment lengths, write code to:
+* Find the maximum fragment length
+* Create a formatted string of the maximum length with 1 decimal place
+* Check if ANY fragment is longer than 200 base pairs
+<br></br>
+</div>

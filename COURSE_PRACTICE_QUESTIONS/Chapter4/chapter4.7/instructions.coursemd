@@ -1,0 +1,46 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 4: Functions and Libraries</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    The return Keyword & parameters
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Counting Guanine Nucleotides
+
+Complete the Python function named `count_guanine` that takes a DNA sequence as input and returns the count of guanine nucleotides ('G'). Call the function with different sequences.
+<br>
+
+# Question 2
+### String Reversal
+
+Create a function named `reverse_string` that takes a string as input and returns the reverse of that string. (Hint: You can use string slicing for this.) Call the function with different sequences.
+<br>
+
+# Question 3
+### Flexible Nucleotide Counter
+
+Complete the Python function named `count_nucleotides` that takes a DNA sequence as input and an optional nucleotide argument (defaulting to 'A'). The function should return the count of the specified nucleotide in the sequence. Call this function with:
+* The sequence 'ATTAGTC' using the default nucleotide parameter
+* The sequence 'ATTAGTC' using 'T' as the nucleotide argument
+<br>
+
+# Question 4
+### GC Content Calculator
+
+Create a function named `calculate_gc_content` that takes a DNA sequence as input and returns the GC content (the percentage of 'G' and 'C' nucleotides).
+* Call the function with the DNA sequence "ATGCGC" and store the result in a variable named `gc_content`
+* Print the calculated `gc_content`
+<br>
+
+# Question 5
+### Sequence Length Analyzer
+
+Create a function named `analyze_sequence` that takes a DNA sequence and optional arguments for minimum length (default 5) and maximum length (default 20). The function should return a string describing the sequence length: "Too short", "Ok", or "Too long".
+* Call the function with the DNA sequence "ATCGATCGATCG" and default parameters
+* Call the function with the DNA sequence "ATCGATCGATCG", `min_length=3`, and `max_length=10`
+<br></br>
+</div>

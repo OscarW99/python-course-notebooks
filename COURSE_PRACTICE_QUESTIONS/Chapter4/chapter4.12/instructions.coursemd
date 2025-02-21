@@ -1,0 +1,72 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 4: Functions and Libraries</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Lambda Functions
+</div>
+<br>
+<div style="font-size:18px;">
+
+**Quick Reference:**
+* `map(function, iterable)`: Applies `function` to each item in `iterable` and returns a map object
+* `filter(function, iterable)`: Filters items in `iterable` based on `function` returning `True` or `False`
+* `sorted(iterable, key=function)`: Sorts `iterable` based on `key` and returns a new sorted list
+<br>
+
+# Question 1
+### Basic Lambda Syntax
+
+Create three lambda functions:
+* One that squares a number
+* One that adds three numbers
+* One that converts a base to lowercase
+
+Test each with appropriate inputs.
+<br>
+
+# Question 2
+### Lambda with Filter
+
+Using the given list of protein sequences, create lambda functions to:
+* Filter sequences that start with 'M'
+* Filter sequences containing 'K'
+* Filter sequences longer than 4 characters
+<br>
+
+# Question 3
+### Lambda with Map
+
+Using the given DNA sequences, use lambda functions with `map()` to:
+* Convert each sequence to lowercase
+* Get the length of each sequence
+* Add "DNA:" as prefix to each sequence
+<br>
+
+# Question 4
+### Lambda with Sorting
+
+Using the given list of sequence data, use lambda functions to sort the list:
+* By sequence length
+* By actual sequence alphabetically
+* By length in descending order
+<br>
+
+# Question 5
+### Combining Lambda Functions
+
+Create a pipeline using lambda functions with the given DNA sequences:
+* First filter sequences containing 'AT'
+* Then map to get their lengths
+* Finally sort the results
+<br>
+
+# Question 6
+### Lambda vs Regular Function
+
+Write the same functionality two ways:
+* As a regular function that checks if a sequence has balanced GC content (e.g., the percentage of 'G' and 'C' nucleotides are equal)
+* As a lambda function doing the same thing
+* Consider when each would be more appropriate
+<br></br>
+</div>

@@ -1,0 +1,34 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 4: Functions and Libraries</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Data Conversion Functions
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Basic Data Type Conversions
+
+Using different data conversion functions, perform these transformations:
+* Convert the string `"3.14159"` to a float
+* Convert the float number to an integer
+* Convert the integer back to a string
+* Print the type of each result
+<br>
+
+# Question 2
+### Collection Type Conversions
+
+Create a dictionary from the given protein lengths data, then use conversion functions to:
+* Convert the dictionary keys to a set
+* Convert the dictionary values to a list
+<br>
+
+# Question 3
+### Boolean Conversions
+
+Use the `bool()` function to test these values and predict their output:
+<br></br>
+</div>

@@ -1,0 +1,93 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 4: Functions and Libraries</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    End of Chapter Problems
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1  
+### Custom Function Creation  
+Write a function `calculate_protein_weight` that:  
+- Takes a protein sequence as a parameter  
+- Uses the predefined dictionary of amino acid molecular weights  
+- Calculates and returns the total molecular weight of the protein  
+- Includes a docstring explaining the function's purpose  
+<br>
+
+# Question 2  
+### Lambda Function for Sequence Manipulation  
+Create a lambda function that:  
+- Takes a DNA sequence as input  
+- Converts all nucleotides to uppercase  
+- Removes any non-DNA characters from the sequence  
+- Test with sequences like "atgcgt", "ATGC123", and "gcTa"  
+<br>
+
+# Question 3  
+### Function with Default Parameters  
+Write a function `analyze_gene_expression` with:  
+- Parameters for gene name, expression level, and a default threshold of 100  
+- Print different messages based on the expression level compared to the threshold  
+- Demonstrate calling the function with and without specifying the threshold  
+<br>
+
+# Question 4  
+### Using *args in a Function  
+Create a function `calculate_average_sequence_length` that:  
+- Accepts multiple DNA sequences as arguments  
+- Calculates and returns the average length of the sequences  
+- Handles cases with varying numbers of input sequences  
+<br>
+
+# Question 5  
+### Using **kwargs in a Function  
+Develop a function `protein_database_entry` that:  
+- Accepts various attributes of a protein using keyword arguments  
+- Prints out a formatted description of the protein  
+- Includes at least name, function, and molecular weight as potential attributes  
+<br>
+
+# Question 6  
+### Recursive Function for Factorial  
+Write a recursive function `calculate_factorial` that:  
+- Takes a non-negative integer as input  
+- Recursively calculates the factorial  
+- Provides base cases for 0 and 1  
+- Includes error handling for negative inputs  
+<br>
+
+# Question 7  
+### Standard Library Modules  
+Write code that:  
+- Imports the `random` module  
+- Generates 10 random DNA sequences (lengths 5-20 nucleotides)  
+- Uses the `statistics` module to calculate mean sequence length  
+  (Hint: Use `random.choice()` to randomly select from 'ATGC' and `random.randint(start, stop)` for lengths; import `statistics` and use `statistics.mean()` to find the mean)  
+<br>
+
+# Question 8  
+### Advanced Function with Libraries  
+Create a function `analyze_sequence_distribution` that:  
+- Uses the `math` module for calculations  
+- Takes a list of DNA sequences  
+- Calculates and returns the standard deviation of sequence lengths  
+<br>
+
+# Question 9  
+### Lambda and Built-in Functions  
+Use lambda functions with `map()` or `filter()` to:  
+- Convert a list of DNA sequences to their reverse sequences  
+- Filter out sequences shorter than 10 nucleotides  
+<br>
+
+# Question 10  
+### Docstring and Placeholder Function  
+Create a function `sequence_alignment` with:  
+- A comprehensive docstring explaining its purpose  
+- Uses the `pass` keyword as a placeholder  
+- Includes at least three parameters typical in sequence alignment (e.g., sequences, alignment method, scoring matrix)  
+<br></br>
+</div>

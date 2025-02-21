@@ -1,0 +1,37 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 4: Functions and Libraries</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Built-in Functions and Function Format
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Working with Built-in Functions
+
+Using Python built-in functions, write code to:
+* Create a list from the string `"AGTC"`
+* Print the type of the resulting list
+* Print each element on a new line
+<br>
+
+# Question 2
+### Functions vs Methods
+
+Write a program that demonstrates the difference between a function and a method by:
+* Using the `type()` function on a string `"atcg"`
+* Using the `upper()` method on the same string
+* Add comments explaining which is the function call and which is the method call
+<br>
+
+# Question 3
+### Processing Loop with range()
+
+Using the `range()` function, create a loop that:
+* Simulates the processing of 3 DNA sequences
+* Prints "Processing sequence X of 3" for each iteration
+* (where X is the current sequence number starting from 1)
+<br></br>
+</div>

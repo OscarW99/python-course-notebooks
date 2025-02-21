@@ -1,0 +1,34 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 4: Functions and Libraries</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Iterator Functions
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Working with iter() and next()
+
+Using the provided DNA codons list:
+* Create an iterator object from this list
+* Print the three codons using `next()`
+<br>
+
+# Question 2
+### Using enumerate() and zip()
+
+Working with the provided sequences:
+* Print each nucleotide with its index from `seq1`
+* Create a list of tuples pairing corresponding nucleotides from `seq1` and `seq2`
+<br>
+
+# Question 3
+### Sorting and Reversing
+
+Given the list of gene expression values, write code to:
+* Create a sorted version in descending order
+* Convert it to a reversed iterator and print the first three values
+<br></br>
+</div>

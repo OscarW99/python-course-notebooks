@@ -1,7 +1,5 @@
 # Chapter 3: Data Structures
 
-
-
 #* 1. Set Comprehension for Unique Nucleotides
 dna_sequences = ['ATCG', 'GCTA', 'ATCG', 'TAGC']
 # Solution:

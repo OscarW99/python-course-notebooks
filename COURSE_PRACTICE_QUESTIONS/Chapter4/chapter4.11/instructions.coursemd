@@ -1,0 +1,54 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 4: Functions and Libraries</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Docstrings, pass, and Advanced Built-in Functions
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Creating and Documenting a Function
+
+Write a function named `analyze_protein_structure` that takes a protein sequence as a parameter. The function should include a docstring describing its purpose, parameters, and return value. Inside the function, use the `pass` keyword as a placeholder for future implementation.
+<br>
+
+# Question 2
+### Using map() Function
+
+Create a function `convert_to_rna` that converts a DNA sequence to RNA. Then, use the `map()` function to apply `convert_to_rna` to each sequence in the list.
+<br>
+
+# Question 3
+### Filtering with filter() Function
+
+Create a function `is_short_sequence` that checks if a sequence is shorter than 15 nucleotides. Use the `filter()` function to get a list of sequences shorter than 15 nucleotides.
+<br>
+
+# Question 4
+### Basic Sorting
+
+Using the given list of sequences, use the `sorted()` function with the `len` function as key to sort sequences by length. Then sort them again in descending order using the reverse parameter.
+<br>
+
+# Question 5
+### Complex Sorting
+
+Create a function `gc_content` that calculates GC content of a sequence, then use it to sort the provided list of DNA sequences.
+<br>
+
+# Question 6
+### Calculate Melting Temperature
+
+Create a function named `calculate_melting_temperature` that calculates the DNA melting temperature based on the following formula:
+
+$Tm=2×(Number\ of\ A\text{-}T\ pairs)+4×(Number\ of\ G\text{-}C\ pairs)$
+
+The function should:
+* Take a DNA sequence as input and count the number of A-T and G-C pairs
+* Include a complete docstring
+* Use comments to explain the calculation
+* Return the calculated melting temperature as a float
+<br></br>
+</div>

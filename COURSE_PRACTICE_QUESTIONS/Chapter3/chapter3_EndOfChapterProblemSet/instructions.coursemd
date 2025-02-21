@@ -1,0 +1,87 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 3: Data Structures</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    End of Chapter Problems
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### List Manipulation
+You are analyzing a set of DNA sequences. Write a Python script to:
+- Create a list of DNA sequences: ['ATCG', 'GCTA', 'TAGC', 'CAGT']
+- Add a new sequence 'ACGT' to the end of the list
+- Remove the second sequence from the list
+- Insert 'TGCA' at index 2
+- Print the final list
+<br>
+
+# Question 2
+### Nested List Processing
+Using the provided nested list of gene expression data, write a Python script to:
+- Print the name of the gene with the highest expression level
+- Calculate the average expression level
+- Create a new list with only the gene names
+<br>
+
+# Question 3
+### Tuple Immutability Challenge
+Create a tuple of amino acids and:
+- Demonstrate an attempt to modify the tuple (which will raise an error)
+- Show the correct way to create a new tuple with modifications
+<br>
+
+# Question 4
+### Set Operations
+Using the provided sets of gene names, write a Python script to:
+- Find the intersection of the two sets
+- Create a set of unique genes from both sets
+- Check if 'BRCA1' is present in the combined set
+<br>
+
+# Question 5
+### Dictionary Creation and Manipulation
+Using the provided protein information dictionary, write a Python script to:
+- Add a new protein 'Hemoglobin' with weight 64.5 and function 'oxygen transport'
+- Print all protein names
+- Retrieve and print the function of 'Insulin'
+<br>
+
+# Question 6
+### String Method Applications
+Given a DNA sequence "atgctagctatgctagct", write code to:
+- Convert the sequence to uppercase
+- Count the number of 'A' bases
+- Check if the sequence starts with 'ATG'
+- Replace all 'A' bases with 'X'
+<br>
+
+# Question 7
+### Nested Dictionary Exploration
+Using the provided experiment data dictionary, write a Python script to:
+- Print the results of each experiment
+- Check if any experiment has a temperature above 40
+- Add a new experiment with custom parameters
+<br>
+
+# Question 8
+### List Comprehension Challenge
+Using the provided expression levels, create list comprehensions to:
+- Create a new list with expression levels above 100
+- Normalize the expression levels (divide by the maximum value)
+<br>
+
+# Question 9
+### Set Comprehension
+Create a set comprehension to extract unique nucleotides from the given DNA sequences.
+<br>
+
+# Question 10
+### Tuple Unpacking
+Using the provided gene data, write code to:
+- Print each gene name and its expression level
+- Create a list of genes with expression levels above 100
+<br></br>
+</div>
