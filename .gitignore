@@ -10,3 +10,6 @@ __pycache__/
 
 # Ignore Jupyter Notebook checkpoints
 .ipynb_checkpoints/
+
+# Ignore file renaming script
+COURSE_PRACTICE_QUESTIONS/rename_files.py
