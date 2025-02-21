@@ -1,5 +1,5 @@
 <div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
-    <strong>Chapter 12: Creating Executable Python Scripts</strong>
+    <strong>Chapter 13: Creating Executable Python Scripts</strong>
 </div>
 
 <div style="text-align:center; font-size:28px; font-weight:bold;">
@@ -44,22 +44,22 @@ The chances are your current working directory is <span style="color:#4d9950;">C
 
 - **Full Path Example (<span style="color:#3d82ba;">Windows</span>):**
   ```bash
-  python "C:\Users\name\example\path\coding\COURSE_PRACTICE_QUESTIONS\Chapter12\chapter12.1\question3\q3.py" file1.fasta file2.fasta
+  python "C:\Users\name\example\path\coding\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13.1\question3\q3.py" file1.fasta file2.fasta
   ```
 
 - **Full Path Example (<span style="color:#3d82ba;">macOS/Linux</span>):**
   ```bash
-  python3 "/home/user/example/path/coding/COURSE_PRACTICE_QUESTIONS/Chapter12/chapter12.1/question3/q3.py" file1.fasta file2.fasta
+  python3 "/home/user/example/path/coding/COURSE_PRACTICE_QUESTIONS/Chapter13/chapter13.1/question3/q3.py" file1.fasta file2.fasta
   ```
 
 - **Relative Path Example (from <span style="color:#4d9950;">COURSE_PRACTICE_QUESTIONS</span> - <span style="color:#3d82ba;">Windows</span>):**
   ```bash
-  python Chapter12\chapter12.1\question3\q3.py file1.fasta file2.fasta
+  python Chapter13\chapter13.1\question3\q3.py file1.fasta file2.fasta
   ```
 
 - **Relative Path Example (from <span style="color:#4d9950;">COURSE_PRACTICE_QUESTIONS</span> - <span style="color:#3d82ba;">macOS/Linux</span>):**
   ```bash
-  python3 Chapter12/chapter12.1/question3/q3.py file1.fasta file2.fasta
+  python3 Chapter13/chapter13.1/question3/q3.py file1.fasta file2.fasta
   ```
 
 <br>

@@ -1,4 +1,4 @@
-# Chapter 3: Data Structures
+# Chapter 5: Data Structures
 
 #* 1. Extracting a Subsequence
 dna_sequence = ['A', 'T', 'G', 'C', 'A', 'T', 'G', 'C', 'A', 'T']

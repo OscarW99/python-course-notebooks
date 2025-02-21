@@ -1,4 +1,4 @@
-# Chapter 4: Functions and Libraries
+# Chapter 6: Functions and Libraries
 
 #* 1. Counting Guanine Nucleotides
 def count_guanine(dna_sequence):

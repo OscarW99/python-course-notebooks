@@ -1,4 +1,4 @@
-# Chapter 7: Error Handling and Logging
+# Chapter 8: Error Handling and Logging
 
 #* 1. DNA Sequence Validation
 dna_sequence = "ATGCCTGAATTC"

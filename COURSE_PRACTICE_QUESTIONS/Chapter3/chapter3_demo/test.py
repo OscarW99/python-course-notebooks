@@ -1,10 +1,10 @@
-# Chapter 5: Local Development Environment Problem Set
+# Chapter 3: Local Development Environment Problem Set
 
 # 1. Test Script
 print("hello world")
 
 """
-This is a question for the Chapter 5: Local Development Environment Problem Set.
+This is a question for the Chapter 3: Local Development Environment Problem Set.
 """
 
 # 2. Sequence Transformation

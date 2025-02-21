@@ -1,4 +1,4 @@
-# Chapter 9: Data Manipulation
+# Chapter 10: Data Manipulation
 
 # Note: File paths differ between operating systems. 
 # Use forward slashes (/) for Linux and macOS, and backslashes (\) for Windows.

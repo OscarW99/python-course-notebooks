@@ -1,4 +1,4 @@
-# Chapter 12: Creating Executable Python Scripts
+# Chapter 13: Creating Executable Python Scripts
 
 #* 1. Simple OOP
 class SequenceAnalyzer:

@@ -1,4 +1,4 @@
-# Chapter 10: Data Visualization
+# Chapter 11: Data Visualization
 
 # Note: File paths differ between operating systems. 
 # Use forward slashes (/) for Linux and macOS, and backslashes (\) for Windows.

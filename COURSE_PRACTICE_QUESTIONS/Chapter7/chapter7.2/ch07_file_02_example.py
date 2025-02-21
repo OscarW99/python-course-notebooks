@@ -1,4 +1,4 @@
-# Chapter 6: Working with Files
+# Chapter 7: Working with Files
 
 # Note: File paths differ between operating systems. 
 # Use forward slashes (/) for Linux and macOS, and backslashes (\) for Windows.

@@ -1,4 +1,4 @@
-# Chapter 11: Object-Orientated Programming
+# Chapter 12: Object-Orientated Programming
 
 #* 1. Cell and StemCell Inheritance
 class Cell:

@@ -1,4 +1,4 @@
-# Chapter 8: Regular Expressions
+# Chapter 9: Regular Expressions
 
 import re
 

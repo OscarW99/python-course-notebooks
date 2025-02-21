@@ -1,4 +1,4 @@
-# Chapter 11: Object-Orientated Programming
+# Chapter 12: Object-Orientated Programming
 
 #* 1. Encapsulated Protein Class
 class Protein:

@@ -1,4 +1,4 @@
-# Chapter 7: Error Handling and Logging
+# Chapter 8: Error Handling and Logging
 
 # Note: File paths differ between operating systems. 
 # Use forward slashes (/) for Linux and macOS, and backslashes (\) for Windows.

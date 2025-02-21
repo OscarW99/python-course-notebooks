@@ -1,4 +1,4 @@
-# Chapter 4: Functions and Libraries
+# Chapter 6: Functions and Libraries
 
 #* 1. Analyzing Protein Weights
 protein_weights = [45.3, 17.8, 56.9, 22.4, 34.2]

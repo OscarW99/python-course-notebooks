@@ -1,4 +1,4 @@
-# Chapter 3: Data Structures
+# Chapter 5: Data Structures
 
 #* 1. Simple Unpacking
 amino_acids = ['Alanine', 'Cysteine', 'Glycine']

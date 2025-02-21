@@ -1,4 +1,4 @@
-# Chapter 3: Data Structures
+# Chapter 5: Data Structures
 
 #* 1. Creating a New List of Squares
 numbers = [1, 2, 3, 4, 5]

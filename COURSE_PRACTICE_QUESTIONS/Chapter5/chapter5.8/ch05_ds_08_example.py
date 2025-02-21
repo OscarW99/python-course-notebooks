@@ -1,4 +1,4 @@
-# Chapter 3: Data Structures
+# Chapter 5: Data Structures
 
 #* 1. Accessing Tuple Elements
 amino_acid_pair = ('lysine', 'arginine')

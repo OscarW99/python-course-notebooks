@@ -1,4 +1,4 @@
-# Chapter 4: Functions and Libraries
+# Chapter 6: Functions and Libraries
 
 #* 1. Analyzing Multiple Gene Sequences
 def analyze_gene_sequences(*args):

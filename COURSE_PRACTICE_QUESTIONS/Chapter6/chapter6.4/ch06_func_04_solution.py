@@ -1,4 +1,4 @@
-# Chapter 4: Functions and Libraries
+# Chapter 6: Functions and Libraries
 
 #* 1. Working with iter() and next()
 dna_codons = ['ATG', 'CCA', 'GGT', 'TAA']

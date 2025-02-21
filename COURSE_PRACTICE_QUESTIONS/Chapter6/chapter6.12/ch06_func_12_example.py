@@ -1,4 +1,4 @@
-# Chapter 4: Functions and Libraries
+# Chapter 6: Functions and Libraries
 
 #* 1. Basic Lambda Syntax
 square = lambda x: x ** 2

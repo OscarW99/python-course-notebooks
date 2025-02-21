@@ -1,4 +1,4 @@
-# Chapter 3: Data Structures
+# Chapter 5: Data Structures
 
 # Sets for practice problems 1-4
 amino_acids_set1 = {'glycine', 'alanine', 'valine', 'serine', 'leucine', 'phenylalanine'}

@@ -1,0 +1,31 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 10: Data Manipulation</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    NumPy Arrays and Reshaping
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+Create a one-dimensional NumPy array containing gene expression values `[2.1, 4.2, 1.5, 3.8, 2.9]`. Print the array and its shape.
+<br></br>
+
+# Question 2
+Using `np.full()`, create a 2x3 array filled with the value 
+**0.5**. Print the array.
+<br></br>
+
+# Question 3
+Generate a sequence using `np.arange()` from 0 to 14 with step size 2, then use smart reshaping with -1 to create a matrix with 4 columns. Print both arrays.
+<br></br>
+
+# Question 4
+Create a 2x2x2 three-dimensional array using `np.ones()`. Print both the array and its shape.
+<br></br>
+
+# Question 5
+Create an array with numbers 1-12, then reshape it into a 3x4 matrix. Print both the original array and the reshaped matrix.
+<br></br>
+</div>

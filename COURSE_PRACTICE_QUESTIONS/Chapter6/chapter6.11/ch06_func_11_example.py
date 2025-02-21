@@ -1,4 +1,4 @@
-# Chapter 4: Functions and Libraries
+# Chapter 6: Functions and Libraries
 
 #* 1. Creating and Documenting a Function
 def analyze_protein_structure(protein_sequence):

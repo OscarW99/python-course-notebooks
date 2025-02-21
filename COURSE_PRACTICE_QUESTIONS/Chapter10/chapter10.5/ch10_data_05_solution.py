@@ -1,4 +1,4 @@
-# Chapter 9: Data Manipulation
+# Chapter 10: Data Manipulation
 
 import pandas as pd
 

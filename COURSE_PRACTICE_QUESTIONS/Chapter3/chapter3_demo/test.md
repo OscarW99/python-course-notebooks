@@ -1,4 +1,4 @@
-# Chapter 5: Local Development Environment Problem Set
+# Chapter 3: Local Development Environment Problem Set
 
 ## Setup Instructions
 1. Open VSCode

@@ -1,4 +1,4 @@
-# Chapter 4: Functions and Libraries
+# Chapter 5: Data Structures
 
 #* 1. List Manipulation
 dna_sequences = ['ATCG', 'GCTA', 'TAGC', 'CAGT']

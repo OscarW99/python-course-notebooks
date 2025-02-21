@@ -1,4 +1,4 @@
-# Chapter 4: Functions and Libraries
+# Chapter 6: Functions and Libraries
 
 #* 1. Using any() and all()
 enzyme_activities = [False, False, 0.05, 0.00, False]
