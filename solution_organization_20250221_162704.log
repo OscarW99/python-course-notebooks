@@ -1,0 +1,31 @@
+Example Solutions Organization Log - 2025-02-21 16:27:04
+Mode: Trial Run
+
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13.1\question1\q1_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter13\ch13_exec_01_q1_q1_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13.1\question2\q2_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter13\ch13_exec_01_q2_q2_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13.1\question3\q3_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter13\ch13_exec_01_q3_q3_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13.1\question4\q4_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter13\ch13_exec_01_q4_q4_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13.2\question1\q1_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter13\ch13_exec_02_q1_q1_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13.2\question2\q2_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter13\ch13_exec_02_q2_q2_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13.2\question3\q3_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter13\ch13_exec_02_q3_q3_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13.3\question1\hello_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter13\ch13_exec_03_q1_hello_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13.3\question2\greet_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter13\ch13_exec_03_q2_greet_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13.3\question3\count_args_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter13\ch13_exec_03_q3_count_args_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13_EndOfChapterProblemSet\example_solutions\arg_checker_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter13\ch13_example_solutions_arg_checker_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13_EndOfChapterProblemSet\example_solutions\base_counter_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter13\ch13_example_solutions_base_counter_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13_EndOfChapterProblemSet\example_solutions\bio_tool_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter13\ch13_example_solutions_bio_tool_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13_EndOfChapterProblemSet\example_solutions\clean_data_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter13\ch13_example_solutions_clean_data_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13_EndOfChapterProblemSet\example_solutions\dna_validator_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter13\ch13_example_solutions_dna_validator_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13_EndOfChapterProblemSet\example_solutions\error_logger_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter13\ch13_example_solutions_error_logger_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13_EndOfChapterProblemSet\example_solutions\execution_check_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter13\ch13_example_solutions_execution_check_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13_EndOfChapterProblemSet\example_solutions\mutate_seq_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter13\ch13_example_solutions_mutate_seq_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13_EndOfChapterProblemSet\example_solutions\seq_len_analyzer_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter13\ch13_example_solutions_seq_len_analyzer_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13_EndOfChapterProblemSet\example_solutions\stdin_reader_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter13\ch13_example_solutions_stdin_reader_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter8\chapter8.6\question1\q1_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter8\q1_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter8\chapter8.6\question2\q2_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter8\q2_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter8\chapter8.6\question3\q3_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter8\q3_example_solutions.py
+TRIAL: Would copy .\COURSE_PRACTICE_QUESTIONS\Chapter8\chapter8.6\question4\q4_example_solutions.py -> COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter8\q4_example_solutions.py
+
+---------- SUMMARY ----------
+Total files processed: 24
+Files skipped/errors: 0
