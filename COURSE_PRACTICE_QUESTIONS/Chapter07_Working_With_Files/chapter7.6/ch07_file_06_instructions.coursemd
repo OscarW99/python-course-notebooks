@@ -62,7 +62,7 @@ data/
 - Write a script to:
     - Build a full path to a file called `final_report.txt` located inside the `analysis` directory of `project_files`.
     - Print the constructed path for both Windows and Unix-like systems.
-    - Confirm that the path is correct by navigating to the specified location and verifying that it exists.
+    - Confirm that the path is correct by navigating to the specified location and verifying if it exists. Create it if not.
 <br></br>
 
 # Question 6: Move a File

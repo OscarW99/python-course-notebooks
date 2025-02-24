@@ -1,5 +1,11 @@
-Patient_ID\tAge\tCondition
-\tP1\t35\tHealthy
-\tP2\t45\tDisease
-\tP3\t50\tHealthy
-\tP4\t60\tDisease
+Patient_ID	Age	Condition
+P001	45	Hypertension
+P002	62	Diabetes
+P003	33	Normal
+P004	50	Hypertension
+P005	29	Normal
+P006	55	Diabetes
+P007	38	Normal
+P008	60	Hypertension
+P009	41	Diabetes
+P010	27	Normal

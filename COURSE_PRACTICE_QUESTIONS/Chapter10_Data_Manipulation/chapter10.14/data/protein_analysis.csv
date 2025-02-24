@@ -4,3 +4,38 @@ Protein_ID,Length,Hydrophobicity,Stability_Score,Expression_Level,Cellular_Locat
 3,90,-3.5,0.4,25,membrane
 4,200,1.5,0.2,15,endoplasmic reticulum
 5,,0.0,0.7,50,
+6,700,-1.0,0.9,80,nucleus
+7,50,2.5,0.3,5,mitochondria
+8,300,-4.0,0.75,70,Plasma Membrane
+9,600,3.0,0.5,35,Golgi apparatus
+10,120,-0.5,0.65,55,cytosol
+11,80,1.0,0.25,10,lysosome
+12,450,-3.0,0.85,90,Endoplasmic Reticulum
+13,750,4.0,0.45,20,nuclear membrane
+14,180,-2.5,0.7,65,extracellular space
+15,550,-1.5,0.55,40,peroxisome
+16,95,2.0,0.35,12,vesicle
+17,350,-3.5,0.9,75,nucleoplasm
+18,650,3.5,0.6,30,Cell Membrane
+19,130,-0.8,0.8,85,intermembrane space
+20,85,1.5,0.2,8,endosome
+21,520,-2.0,0.78,68,nuclear pore
+22,720,2.8,0.52,42,integral membrane
+23,170,-1.2,0.68,58,interstitial fluid
+24,620,-0.5,0.48,38,peripheral membrane
+25,98,2.2,0.32,18,vacuole
+26,380,-3.2,0.92,78,nuclear matrix
+27,680,3.2,0.58,32,membrane raft
+28,140,-0.6,0.82,88,synaptic membrane
+29,780,2.6,0.42,22,nuclear envelope
+30,800,4.2,0.95,95,inner nuclear membrane
+31,100,0.2,0.1,20,Outer Membrane
+32,250,-2.8,0.62,48,Nuclear Region
+33,580,3.8,0.38,28,Nuclear lamina
+34,190,-1.8,0.88,82,Nuclear speckle
+35,320,-0.2,0.58,52,Nuclear pore complex
+36,630,2.2,0.68,36,Nuclear periphery
+37,110,-4.2,0.28,16,Nuclear matrix
+38,420,-1.2,0.98,98,Nuclear body
+39,730,1.8,0.32,12,Nuclear basket
+40,220,-3.8,0.2,88,Nuclear fibrillar center

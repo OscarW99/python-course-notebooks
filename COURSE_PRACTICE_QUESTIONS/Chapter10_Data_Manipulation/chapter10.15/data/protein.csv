@@ -2,3 +2,20 @@ Protein_ID,Length,Function,Gene_ID,Pathway
 Pro1,150,Enzyme,Gene1,Metabolism
 Pro2,200,Transporter,Gene2,Signaling
 Pro3,100,Receptor,Gene3,Metabolism
+Pro4,250,Kinase,Gene4,Apoptosis
+Pro5,180,Transcription Factor,Gene5,Differentiation
+Pro6,300,Channel,Gene6,Transport
+Pro7,120,Antibody,Gene7,Immunity
+Pro8,220,Growth Factor,Gene8,Growth
+Pro9,280,Polymerase,Gene9,Transcription
+Pro10,320,Ribosomal Protein,Gene10,Translation
+Pro11,160,Metabolic Enzyme,Gene11,Metabolism
+Pro12,210,Signaling Molecule,Gene12,Signaling
+Pro13,110,DNA Repair Enzyme,Gene13,Repair
+Pro14,260,Apoptotic Protein,Gene14,Apoptosis
+Pro15,190,Differentiation Factor,Gene15,Differentiation
+Pro16,310,Ion Channel,Gene16,Transport
+Pro17,130,Immunoglobulin,Gene17,Immunity
+Pro18,230,Growth Hormone,Gene18,Growth
+Pro19,290,RNA Polymerase,Gene19,Transcription
+Pro20,330,Ribosomal Subunit,Gene20,Translation

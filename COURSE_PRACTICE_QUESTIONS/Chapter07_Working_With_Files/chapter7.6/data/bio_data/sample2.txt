@@ -1,1 +1,3 @@
-This is another sample file.
+Sample_ID: S002
+Sequence: ATCGATCGATCGATCG
+Date: 2025-02-22

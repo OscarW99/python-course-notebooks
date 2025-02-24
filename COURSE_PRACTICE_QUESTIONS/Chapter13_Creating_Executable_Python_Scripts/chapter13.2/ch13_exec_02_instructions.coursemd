@@ -39,15 +39,15 @@ As this script needs to be run from the command line (as it reads command-line a
 - **Running the Script:**
   - **Using relative path from the <span style="color:#4d9950;">COURSE_PRACTICE_QUESTIONS</span> directory:**
     ```bash
-    python Chapter13\chapter13.2\question3\q3.py 4
+    python Chapter13_Creating_Executable_Python_Scripts\chapter13.2\question3\q3.py 4
     ```
   - **Using Full Path (<span style="color:#3d82ba;">Windows</span>):**
     ```bash
-    python "C:\Users\name\example\path\coding\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13.2\question3\q3.py" 4
+    python "C:\Users\name\example\path\coding\COURSE_PRACTICE_QUESTIONS\Chapter13_Creating_Executable_Python_Scripts\chapter13.2\question3\q3.py" 4
     ```
   - **Using Full Path (<span style="color:#3d82ba;">macOS/Linux</span>):**
     ```bash
-    python3 "/home/user/example/path/coding/COURSE_PRACTICE_QUESTIONS/Chapter13/chapter13.2/question3/q3.py" 4
+    python3 "/home/user/example/path/coding/COURSE_PRACTICE_QUESTIONS/Chapter13_Creating_Executable_Python_Scripts/chapter13.2/question3/q3.py" 4
     ```
 
 <br>

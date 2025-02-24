@@ -11,13 +11,13 @@
 # Question 1
 ### Basic Math Operation
 
-Write a print statement to show the result of the calculation (2 + 12) / 7 + 6. This is to verify basic arithmetic operations and output functionality.
+Assign the expression `(2 + 12) / 7 + 6` to the **math_expression** variable. Use a print statement to display the result of the expression.
 <br></br>
 
 # Question 2
 ### Sum Integers Less Than 100
 
-You have a list of integer values representing data points. Write a while loop that calculates the sum of all values in the list that are less than 100. Print the sum of the values that are less than 100.
+You have a list of integer values representing data points. Write a loop that calculates the sum of all values in the list that are less than 100. Print the sum of the values that are less than 100.
 <br></br>
 
 # Question 3

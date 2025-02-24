@@ -13,7 +13,7 @@
 <br></br>
 
 # Question 2
-- Read the file `data/gene_expression_2024.csv` and extract only the genes that show differential expression (marked with '**_Yes_**' in the '**_Differential_**' column). Save these genes to a new file called `output/differential_genes.csv`.
+- Read the file `data/gene_expression_2025.csv` and extract only the genes that show differential expression (marked with '**_Yes_**' in the '**_Differential_**' column). Save these genes to a new file called `output/differential_genes.csv`.
 <br></br>
 
 # Question 3
@@ -55,7 +55,7 @@ Read the file `data/protein_weights.txt` which contains protein names and their 
 </br>
 
 # Question 9
-The directory `data/old_records` contains several **.txt** files. Move all files modified before 2024 to a new directory called `data/archive`.
+The directory `data/old_records` contains several **.txt** files. Move all files modified before 2025 to a new directory called `data/archive`.
 
 (We have not yet covered file modification times, but try using the following hint to help).
 
@@ -63,7 +63,7 @@ The directory `data/old_records` contains several **.txt** files. Move all files
 ```python
 import time
 # Example comparison:
-if time.gmtime(os.path.getmtime(filename)).tm_year < 2024:
+if time.gmtime(os.path.getmtime(filename)).tm_year < 2025:
     # Move the file
 ```
 </br>

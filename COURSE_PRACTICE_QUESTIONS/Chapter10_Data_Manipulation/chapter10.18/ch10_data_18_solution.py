@@ -20,10 +20,12 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 # Perform alignment
 # Print alignment details and score
 
+
 #* 2. Reading Multiple Sequence Alignment
 # Read Clustal format alignment file
 # Calculate and print alignment length
 # Iterate and print each sequence
+
 
 #* 3. Extracting Conserved Columns
 # Load multiple sequence alignment

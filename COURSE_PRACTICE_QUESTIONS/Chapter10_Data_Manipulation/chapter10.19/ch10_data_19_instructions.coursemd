@@ -21,7 +21,7 @@
 <br></br>
 
 # Question 3
-- Create a function that performs a protein BLAST search with the sequence `"MAEGEITTFTALTEKFNLPPGNYKKPKLLYCSNG"` and saves the results to an XML file. The function should take the sequence and output filename as parameters.
+- Create a function that performs a protein BLAST search with the sequence `"MAEGEITTFTALTEKFNLPPGNYKKPKLLYCSNG"` and saves the results to an XML file in the `output` folder. The function should take the sequence and output filename as parameters.
 
     <span style="color:#8b0153;">Hint</span>: Use `NCBIWWW.qblast()` with `"blastp"` and `"nr"` parameters, then write `result_handle` contents to file
 

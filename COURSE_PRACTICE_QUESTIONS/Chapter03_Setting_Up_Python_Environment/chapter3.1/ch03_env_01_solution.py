@@ -24,6 +24,7 @@ proteins = ["ASDFGHJKLKFERQWERTYUIOP",
 
 #* 4. Temperature Data Analysis
 temperature = 50
-while temperature > 30:
-    pass # Remove 'pass' and write your code here
+# Uncomment the code below and fill in answer
+#$ while temperature > 30:
+    
 

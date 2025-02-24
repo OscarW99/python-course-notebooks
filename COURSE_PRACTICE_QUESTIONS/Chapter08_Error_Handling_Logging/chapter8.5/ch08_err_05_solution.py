@@ -17,6 +17,7 @@ from datetime import datetime
 #* 1. Logging to File
 # Configure logging here
 
+
 #* 2. Protein Weight Calculation
 def calculate_protein_weight(sequence):
     """
@@ -35,6 +36,7 @@ def calculate_protein_weight(sequence):
         'Y': 181.2, 'V': 117.1
     }
     pass
+
 
 #* 3. Custom Logging Format
 # Configure logging here

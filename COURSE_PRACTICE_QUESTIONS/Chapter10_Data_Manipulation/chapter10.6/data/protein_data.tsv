@@ -1,0 +1,11 @@
+Protein_ID\tAccession_Number\tOrganism\tExpression_Level
+Prot1\tABC12345\tHuman\tHigh
+Prot2\tXYZ67890\tMouse\tMedium
+Prot3\tDEF13579\tYeast\tLow
+Prot4\tGHI24680\tHuman\tMedium
+Prot5\tJKL98765\tE.coli\tHigh
+Prot6\tMNO11223\tMouse\tLow
+Prot7\tPQR44556\tYeast\tMedium
+Prot8\tSTU77889\tHuman\tHigh
+Prot9\tVWX00112\tE.coli\tLow
+Prot10\tYZA33445\tMouse\tMedium

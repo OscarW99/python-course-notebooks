@@ -1,3 +1,6 @@
-Protein\tMolecular_Weight
-\tProtein1\t50000
-\tProtein2\t60000
+Protein Molecular_Weight
+Actin	42000
+Myosin	200000
+Hemoglobin	64500
+Albumin	69000
+CytochromeC	12300

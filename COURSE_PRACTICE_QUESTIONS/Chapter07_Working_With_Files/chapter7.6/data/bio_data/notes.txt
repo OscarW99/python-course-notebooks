@@ -1,1 +1,3 @@
-Some notes about the project.
+2025-03-20: Sample prep completed for sequencing.
+2025-03-21: Run started on sequencer.
+2025-03-23: Data quality check passed.

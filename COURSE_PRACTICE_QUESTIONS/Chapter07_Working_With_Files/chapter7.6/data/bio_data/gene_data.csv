@@ -1,1 +1,6 @@
-Gene expression data.
+Gene_ID,Expression,Chromosome,Start_Position
+G001,12.5,Chr1,1000
+G002,3.4,Chr2,2500
+G003,9.8,Chr1,3000
+G004,1.2,Chr3,4500
+G005,15.7,Chr2,6000

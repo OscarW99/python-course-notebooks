@@ -5,10 +5,12 @@ import logging
 #* 1. Logging Severity Levels
 # Your code here
 
+
 #* 2. DNA Sequence Processing
 def process_dna_sequence(sequence):
     # Add your implementation here
     pass
+
 
 #* 3. Changing Logging Level
 # Modify the logging configuration here

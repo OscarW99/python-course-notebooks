@@ -21,6 +21,6 @@
 <br></br>
 
 # Question 4
-- Save thr DataFrame `df4` to both CSV and JSON formats, naming them `output/output.csv` and `output/output.json` respectively.
+- Save the DataFrame `df4` to both CSV and JSON formats, naming them `output/output.csv` and `output/output.json` respectively.
 <br></br>
 </div>

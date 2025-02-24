@@ -9,7 +9,7 @@
 <div style="font-size:18px;">
 
 # Question 1
-**Simple OOP**
+### Simple OOP
 
 **Description:** Convert this sequence processing code into a class:
 
@@ -38,7 +38,7 @@ Create a class called `SequenceAnalyzer` that:
 <br>
 
 # Question 2
-**Functional Programming**
+### Functional Programming
 
 **Description:** Complete the pure functions to analyze protein sequences:
 
@@ -46,7 +46,7 @@ Create a class called `SequenceAnalyzer` that:
 <br>
 
 # Question 3
-**Procedural Programming**
+### Procedural Programming
 
 **Description:** Write a simple script that processes mutation frequencies in a population:
 

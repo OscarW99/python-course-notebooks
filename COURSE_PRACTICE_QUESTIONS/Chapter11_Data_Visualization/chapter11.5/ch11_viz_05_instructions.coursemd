@@ -12,8 +12,8 @@
 # Question 1
 Create a figure with two subplots arranged horizontally (1 row, 2 columns) using the gene expression dataset `"data/gene_expression.csv"`:
 
-* **Left subplot**: Bar plot showing mean expression levels by tissue type
-* **Right subplot**: Line plot showing expression over time for BRCA1 gene, with different colored lines for each tissue type
+* **Left subplot**: Generate a bar plot displaying the mean expression levels for each tissue type, aggregated across all time points and conditions.
+* **Right subplot**:  Develop a line plot that illustrates the temporal expression pattern of the 'BRCA1' gene, with distinct lines representing each tissue type.
 * Add appropriate titles, labels, and use `plt.tight_layout()`
     
 <span style="color:#8b0153;">Hint</span>: For the time series, first filter for **BRCA1**, then use `pivot_table` or `groupby` to get expression levels by tissue and time. Use different colors for each tissue's time series
@@ -22,21 +22,25 @@ Create a figure with two subplots arranged horizontally (1 row, 2 columns) using
 <br></br>
 
 # Question 2
-Create a 2x2 grid of subplots showing different aspects of the gene expression data. Include:
-* A bar plot in [0,0]
-* A scatter plot in [0,1]
-* A pie chart in [1,0]
-* A line plot in [1,1]
+Construct a 2x2 grid of subplots to visualize various aspects of the gene expression data. Include the following plots:
+* [0, 0]: A bar plot showing the mean expression levels for each condition.(Control vs treated)
+* [0, 1]: A scatter plot comparing the expression levels at time points 0 and 12, colored by tissue type.
+* [1, 0]: A pie chart representing the distribution of genes across different tissue types.
+* [1, 1]: A line plot depicting the expression levels of the 'TP53' gene over time, grouped by condition.
 
 <span style="color:#8b0153;">Hint</span>: Access each subplot using axs[row, column] indexing
 <br></br>
 
 # Question 3
-Using GridSpec, create a figure where one plot spans the entire first row, and two smaller plots share the second row:
-* Make the top plot span all columns
-* Create two equal-sized plots in the bottom row
-* Add appropriate titles and labels
-    
-<span style="color:#8b0153;">Hint</span>: Use `GridSpec` from `matplotlib.gridspec` to define the layout. Start by creating a figure with `fig = plt.figure(figsize=(x, y))`, then define the grid layout with `gs = GridSpec(2, 2, figure=fig)`. Use `gs[0, :]` to span all columns for the top plot and `gs[1, 0]` and `gs[1, 1]` for the two bottom-row plots. Assign subplots to specific regions using `plt.subplot(gs[row, column])`. Adjust `figsize` to improve visualization.**
+Employ GridSpec to create a figure with a customized layout:
+* A single plot spanning the entire first row.
+* Two equally sized plots in the second row.
+* Create a line plot of the gene 'EGFR' spanning the first row, grouped by tissue type.
+* Create a histogram of expression levels at time point 0, and a boxplot of expression levels grouped by condition in the second row.
+
+Add descriptive titles and axis labels to all plots.
+Adjust the figure size (figsize) for optimal visualization.
+
+<span style="color:#8b0153;">Hint</span>: Use `GridSpec` from `matplotlib.gridspec` to define the layout. Start by creating a figure with `fig = plt.figure(figsize=(x, y))`, then define the grid layout with `gs = GridSpec(2, 2, figure=fig)`. Use `gs[0, :]` to span all columns for the top plot and `gs[1, 0]` and `gs[1, 1]` for the two bottom-row plots. Assign subplots to specific regions using `plt.subplot(gs[row, column])`. Adjust `figsize` to improve visualization.
 <br></br>
 </div>

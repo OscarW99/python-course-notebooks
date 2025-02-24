@@ -1,3 +1,5 @@
-Gene1
-^Gene2
-^Gene3
+Actb
+Myh7
+HbA1
+Alb
+Cyc1

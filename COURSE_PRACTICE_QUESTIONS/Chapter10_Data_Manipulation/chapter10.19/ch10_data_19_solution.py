@@ -1,3 +1,4 @@
+
 # Chapter 10: Data Manipulation
 
 # Note: File paths differ between operating systems. 
@@ -22,11 +23,13 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 # Parse results
 # Print first alignment info
 
+
 #* 2. Parsing BLAST XML Results
 # Read the BLAST XML file
 # Create empty lists for storing data
 # Extract required information from each hit
 # Return the collected data
+
 
 #* 3. Function for Protein BLAST Search
 # Define function with parameters

@@ -15,5 +15,5 @@ try:
     # Your code here
     pass
 except TypeError as e:
-    # Handle the error here
+    # Handle the error here (use AI to help)
     pass

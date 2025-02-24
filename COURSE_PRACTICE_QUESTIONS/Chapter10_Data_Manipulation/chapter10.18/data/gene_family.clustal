@@ -1,3 +1,22 @@
 CLUSTAL O(1.2.4) multiple sequence alignment
 
-gene1      AC-GT-M^gene2      ACGT-M^gene3      AC-GT
+seq1       ATGC--TAGC-ATCG
+seq2       ATGC--TAGC-ATCG
+seq3       ATGC--TAGC-ATCG
+seq4       ATGC--TAGC-ATCG
+seq5       ATGC--TAGC-ATCG
+seq6       ATGC--TAGC-ATCG
+seq7       ATGC--TAGC-ATCG
+seq8       ATGC--TAGC-ATCG
+seq9       ATGC--TAGC-ATCG
+seq10      ATGC--TAGC-ATCG
+seq11      ATGC--TAGC-ATCG
+seq12      ATGC--TAGC-ATCG
+seq13      ATGC--TAGC-ATCG
+seq14      ATGC--TAGC-ATCG
+seq15      ATGC--TAGC-ATCG
+seq16      ATGC--TAGC-ATCG
+seq17      ATGC--TAGC-ATCG
+seq18      ATGC--TAGC-ATCG
+seq19      ATGC--TAGC-ATCG
+seq20      ATGC--TAGC-ATCG

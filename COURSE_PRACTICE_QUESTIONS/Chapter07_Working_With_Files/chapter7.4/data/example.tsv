@@ -1,4 +1,21 @@
-Gene ID\tExpr A\tExpr B\tNotes
-^Gene1\t2.5\t3.7\tUp
-^Gene2\t4.2\t2.0\tDown
-^Gene3\t1.2\t1.2\tUnchanged
+Gene ID	Expr A	Expr B	Notes
+G001	12.5	18.9	Upregulated
+G002	3.4	3.6	Stable
+G003	7.8	15.2	Upregulated
+G004	9.1	8.9	Control sample
+G005	14.3	22.1	Upregulated
+G006	5.6	5.4	Low variance
+G007	10.2	17.8	Upregulated
+G008	2.1	2.3	No change
+G009	16.7	25.4	Upregulated
+G010	4.8	4.7	Baseline
+G011	13.9	19.5	Downregulated
+G012	6.2	6.1	Normal
+G013	8.5	14.3	Upregulated
+G014	11.0	11.2	Steady
+G015	15.1	23.0	Upregulated
+G016	3.9	4.0	Minimal
+G017	9.7	16.8	Upregulated
+G018	1.8	2.0	Low signal
+G019	17.2	26.1	Upregulated
+G020	5.0	5.1	Reference

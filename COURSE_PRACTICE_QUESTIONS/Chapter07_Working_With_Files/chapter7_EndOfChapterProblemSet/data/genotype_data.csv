@@ -1,3 +1,6 @@
-SNP_ID,Allele1,Allele2
-^rs1234,A,G
-^rs5678,NA,T
+Sample_ID,Marker1,Marker2,Marker3
+S001,AA,AT,NA
+S002,TT,NA,GG
+S003,AT,AA,TT
+S004,NA,TT,NA
+S005,GG,AT,AA

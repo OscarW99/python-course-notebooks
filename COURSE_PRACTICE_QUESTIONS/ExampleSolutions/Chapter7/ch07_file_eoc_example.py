@@ -89,7 +89,7 @@ archive_path = 'data/archive'
 os.makedirs(archive_path, exist_ok=True)
 for filename in os.listdir('data/old_records'):
     file_path = os.path.join('data/old_records', filename)
-    if time.gmtime(os.path.getmtime(file_path)).tm_year < 2024:
+    if time.gmtime(os.path.getmtime(file_path)).tm_year < 2025:
         os.rename(file_path, os.path.join(archive_path, filename))
 
 #* 10. Gene Names to Uppercase with Numbering

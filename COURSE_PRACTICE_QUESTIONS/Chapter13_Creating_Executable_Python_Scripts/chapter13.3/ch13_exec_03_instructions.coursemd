@@ -42,23 +42,23 @@ As with previous questions, if your current directory is not the same as where t
 
 - **Full Path Example (<span style="color:#3d82ba;">Windows</span>):**
   ```bash
-  python "C:\Users\name\example\path\coding\COURSE_PRACTICE_QUESTIONS\Chapter13\chapter13.3\question1\hello.py"
+  python "C:\Users\name\example\path\coding\COURSE_PRACTICE_QUESTIONS\Chapter13_Creating_Executable_Python_Scripts\chapter13.3\question1\hello.py"
   ```
 
 - **Full Path Example (<span style="color:#3d82ba;">macOS/Linux</span>):**
   ```bash
-  python3 "/home/user/example/path/coding/COURSE_PRACTICE_QUESTIONS/Chapter13/chapter13.3/question1/hello.py"
+  python3 "/home/user/example/path/coding/COURSE_PRACTICE_QUESTIONS/Chapter13_Creating_Executable_Python_Scripts/chapter13.3/question1/hello.py"
   ```
 
 
 - **Relative Path Example (from <span style="color:#4d9950;">COURSE_PRACTICE_QUESTIONS</span> - <span style="color:#3d82ba;">Windows</span>):**
   ```bash
-  python Chapter13\chapter13.3\question1\hello.py
+  python Chapter13_Creating_Executable_Python_Scripts\chapter13.3\question1\hello.py
   ```
 
 - **Relative Path Example (from <span style="color:#4d9950;">COURSE_PRACTICE_QUESTIONS</span> - <span style="color:#3d82ba;">macOS/Linux</span>):**
   ```bash
-  python3 Chapter13/chapter13.3/question1/hello.py
+  python3 Chapter13_Creating_Executable_Python_Scripts/chapter13.3/question1/hello.py
   ```
 
 

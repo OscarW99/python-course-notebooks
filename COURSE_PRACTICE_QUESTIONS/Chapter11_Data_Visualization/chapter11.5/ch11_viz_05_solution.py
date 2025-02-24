@@ -20,13 +20,15 @@ expression_data = pd.read_csv('data/gene_expression.csv')
 
 #* 1. Creating 1x2 Subplots
 # Create 1x2 subplot grid
-# Add bar plot and scatter plot
+# Add bar plot and line plot
 # Customize labels and layout
+
 
 #* 2. Creating 2x2 Subplots
 # Create 2x2 subplot grid
 # Add different plot types
 # Add titles and labels
+
 
 #* 3. Using GridSpec for Complex Layout
 # Create GridSpec layout

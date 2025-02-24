@@ -1,1 +1,5 @@
-Experimental notes here.
+Experiment initiated, samples prepared.
+RNA extraction completed for samples A1-A5.
+Sequencing run started on Illumina platform.
+Raw data received, quality control in progress.
+Initial gene expression analysis performed.

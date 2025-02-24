@@ -1,4 +1,21 @@
 Gene ID,Expr A,Expr B,Notes
-^Gene1,2.5,3.7,Up
-^Gene2,4.2,2.0,Down
-^Gene3,1.2,1.2,Unchanged
+G001,12.5,18.9,High expression
+G002,3.4,3.6,Stable
+G003,7.8,15.2,Upregulated
+G004,9.1,8.9,Control sample
+G005,14.3,22.1,Significant
+G006,5.6,5.4,Low variance
+G007,10.2,17.8,Batch 1
+G008,2.1,2.3,No change
+G009,16.7,25.4,Outlier
+G010,4.8,4.7,Baseline
+G011,13.9,19.5,Tested
+G012,6.2,6.1,Normal
+G013,8.5,14.3,Increased
+G014,11.0,11.2,Steady
+G015,15.1,23.0,Peak
+G016,3.9,4.0,Minimal
+G017,9.7,16.8,Detected
+G018,1.8,2.0,Low signal
+G019,17.2,26.1,Strong
+G020,5.0,5.1,Reference

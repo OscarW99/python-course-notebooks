@@ -28,10 +28,10 @@
     * Running `dna_tools.py` in the terminal
 
 
-* To test importing the script, try importing the `count_gc` function into solutions.py:
+* To test importing the script, try importing the `count_gc` function into ch13_exec_07_solution.py:
 
     ```python
-    # solutions.py
+    # ch13_exec_07_solution.py
     from dna_tools import count_gc
     count_gc("ATCGCGTA")
     ```
@@ -54,9 +54,9 @@
 
 Test the script both ways:
 * Run directly
-* Import the `analyze_sequence` function into `solutions.py`
+* Import the `analyze_sequence` function into `ch13_exec_07_solution.py`
     ```python
-    # solutions.py
+    # ch13_exec_07_solution.py
     from sequence_analyzer import analyze_sequence
     analyze_sequence("ATCG")
     analyze_sequence("") # Should raise an error

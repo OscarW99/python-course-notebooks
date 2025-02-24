@@ -2,9 +2,7 @@
 ## QUESTION 1
 # dna_tools.py
 def calculate_a_freq(sequence):
-    # TODO: Count 'A' bases in the sequence
     a_count = sequence.count('A')
-    # TODO: Calculate the frequency of 'A' bases
     freq = a_count / len(sequence) if sequence else 0
     return freq
 

@@ -1,9 +1,83 @@
-LOCUS       gene1                     20 bp    DNA
+LOCUS       Example_Gene     1000 bp    DNA     linear       01-JAN-2024
+DEFINITION  Example gene annotation.
+ACCESSION   EXAMPLE123
+VERSION     1
+KEYWORDS    gene; annotation.
+SOURCE      Synthetic construct
 FEATURES             Location/Qualifiers
-     gene            1..20
-         /gene=example_gene
+     gene            100..900
+                     /gene="example_gene"
+                     /locus_tag="EG123"
+     CDS             150..850
+                     /gene="example_gene"
+                     /locus_tag="EG123"
+                     /codon_start=1
+                     /product="Example protein"
+                     /translation="MSQTHPTYVTVHEGKVBAQLLQY"
+     exon            150..300
+     exon            400..550
+     exon            700..850
+     regulatory      950..1000
+                     /regulatory_class="promoter"
 ORIGIN
-        1 ATGCGATCGAT CGATCGATCG
+        1 atgcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+       61 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      121 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      181 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      241 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      301 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      361 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      421 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      481 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      541 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      601 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      661 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      721 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      781 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      841 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      901 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      961 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
 //
-
-#FIXME - THIS FILE FORMAT CAUSES ERRORS SO FIX THIS
+LOCUS       Another_Gene     1200 bp    DNA     linear       01-JAN-2024
+DEFINITION  Another gene annotation.
+ACCESSION   ANOTHER456
+VERSION     1
+KEYWORDS    gene; annotation.
+SOURCE      Synthetic construct
+FEATURES             Location/Qualifiers
+     gene            200..1100
+                     /gene="another_gene"
+                     /locus_tag="AG456"
+     CDS             250..1050
+                     /gene="another_gene"
+                     /locus_tag="AG456"
+                     /codon_start=1
+                     /product="Another protein"
+                     /translation="MSTQHPAYVTVHEGKVBAQLLQY"
+     exon            250..400
+     exon            500..750
+     exon            800..1050
+     regulatory      1150..1200
+                     /regulatory_class="terminator"
+ORIGIN
+        1 atgcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+       61 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      121 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      181 atgcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      241 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      301 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      361 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      421 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      481 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      541 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      601 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      661 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      721 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      781 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      841 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      901 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+      961 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+     1021 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+     1081 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+     1141 gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+//

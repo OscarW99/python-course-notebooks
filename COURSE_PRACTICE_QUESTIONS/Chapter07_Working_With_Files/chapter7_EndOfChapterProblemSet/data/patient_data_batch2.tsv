@@ -1,3 +1,5 @@
-Patient_ID\tAge\tCondition
-\tP3\t50\tHealthy
-\tP4\t60\tDisease
+Patient_ID	Age	SBP	DBP	Diagnosis
+P005	29	110	70	Normal
+P006	55	145	95	Hypertension
+P007	38	125	82	Normal
+P008	60	135	88	Prehypertension

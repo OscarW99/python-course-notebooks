@@ -1,0 +1,104 @@
+[
+    {
+        "Experiment_ID": "Exp001",
+        "Date": "2023-10-26",
+        "Temperature": 25.5,
+        "Result": "Success",
+        "Samples": [
+            "SampleA",
+            "SampleB",
+            "SampleC"
+        ]
+    },
+    {
+        "Experiment_ID": "Exp002",
+        "Date": "2023-10-27",
+        "Temperature": 26.0,
+        "Result": "Failure",
+        "Samples": [
+            "SampleD",
+            "SampleE"
+        ]
+    },
+    {
+        "Experiment_ID": "Exp003",
+        "Date": "2023-10-28",
+        "Temperature": 24.8,
+        "Result": "Success",
+        "Samples": [
+            "SampleF",
+            "SampleG",
+            "SampleH",
+            "SampleI"
+        ]
+    },
+    {
+        "Experiment_ID": "Exp004",
+        "Date": "2023-10-29",
+        "Temperature": 27.2,
+        "Result": "Failure",
+        "Samples": [
+            "SampleJ"
+        ]
+    },
+    {
+        "Experiment_ID": "Exp005",
+        "Date": "2023-10-30",
+        "Temperature": 25.0,
+        "Result": "Success",
+        "Samples": [
+            "SampleK",
+            "SampleL"
+        ]
+    },
+    {
+        "Experiment_ID": "Exp006",
+        "Date": "2023-10-31",
+        "Temperature": 26.5,
+        "Result": "Failure",
+        "Samples": [
+            "SampleM",
+            "SampleN",
+            "SampleO"
+        ]
+    },
+    {
+        "Experiment_ID": "Exp007",
+        "Date": "2023-11-01",
+        "Temperature": 24.0,
+        "Result": "Success",
+        "Samples": [
+            "SampleP"
+        ]
+    },
+    {
+        "Experiment_ID": "Exp008",
+        "Date": "2023-11-02",
+        "Temperature": 28.0,
+        "Result": "Failure",
+        "Samples": [
+            "SampleQ",
+            "SampleR"
+        ]
+    },
+    {
+        "Experiment_ID": "Exp009",
+        "Date": "2023-11-03",
+        "Temperature": 25.8,
+        "Result": "Success",
+        "Samples": [
+            "SampleS",
+            "SampleT",
+            "SampleU"
+        ]
+    },
+    {
+        "Experiment_ID": "Exp010",
+        "Date": "2023-11-04",
+        "Temperature": 26.8,
+        "Result": "Failure",
+        "Samples": [
+            "SampleV"
+        ]
+    }
+]

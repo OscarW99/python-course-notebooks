@@ -2,3 +2,10 @@ Pathway_ID,Pathway,Category,Number_of_Genes
 1,Metabolism,Cellular Process,10
 2,Signaling,Communication,5
 3,Repair,Cellular Process,8
+4,Apoptosis,Cell Death,7
+5,Differentiation,Development,6
+6,Transport,Cellular Process,9
+7,Immunity,Defense,4
+8,Growth,Development,3
+9,Transcription,Information,11
+10,Translation,Information,12

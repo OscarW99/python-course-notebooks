@@ -1,38 +1,30 @@
-# Chapter 11: Data Visualization
-
-# Note: File paths differ between operating systems. 
-# Use forward slashes (/) for Linux and macOS, and backslashes (\) for Windows.
-# For example:
-# Linux/macOS: "data/example.file"
-# Windows: "data\\example.file" or r"data\example.file"
-# Python generally handles forward slashes (/) well on all platforms.
-
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
+import seaborn as sns
 import os
 
-#$ This Just Makes Sure We're Starting in the Right Directory
+# This Just Makes Sure We're Starting in the Right Directory
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # Load the dataset
 expression_data = pd.read_csv('data/gene_expression.csv')
 
 #* 1. Creating 1x2 Subplots
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 6))
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
 
-# Left subplot: Bar plot
+# Left Subplot: Bar plot of mean expression by tissue
 mean_expression = expression_data.groupby('tissue_type')['expression_level'].mean()
-mean_expression.plot(kind='bar', ax=ax1)
-ax1.set_title('Mean Expression by Tissue Type')
+mean_expression.plot(kind='bar', ax=ax1, color='skyblue')
+ax1.set_title('Mean Gene Expression by Tissue Type')
 ax1.set_xlabel('Tissue Type')
 ax1.set_ylabel('Mean Expression Level')
 
-# Right subplot: Line plot for BRCA1
+# Right Subplot: Line plot of BRCA1 expression over time by tissue
 brca1_data = expression_data[expression_data['gene_id'] == 'BRCA1']
 for tissue, group in brca1_data.groupby('tissue_type'):
-    group.pivot(index='time_point', columns='tissue_type', values='expression_level').plot(ax=ax2, label=tissue)
-ax2.set_title('Expression Over Time for BRCA1 Gene')
+    group.plot(x='time_point', y='expression_level', ax=ax2, label=tissue, marker='o')
+ax2.set_title('BRCA1 Expression Over Time by Tissue')
 ax2.set_xlabel('Time Point')
 ax2.set_ylabel('Expression Level')
 ax2.legend(title='Tissue Type')
@@ -41,73 +33,72 @@ plt.tight_layout()
 plt.show()
 
 #* 2. Creating 2x2 Subplots
-fig, axs = plt.subplots(2, 2, figsize=(10, 10))
+fig, axs = plt.subplots(2, 2, figsize=(14, 10))
 
-# Bar plot
-expression_data.groupby('gene_id')['expression_level'].mean().plot(kind='bar', ax=axs[0, 0])
-axs[0, 0].set_title('Mean Expression by Gene')
-axs[0, 0].set_xlabel('Gene ID')
-axs[0, 0].set_ylabel('Expression Level')
+# [0, 0]: Bar plot of mean expression by condition
+mean_expression_condition = expression_data.groupby('condition')['expression_level'].mean()
+mean_expression_condition.plot(kind='bar', ax=axs[0, 0], color=['skyblue', 'salmon'])
+axs[0, 0].set_title('Mean Gene Expression by Condition')
+axs[0, 0].set_xlabel('Condition')
+axs[0, 0].set_ylabel('Mean Expression Level')
 
-# Scatter plot
-scatter = axs[0, 1].scatter(expression_data['time_point'], expression_data['expression_level'], c=expression_data['gene_id'].astype('category').cat.codes, cmap='viridis')
-axs[0, 1].set_title('Expression vs Time')
-axs[0, 1].set_xlabel('Time Point')
-axs[0, 1].set_ylabel('Expression Level')
-gene_ids = expression_data['gene_id'].astype('category').cat.categories
+# [0, 1]: Scatter plot of expression at 0h vs 12h, colored by tissue
+time_0 = expression_data[expression_data['time_point'] == 0]
+time_12 = expression_data[expression_data['time_point'] == 12]
+merged_data = pd.merge(time_0, time_12, on=['gene_id', 'tissue_type'], suffixes=('_0h', '_12h'))
+scatter = axs[0, 1].scatter(merged_data['expression_level_0h'], merged_data['expression_level_12h'], c=merged_data['tissue_type'].astype('category').cat.codes, cmap='viridis')
+axs[0, 1].set_title('Expression at 0h vs 12h by Tissue')
+axs[0, 1].set_xlabel('Expression Level at 0h')
+axs[0, 1].set_ylabel('Expression Level at 12h')
+tissue_types = merged_data['tissue_type'].astype('category').cat.categories
 handles, _ = scatter.legend_elements()
-axs[0, 1].legend(handles, gene_ids, title='Gene ID')
+axs[0, 1].legend(handles, tissue_types, title='Tissue Type')
 
-# Pie chart
-gene_counts = expression_data['gene_id'].value_counts()
-axs[1, 0].pie(gene_counts, labels=gene_counts.index, autopct='%1.1f%%')
-axs[1, 0].set_title('Gene Distribution')
+# [1, 0]: Pie chart of gene distribution across tissues
+tissue_counts = expression_data['tissue_type'].value_counts()
+axs[1, 0].pie(tissue_counts, labels=tissue_counts.index, autopct='%1.1f%%', startangle=90)
+axs[1, 0].set_title('Gene Distribution Across Tissues')
 
-# Line plot
-for gene, group in expression_data.groupby('gene_id'):
-    group.pivot_table(index='time_point', columns='gene_id', values='expression_level', aggfunc='mean').plot(ax=axs[1, 1], label=gene)
-axs[1, 1].set_title('Expression Over Time by Gene')
+# [1, 1]: Line plot of TP53 expression over time by condition
+tp53_data = expression_data[expression_data['gene_id'] == 'TP53']
+for condition, group in tp53_data.groupby('condition'):
+    group.plot(x='time_point', y='expression_level', ax=axs[1, 1], label=condition, marker='o')
+axs[1, 1].set_title('TP53 Expression Over Time by Condition')
 axs[1, 1].set_xlabel('Time Point')
 axs[1, 1].set_ylabel('Expression Level')
-axs[1, 1].legend(title='Gene ID')
+axs[1, 1].legend(title='Condition')
 
 plt.tight_layout()
 plt.show()
 
 #* 3. Using GridSpec for Complex Layout
-fig = plt.figure(figsize=(10, 8))
+fig = plt.figure(figsize=(14, 8))
 gs = GridSpec(2, 2, figure=fig)
 
-# Top plot spanning all columns
+# Top plot: EGFR expression over time by tissue
 ax1 = fig.add_subplot(gs[0, :])
-
-# Aggregate the data to ensure unique combinations of time_point and gene_id
-aggregated_data = expression_data.groupby(['time_point', 'gene_id']).agg({'expression_level': 'mean'}).reset_index()
-
-# Pivot the aggregated data
-pivot_data = aggregated_data.pivot(index='time_point', columns='gene_id', values='expression_level')
-
-# Plot the pivoted data
-pivot_data.plot(ax=ax1)
-ax1.set_title('Expression Over Time for All Genes')
+egfr_data = expression_data[expression_data['gene_id'] == 'EGFR']
+for tissue, group in egfr_data.groupby('tissue_type'):
+    group.plot(x='time_point', y='expression_level', ax=ax1, label=tissue, marker='o')
+ax1.set_title('EGFR Expression Over Time by Tissue')
 ax1.set_xlabel('Time Point')
 ax1.set_ylabel('Expression Level')
+ax1.legend(title='Tissue Type')
 
-# Bottom left plot
+# Bottom left plot: Histogram of expression at 0h
 ax2 = fig.add_subplot(gs[1, 0])
-control_data = expression_data[expression_data['condition'] == 'control']
-control_data.groupby('tissue_type')['expression_level'].mean().plot(kind='bar', ax=ax2, color='skyblue')
-ax2.set_title('Mean Expression in Control Condition by Tissue')
-ax2.set_xlabel('Tissue Type')
-ax2.set_ylabel('Mean Expression Level')
+time_0_expression = expression_data[expression_data['time_point'] == 0]['expression_level']
+ax2.hist(time_0_expression, bins=10, color='skyblue', alpha=0.7)
+ax2.set_title('Expression Level Distribution at 0h')
+ax2.set_xlabel('Expression Level')
+ax2.set_ylabel('Frequency')
 
-# Bottom right plot
+# Bottom right plot: Boxplot of expression by condition
 ax3 = fig.add_subplot(gs[1, 1])
-treated_data = expression_data[expression_data['condition'] == 'treated']
-treated_data.groupby('tissue_type')['expression_level'].mean().plot(kind='bar', ax=ax3, color='lightcoral')
-ax3.set_title('Mean Expression in Treated Condition by Tissue')
-ax3.set_xlabel('Tissue Type')
-ax3.set_ylabel('Mean Expression Level')
+sns.boxplot(x='condition', y='expression_level', data=expression_data, ax=ax3, palette=['skyblue', 'salmon'])
+ax3.set_title('Expression Level by Condition')
+ax3.set_xlabel('Condition')
+ax3.set_ylabel('Expression Level')
 
 plt.tight_layout()
 plt.show()

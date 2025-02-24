@@ -8,16 +8,16 @@
 <br>
 <div style="font-size:18px;">
 
-Have this in drop down format
-**Universal Instructions for Running Scripts:**
+<details>
+  <summary><b>Universal Instructions for Running Scripts</b></summary>
 
-- **General Run:** All scripts can be run on any machine using `python script_name.py`.
-- **Unix-like Systems (Linux, macOS):** After making the script executable with `chmod +x script_name.py`, you can run it with `./script_name.py`.
-- **Windows:** After setting file associations (or using the Python Launcher), you can run scripts directly by typing `script_name.py` in the command prompt or PowerShell. If file associations are not set up, use `python script_name.py`.
+  - **General Run:** All scripts can be run on any machine using `python script_name.py`.
+  - **Unix-like Systems (Linux, macOS):** After making the script executable with `chmod +x script_name.py`, you can run it with `./script_name.py`.
+  - **Windows:** After setting file associations (or using the Python Launcher), you can run scripts directly by typing `script_name.py` in the command prompt or PowerShell. If file associations are not set up, use `python script_name.py`.
+</details>
+<br>
 
-note on files as arguments - need to specify ful paths to those too
-
-**ALL QUESTIONS ARE TO BE ANSWERED IN A SEPARATE FILE**
+**Note:** _Each question will be answered in its own file to better illustrate command-line script functionality and to keep each script independent for testing and learning purposes._
 
 # Question 1
 **Interactive DNA Base Counter**
