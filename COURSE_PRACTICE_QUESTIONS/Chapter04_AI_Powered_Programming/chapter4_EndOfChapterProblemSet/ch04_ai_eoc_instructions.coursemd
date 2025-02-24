@@ -1,0 +1,112 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 4: AI-Powered Programming</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    End of Chapter Problems
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### AI-Assisted Loop Modification
+
+```python
+for i in range(5):
+    print(i)
+```
+
+Use Copilot to modify the loop to calculate Factorial numbers up to the 15th term. The output should be displayed as a list of factorials from 1! to 15!, with each result shown alongside its position (e.g., "1! = 1", "2! = 2", "3! = 6", etc.). Ensure your solution handles large numbers appropriately.
+
+<br>
+
+# Question 2
+### Security Audit
+Analyze the following code using AI.
+
+```python
+def process_patient_data(id):
+    data = open(f"{id}.txt").read()
+    return data.upper()
+```
+
+* Explain what the code does.
+Identify any potential security vulnerabilities.
+* Explain why these vulnerabilities are problematic.
+* Suggest how to fix or prevent these vulnerabilities.
+
+<br>
+
+# Question 3
+### Multi-File Refactoring
+
+Use Copilot Edits to add comments to <b>sequence_analyzer.py</b> and <b>sequence_processor.py</b> files. These two bioinformatics scripts are located in the `scripts` folder, which is in the same directory as this file.
+
+<br>
+
+# Question 4
+### Ethical Mock Data Generation
+
+Generate a synthetic DNA dataset mimicking real patient data (without sensitive info) using AI. The dataset should contain:
+
+* 100 DNA sequences, each 250 base pairs long
+- Associated metadata: age range (20-80), gender (M/F), ethnicity (anonymized to broad categories)
+* Simulated gene variations common in cardiovascular diseases
+* Quality scores for each sequence (Phred scale)
+* No real patient identifiers or exact demographic data
+
+Save the data in a CSV file named <b>synthetic_dna_data.csv</b> in the question's `data` folder. Here's an example of how the first few rows should look:
+
+```
+sequence_id,dna_sequence,age_range,gender,ethnicity_group,cardiovascular_variant,quality_score
+P001,ATGCCTGAA...,(40-45),F,Group_A,BRCA1_v1,38.5
+P002,GCTTACGGT...,(65-70),M,Group_C,BRCA2_v2,42.1
+P003,TACGGCATA...,(25-30),F,Group_B,BRCA1_v3,35.8
+```
+
+<br>
+
+# Question 5
+### Prompt Engineering
+
+Improve the following prompt for generating bioinformatics documentation. It should be more specific and effective.
+
+<b>Original prompt:</b>
+```
+Write documentation for my code
+```
+<br>
+
+# Question 6
+### Model Comparison
+
+Solve the same bioinformatics problem using Copilot, ChatGPT, and Claude. Compare the answers for each. Which do you think performed better for this specific task?
+
+### The Problem
+```
+Count Occurrences of a Substring
+
+Requirements...
+
+Input:
+A main string (e.g., "ATGCATGC").
+A substring to search for (e.g., "GC").
+
+Task:
+Count how many times the substring appears in the main string.
+
+Output:
+Print the count of occurrences.
+
+Example:
+Main string: "ATGCATGC"
+Substring: "GC"
+Output: 2
+```
+
+<i>You might not understand the outputs you get from the various AI tools right away, but don't worry. You'll gain clarity as we progress through the course.</i>
+
+<br>
+
+</br>
+</div>

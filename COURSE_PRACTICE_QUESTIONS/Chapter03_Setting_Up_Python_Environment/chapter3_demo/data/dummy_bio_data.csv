@@ -1,0 +1,11 @@
+GeneID,Species,Chromosome,Start,End,ExpressionLevel,MutationType
+GENE001,Homo sapiens,chr1,1000,2000,15.2,SNP
+GENE002,Mus musculus,chrX,5000,6000,8.7,Insertion
+GENE003,Drosophila melanogaster,chr2L,12000,13000,22.5,Deletion
+GENE004,Arabidopsis thaliana,chr4,8000,9000,11.0,SNP
+GENE005,Caenorhabditis elegans,chrV,3000,4000,18.9,Substitution
+GENE006,Saccharomyces cerevisiae,chrIII,15000,16000,6.3,Insertion
+GENE007,Escherichia coli,chr,2000,3000,25.1,Deletion
+GENE008,Danio rerio,chrZ,9000,10000,13.8,SNP
+GENE009,Oryza sativa,chr11,6000,7000,9.5,Substitution
+GENE010,Gallus gallus,chr2,11000,12000,17.4,Insertion

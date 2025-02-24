@@ -1,0 +1,58 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 4: AI-Powered Programming</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Prompt Engineering for AI Tools
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Correcting the Loop Range
+
+Modify the code using AI so that it prints the square of numbers from 5 to 15 instead of just numbers 0 to 9. Use the following prompt template to help:
+
+```
+Help me modify this code to []:
+[paste code]
+Specific requirements:
+- []
+- []
+```
+
+Use iterative refinement if the inital response is not clear.
+
+<br>
+
+# Question 2
+### Fixing a Syntax Error
+Use AI to correct the syntax error and ensure the program correctly checks if a number is even or odd. Use the following prompt template to help identify and fix the issue:
+
+```
+This code isn't working as expected:
+[paste code]
+
+Current output: [describe what happens]
+Expected output: [describe what should happen]
+What's wrong and how can I fix it?
+```
+
+<br>
+
+# Question 3
+### Understanding Code
+
+Some code has been propvided that you may not understand. Use AI to explain the code to you. Use the following prompt template to help:
+```
+Explain this code in simple terms:
+[paste code]
+Focus on:
+- Overall purpose
+- How it works
+- Any potential issues
+```
+<br>
+
+</br>
+</div>

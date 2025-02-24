@@ -1,0 +1,27 @@
+<div style="width:100%; background-color:#226c61; color:white; padding:10px; text-align:center; font-size:20px;">
+    <strong>Chapter 3: Local Development Environment</strong>
+</div>
+
+<div style="text-align:center; font-size:28px; font-weight:bold;">
+    Demonstration Practice Problems
+</div>
+<br>
+<div style="font-size:18px;">
+
+# Question 1
+### Basic Math Operation
+
+Write a print statement to show the result of the calculation (2 + 12) / 7 + 6. This is to verify basic arithmetic operations and output functionality.
+<br></br>
+
+# Question 2
+### Sum Integers Less Than 100
+
+You have a list of integer values representing data points. Write a while loop that calculates the sum of all values in the list that are less than 100. Print the sum of the values that are less than 100.
+<br></br>
+
+# Question 3
+### Check for File Extension
+
+You have a list of filenames. Write a loop that iterates through the list and prints any filename that contains the substring ".fasta"
+<br></br>

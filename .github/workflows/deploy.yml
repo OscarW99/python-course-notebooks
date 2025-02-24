@@ -21,8 +21,8 @@ jobs:
           
           # Copy all HTML files from Chapter1 and Chapter2
           mkdir -p temp_deploy/Chapter1 temp_deploy/Chapter2
-          cp COURSE_PRACTICE_QUESTIONS/Chapter1/*.html temp_deploy/Chapter1/
-          cp COURSE_PRACTICE_QUESTIONS/Chapter2/*.html temp_deploy/Chapter2/
+          cp COURSE_PRACTICE_QUESTIONS/Chapter01_Variables_DataTypes_Operators/*.html temp_deploy/Chapter1/
+          cp COURSE_PRACTICE_QUESTIONS/Chapter02_Conditional_Statements_Loops/*.html temp_deploy/Chapter2/
           
           # Copy Skulpt files maintaining relative paths
           mkdir -p temp_deploy/skulpt-dist-master

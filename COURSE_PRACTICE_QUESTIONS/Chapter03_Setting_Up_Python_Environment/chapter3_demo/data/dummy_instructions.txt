@@ -1,0 +1,21 @@
+Dummy Data Files - Instructions
+
+This directory contains three types of dummy data files:
+
+1.  dummy_data.csv:
+    -   Contains user data in a tabular format.
+    -   Columns: GeneID, Species, Chromosome, Start, End, ExpressionLevel, MutationType.
+    -   Purpose: To simulate typical bioinformatics data
+
+2.  dummy_sequences.fasta:
+    -   Contains simulated biological sequence data.
+    -   Format: FASTA format.
+    -   Purpose: To represent genetic sequences.
+
+3.  dummy_instructions.txt:
+    -   This file, providing information about the other files.
+
+Usage:
+    -   The CSV file can be opened with spreadsheet software.
+    -   The FASTA file can be used with bioinformatics tools.
+    -   This text file provides context.
