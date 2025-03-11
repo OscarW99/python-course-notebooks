@@ -1,12 +1,11 @@
-# Input DNA sequence
+
 dna = "ATGGCCTAA"
 
-# Create list of codons
 codons = []
 for i in range(0, len(dna), 3):
     codons.append(dna[i:i+3])
 
-# Create reverse complement
+
 complement_dict = {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}
 reversed_sequence = dna[::-1]
 complement = ""

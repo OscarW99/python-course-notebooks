@@ -6,16 +6,16 @@ for i in range(10):
 
 
 #* 2. Fixing a Syntax Error
-num = 7
-if num % 2 = 0:
-    print("Even")
-else:
-    print("Odd")
+# num = 7
+# if num % 2 = 0:
+#     print("Even")
+# else:
+#     print("Odd")
 
 
 #* 3. Understanding Code
 def calculate_protein_mass(protein_sequence):
-    """Calculates the approximate molecular weight of the Insulin B chain (simplified)."""
+    """Calculates the approximate molecular weight of a protein sequence."""
     amino_acid_masses = {  # Simplified masses (Da)
         'A': 89.09, 'C': 121.16, 'D': 133.10, 'E': 147.13, 'F': 165.19,
         'G': 75.07, 'H': 155.16, 'I': 131.17, 'K': 146.19, 'L': 131.17,

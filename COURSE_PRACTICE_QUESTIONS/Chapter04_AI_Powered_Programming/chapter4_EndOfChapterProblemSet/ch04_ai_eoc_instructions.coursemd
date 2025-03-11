@@ -47,7 +47,7 @@ Use Copilot Edits to add comments to <b>sequence_analyzer.py</b> and <b>sequence
 # Question 4
 ### Ethical Mock Data Generation
 
-Generate a synthetic DNA dataset mimicking real patient data (without sensitive info) using AI. The dataset should contain:
+Generate a synthetic DNA dataset mimicking real patient data using AI. The dataset should contain:
 
 * 100 DNA sequences, each 250 base pairs long
 - Associated metadata: age range (20-80), gender (M/F), ethnicity (anonymized to broad categories)

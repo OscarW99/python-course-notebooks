@@ -27,7 +27,7 @@ Use iterative refinement if the inital response is not clear.
 
 # Question 2
 ### Fixing a Syntax Error
-Use AI to correct the syntax error and ensure the program correctly checks if a number is even or odd. Use the following prompt template to help identify and fix the issue:
+Uncomment the code, then use AI to correct the syntax error and ensure the program correctly checks if a number is even or odd. Use the following prompt template to help identify and fix the issue:
 
 ```
 This code isn't working as expected:
