@@ -13,7 +13,7 @@
   <script src="/python-course-notebooks/skulpt-dist-master/skulpt-stdlib.js"></script>
   <style>
     body {
-      font-family: 'Arial',s ans-serif;
+      font-family: 'Arial', sans-serif;
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
@@ -134,42 +134,31 @@
   <div class="exercise">
     <ol>
       <li>
-        <p><strong>Assign values to string variables:</strong> Create two string variables <code>strA</code> and <code>strB</code>, and assign them the values "Bio" and "informatics" respectively.</p>
+        <p><strong>Given the string <code>genome = "ACTGATCGATTACGTATAGTATTTGCTATCATACATATATATCGATGCGTTCAT"</code>, check if it contains the pattern <code>"TATAT"</code>. Store the result in a variable called <code>contains_pattern</code> and print the result.</strong></p>
       </li>
       <li>
-        <p><strong>Concatenate strings:</strong> Concatenate <code>strA</code> and <code>strB</code>. Store the result in a variable called <code>str_combined</code> and print it.</p>
+        <p><strong>For the same genome string, check if it doesn't contain the pattern <code>"GATGAT"</code>. Store the result in a variable called <code>absent_pattern</code> and print the result.</strong></p>
       </li>
       <li>
-        <p><strong>Repeat a string:</strong> Repeat <code>strA</code> three times. Store the result in a variable called <code>str_repeated</code> and print it.</p>
-      </li>
-      <li>
-        <p><strong>Check for string equality:</strong> Check if <code>strA</code> is equal to "BioTech". Store the result in a variable called <code>str_equality</code> and print it.</p>
-      </li>
-      <li>
-        <p><strong>Lexicographical comparison:</strong> Compare <code>strA</code> and "BIO" lexicographically. If <code>strA</code> comes before "BIO", store <code>True</code> in a variable called <code>str_comparison</code>, else store <code>False</code>. Print the result.</p>
+        <p><strong>Check if the string <code>"ATCG"</code> is present in <code>"CGATCGTA"</code>. Store the result in <code>pattern_check</code> and print it.</strong></p>
       </li>
     </ol>
     <div id="editor" class="editor"></div>
     <textarea id="code" style="display: none;">
-# Assigning values to strA and strB
-strA = 
-strB = 
+# Provided genome string
+genome = "ACTGATCGATTACGTATAGTATTTGCTATCATACATATATATCGATGCGTTCAT"
 
-# Concatenate and print strA and strB
-str_combined = 
-print(str_combined)
+# Check and print if genome contains "TATAT"
+contains_pattern =
+print(contains_pattern)
 
-# Repeat and print strA three times
-str_repeated = 
-print(str_repeated)
+# Check and print if genome doesn't contain "GATGAT"
+absent_pattern =
+print(absent_pattern)
 
-# Check and print if strA is equal to "BioTech"
-str_equality = 
-print(str_equality)
-
-# Compare and print if strA comes before "BIO" lexicographically
-str_comparison = 
-print(str_comparison)
+# Check and print if "ATCG" is in "CGATCGTA"
+pattern_check =
+print(pattern_check)
 </textarea>
   </div>
   <div class="button-group">
