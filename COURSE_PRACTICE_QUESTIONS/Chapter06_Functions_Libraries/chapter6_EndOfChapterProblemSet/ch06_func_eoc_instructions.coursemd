@@ -85,6 +85,8 @@ Use lambda functions with `map()` or `filter()` to:
 
 # Question 10  
 ### Docstring and Placeholder Function  
+The following exercise is designed to test your ability to write a clear and comprehensive docstring. The function described below is entirely hypothetical and will not perform any actual sequence alignment.
+
 Create a function `sequence_alignment` with:  
 - A comprehensive docstring explaining its purpose  
 - Uses the `pass` keyword as a placeholder  

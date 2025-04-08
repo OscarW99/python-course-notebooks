@@ -17,6 +17,8 @@ print("Current working directory:", os.getcwd())
 os.chdir("data/project_files")
 os.mkdir("analysis")
 print("Directories in project_files:", os.listdir())
+os.chdir("../..")
+print("Back to original directory:", os.getcwd())
 
 #* 2. Identifying Specific Files
 bio_data_path = "data/bio_data"
@@ -24,14 +26,30 @@ fasta_files = [f for f in os.listdir(bio_data_path) if f.endswith('.fasta')]
 print("FASTA files found:", fasta_files)
 
 #* 3. Modifying the Directory Structure
-os.rename("raw_data", "input_data")
-print("Updated directories in project_files:", os.listdir())
+os.rename("data/project_files/raw_data", "data/project_files/input_data")
+print("Updated directories in project_files:", os.listdir("data/project_files"))
 
 #* 4. Removing Files and Directories
-os.remove("data/bio_data/notes.txt")
-os.rmdir("data/project_files/results")
+# Safely remove the notes.txt file from the bio_data directory
+if os.path.exists("data/bio_data/notes.txt"):
+    os.remove("data/bio_data/notes.txt")
+    print(f"File '{"data/bio_data/notes.txt"}' has been removed successfully.")
+else:
+    print(f"File '{"data/bio_data/notes.txt"}' does not exist.")
+
+# Ensure the results directory inside project_files is empty before removal
+if os.path.exists("data/project_files/results"):
+    if not os.listdir("data/project_files/results"):  # Check if the directory is empty
+        os.rmdir("data/project_files/results")
+        print(f"Directory '{"data/project_files/results"}' has been removed successfully.")
+    else:
+        print(f"Directory '{"data/project_files/results"}' is not empty and cannot be removed using os.rmdir().")
+else:
+    print(f"Directory '{"data/project_files/results"}' does not exist.")
+
 print("Updated bio_data contents:", os.listdir("data/bio_data"))
 print("Updated project_files contents:", os.listdir("data/project_files"))
+
 
 #* 5. Building Paths
 path = os.path.join("project_files", "analysis", "final_report.txt")
@@ -43,13 +61,22 @@ else:
     print("Path does not exist")
 
 #* 6. Move a File
-# Rename the file to mimic moving by using full paths
-os.rename("data/bio_data/gene_data.csv", "data/project_files/analysis/gene_data.csv")
-print("bio_data after move:", os.listdir("data/bio_data"))
-print("analysis after move:", os.listdir("data/project_files/analysis"))
+# Define source and destination paths
+source_path = "data/bio_data/gene_data.csv"
+destination_path = "data/project_files/analysis/gene_data.csv"
+# Check if the source file exists
+if os.path.exists(source_path):
+    # Rename the file to mimic moving by using full paths
+    os.rename(source_path, destination_path)
+    print(f"File moved from '{source_path}' to '{destination_path}'.")
+    # Print the updated directory structures
+    print("bio_data after move:", os.listdir("data/bio_data"))
+    print("analysis after move:", os.listdir("data/project_files/analysis"))
+else:
+    print(f"Source file '{source_path}' does not exist. Unable to move the file.")
 
 #* 7. Rename Files
-analysis_path = "project_files/analysis"
+analysis_path = "data/project_files/analysis"
 for filename in os.listdir(analysis_path):
     if filename.endswith('.csv'):
         os.rename(os.path.join(analysis_path, filename), os.path.join(analysis_path, filename.replace('.csv', '_final.csv')))

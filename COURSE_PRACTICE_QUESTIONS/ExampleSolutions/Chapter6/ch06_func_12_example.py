@@ -7,7 +7,7 @@ to_lower = lambda s: s.lower()
 # Test cases
 print(square(4))
 print(add_three(1, 2, 3))
-print(to_lower("HELLO"))
+print(to_lower("A"))
 
 #* 2. Lambda with Filter
 proteins = ["MKKFT", "MLASP", "WPKNS", "NRWVS", "MLKYT"]

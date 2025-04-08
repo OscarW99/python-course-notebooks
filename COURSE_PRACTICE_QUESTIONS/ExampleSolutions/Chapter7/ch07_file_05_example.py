@@ -31,7 +31,6 @@ data = {
     'Protein': ['P53', 'BRCA1', 'EGFR', 'TNF', 'IL6'],
     'Expression': [0.8, 1.2, 1.5, 0.6, 1.1]
 }
-
 protein_df = pd.DataFrame(data)
 print(protein_df.head())
 protein_df.to_csv('output/protein_expression.tsv', sep='\t', index=False)

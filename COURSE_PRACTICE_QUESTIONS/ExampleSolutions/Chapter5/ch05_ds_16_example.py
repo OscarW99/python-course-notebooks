@@ -7,7 +7,6 @@ amino_acids = {
     "Histidine": "Basic",
     "Glycine": "Nonpolar"
 }
-# Solution:
 # Print keys only
 for amino_acid in amino_acids.keys():
     print(amino_acid)
@@ -26,7 +25,6 @@ expression_levels = {
     "KRAS": 95,
     "EGFR": 150
 }
-# Solution:
 # Find high expression genes
 for gene, expression in expression_levels.items():
     if expression > 100:
@@ -40,7 +38,6 @@ protein_weights = {
     "Hemoglobin": 64.5,
     "Lysozyme": 14.3
 }
-# Solution:
 # Create new dictionary with heavy proteins
 heavy_proteins = {protein: weight for protein, weight in protein_weights.items() if weight > 20}
 print(heavy_proteins)
@@ -52,7 +49,6 @@ protein_data = {
     "Albumin": {"weight": 66.5, "function": "transport"},
     "Hemoglobin": {"weight": 64.5, "function": "oxygen transport"}
 }
-# Solution:
 # Print protein names and functions
 for protein, data in protein_data.items():
     print(f"{protein}: {data['function']}")
@@ -61,7 +57,6 @@ for protein, data in protein_data.items():
 #* 5. Comparing Metabolite Levels
 morning_levels = {"glucose": 5.5, "lactate": 2.2, "pyruvate": 1.1}
 evening_levels = {"glucose": 4.8, "lactate": 2.8, "pyruvate": 1.3}
-# Solution:
 # Compare metabolite levels
 for metabolite, morning_value in morning_levels.items():
     evening_value = evening_levels[metabolite]

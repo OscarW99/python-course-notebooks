@@ -14,6 +14,7 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 #* 1. Reading a CSV File
 # Your solution here
 
+
 #* 2. Writing to a TSV File
 gene_data = [
     ["Gene1", 2.5, 3.7],
@@ -22,8 +23,10 @@ gene_data = [
 ]
 # Your solution here
 
+
 #* 3. Skipping Headers and Calculating Average Expression
 # Your solution here
+
 
 #* 4. Filtering Rows and Writing to a New File
 # Your solution here

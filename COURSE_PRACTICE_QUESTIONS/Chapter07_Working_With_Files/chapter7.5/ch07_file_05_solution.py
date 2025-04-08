@@ -16,11 +16,14 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 #* 1. Reading a CSV File
 # Your solution here
 
+
 #* 2. Filtering Data and Writing to CSV
 # Your solution here
 
+
 #* 3. Reading TSV and Calculating Average Age
 # Your solution here
+
 
 #* 4. Creating and Writing DataFrame
 data = {

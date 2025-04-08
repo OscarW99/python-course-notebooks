@@ -20,7 +20,7 @@ amino_acids = ['A', 'R', 'N', 'D', 'C', 'E', 'Q', 'G', 'H', 'I']
 
 #* 3. Using the Datetime Module
 import datetime
-# Create a datetime object for December 25, 2025, at 2:30 PM
+# Create a datetime object for December 25th of the current year at 2:30 PM
 #$ december_25 = 
 # Get the current time
 #$ current_time = 

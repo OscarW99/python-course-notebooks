@@ -13,23 +13,23 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 #* 1. Create a Relative Path
 relative_path_to_fasta = "data/genome_sequence.fasta"
-print(relative_path_to_fasta)  # Output: data/genome_sequence.fasta
+print(relative_path_to_fasta)
 
 
 #* 2. Navigating with the Double-dot Syntax
 path_to_experiment_results = "../../experiment_results.csv"
-print(path_to_experiment_results)  # Output: ../../experiment_results.csv
+print(path_to_experiment_results)
 
 
 #* 3. Open and Read a File in various modes
 dna_file_r = open('data/dna_sequence.txt', 'r')
-print(dna_file_r)  # Output: <open file 'data/dna_sequence.txt', mode 'r' at ...>
+print(dna_file_r)
 
 dna_file_a = open('data/dna_sequence.txt', 'a')
-print(dna_file_a)  # Output: <open file 'data/dna_sequence.txt', mode 'a' at ...>
+print(dna_file_a)
 
 dna_file_w = open('data/dna_sequence.txt', 'w')
-print(dna_file_w)  # Output: <open file 'data/dna_sequence.txt', mode 'w' at ...>
+print(dna_file_w)
 
 # Closing all files
 dna_file_r.close()
@@ -39,4 +39,4 @@ dna_file_w.close()
 
 #* 4. Using the `with` Statement
 with open('data/dna_sequence.txt', 'r') as file:
-    print(file)  # Output: <open file 'data/dna_sequence.txt', mode 'r' at ...>
+    print(file)

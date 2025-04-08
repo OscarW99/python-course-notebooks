@@ -37,6 +37,8 @@ data/
     - Print the current working directory.
     - Navigate to the `project_files` folder and create a new directory called `analysis`.
     - Confirm that the `analysis` directory has been created by listing all directories inside `project_files`.
+    - Navigate back to the original working directory.
+    - Print the current working directory again to confirm you are back in the original location.
 <br></br>
 
 # Question 2: Identifying Specific Files

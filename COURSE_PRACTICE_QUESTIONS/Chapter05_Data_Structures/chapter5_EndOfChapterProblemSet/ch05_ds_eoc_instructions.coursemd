@@ -38,7 +38,7 @@ Create a tuple of amino acids and:
 Using the provided sets of gene names, write a Python script to:
 - Find the intersection of the two sets
 - Create a set of unique genes from both sets
-- Check if 'BRCA1' is present in the combined set
+- Check if 'BRCA1' is present in the combined set of unique genes
 <br>
 
 # Question 5

@@ -10,7 +10,7 @@ sequences = ["ATGCGA", "CCGTAG", "GGCCTA"]
 
 
 #* 3. Filtering with filter() Function
-gene_sequences = ["ATGCTTGA", "CCGTACTGCAG", "GGCCTA"]
+gene_sequences = ["ATGCTTGA", "CCGATTGACTACTCGCAG", "GGCCTA"]
 # Add filter function solution
 
 

@@ -30,4 +30,5 @@ sequence_bases = ['A', 'C', 'G', 'T', 'A', 'G']
 
 
 #* 7. Set Uniqueness in Bioinformatics
+sequences = ['ATCG', 'ATCG', 'GCTA', 'CGAT', 'ATCG']
 # Write your code here

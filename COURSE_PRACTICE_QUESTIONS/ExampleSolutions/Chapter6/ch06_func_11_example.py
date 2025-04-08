@@ -25,7 +25,7 @@ print(rna_sequences)
 def is_short_sequence(sequence):
     return len(sequence) < 15
 
-gene_sequences = ["ATGCTTGA", "CCGTACTGCAG", "GGCCTA"]
+gene_sequences = ["ATGCTTGA", "CCGATTGACTACTCGCAG", "GGCCTA"]
 short_sequences = list(filter(is_short_sequence, gene_sequences))
 print(short_sequences)
 

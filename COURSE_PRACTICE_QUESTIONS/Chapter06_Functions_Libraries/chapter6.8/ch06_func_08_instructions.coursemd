@@ -11,7 +11,7 @@
 # Question 1
 ### Analyzing Multiple Gene Sequences
 
-Finish the function named `analyze_gene_sequences` using `*args` that can take any number of gene sequences as arguments and prints each sequence with a prefix "Gene Sequence:". Call this function with multiple sequences at once.
+Finish the function named `analyze_gene_sequences` using `*args` that can take any number of gene sequences as arguments and prints each sequence with a prefix "Gene Sequence: ". Call this function with multiple sequences at once.
 <br>
 
 # Question 2

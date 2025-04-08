@@ -17,12 +17,13 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 # Navigate to project_files
 # Create analysis directory
 # Confirm creation
+# Navigate back to the original starting directory
+# Confirm current working directory
 
 
 #* 2. Identifying Specific Files
 # Identify FASTA files in bio_data
 # Print identified files
-# Confirm output
 
 
 #* 3. Modifying the Directory Structure

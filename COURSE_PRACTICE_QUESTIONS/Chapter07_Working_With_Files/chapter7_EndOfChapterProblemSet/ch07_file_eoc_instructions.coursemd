@@ -9,7 +9,7 @@
 <div style="font-size:18px;">
 
 # Question 1
-- Navigate to the `data/sequences` directory and list all files with the `.fasta` extension. Print the names of these files to the console.
+- List all files with the `.fasta` extension in the `data/sequences` directory . Print the names of these files to the console.
 <br></br>
 
 # Question 2
@@ -19,7 +19,7 @@
 # Question 3
 - The file `data/experiment_log.txt` contains experimental notes. Add today's date and the text "_**Data analysis completed**_" at the end of this file without overwriting the existing content.
 
-(We have not yet covered accessing specific dates, but try using the following hint to help).
+(The code snippet below demonstrates how to get the specific date)
 
 <span style="color:#8b0153;">Hint</span>: Use **'a'** mode for appending:
 ```python

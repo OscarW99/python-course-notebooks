@@ -20,8 +20,8 @@ print(f"Rounded value: {rounded_value}")
 print(f"Absolute value: {absolute_value}")
 
 #* 3. Comparing Gene Expression Data
-expression_day1 = [12.3, 15.8, 9.2, 14.5]
-expression_day2 = [11.8, 16.2, 8.9, 15.0]
+expression_day1 = [12.34, 15.88, 9.21, 14.53]
+expression_day2 = [11.98, 16.12, 8.79, 15.10]
 highest_expression = max(max(expression_day1), max(expression_day2))
 total_expression_day1 = sum(expression_day1)
 total_expression_day2 = sum(expression_day2)

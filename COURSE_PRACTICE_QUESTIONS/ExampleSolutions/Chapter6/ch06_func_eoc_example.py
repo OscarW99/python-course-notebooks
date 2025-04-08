@@ -20,10 +20,18 @@ def calculate_protein_weight(sequence):
     float: The total molecular weight of the protein
     """
     return sum(aa_weights[aa] for aa in sequence)
+# Demonstration of calling the function
+protein_sequence = "ACDEFGHIKLMNPQRSTVWY"
+protein_weight = calculate_protein_weight(protein_sequence)
+print(f"The molecular weight of the protein sequence '{protein_sequence}' is {protein_weight:.2f} Da.")
 
 
 #* 2. Lambda Function for Sequence Manipulation
 clean_sequence = lambda seq: ''.join(filter(lambda x: x in 'ATGC', seq.upper()))
+# Test the lambda function with sequences
+print(clean_sequence("atgcgt"))
+print(clean_sequence("ATGC123"))
+print(clean_sequence("gcTa"))
 
 
 #* 3. Function with Default Parameters
@@ -32,6 +40,11 @@ def analyze_gene_expression(gene_name, expression_level, threshold=100):
         print(f"{gene_name} is highly expressed.")
     else:
         print(f"{gene_name} is lowly expressed.")
+# Demonstration of calling the function
+analyze_gene_expression("GeneA", 120)  # Without specifying the threshold
+analyze_gene_expression("GeneB", 80)   # Without specifying the threshold
+analyze_gene_expression("GeneC", 150, threshold=140)  # Specifying the threshold
+analyze_gene_expression("GeneD", 90, threshold=50)    # Specifying the threshold
 
 
 #* 4. Using *args in a Function
@@ -61,8 +74,11 @@ def calculate_factorial(num):
 import random
 import statistics
 
-sequences = [''.join(random.choice('ATGC') for _ in range(random.randint(5, 20))) for _ in range(10)]
-mean_length = statistics.mean(len(seq) for seq in sequences)
+sequences = [''.join(random.choice('ATGC') for i in range(random.randint(5, 20))) for j in range(10)]
+sequence_lengths = [len(seq) for seq in sequences]
+mean_length = statistics.mean(sequence_lengths)
+print("Generated sequences:", sequences)
+print("Generated sequence lengths:", sequence_lengths)
 print(f"Mean sequence length: {mean_length}")
 
 
@@ -72,14 +88,20 @@ import math
 def analyze_sequence_distribution(sequences):
     lengths = [len(seq) for seq in sequences]
     mean_length = sum(lengths) / len(lengths)
-    variance = sum((x - mean_length) ** 2 for x in lengths) / len(lengths)
-    return math.sqrt(variance)
+    return math.sqrt(statistics.variance(lengths)) # Standard deviation
+# Demonstration of calling the function
+sequences = ['ATGC', 'GCTA', 'TAGC', 'CAGT', 'ATGCGT', 'GCTAGC']
+std_dev = analyze_sequence_distribution(sequences)
+print(f"The standard deviation of sequence lengths is {std_dev:.2f}")
 
 
 #* 9. Lambda and Built-in Functions
-sequences = ['ATGC', 'GCTA', 'TAGC', 'CAGT']
+sequences = ['ACTCTGGCTCA', 'GTGCTTAGCCTA', 'TTAGCGCT', 'CAGT']
 reverse_sequences = list(map(lambda seq: seq[::-1], sequences))
-filtered_sequences = list(filter(lambda seq: len(seq) >= 10, sequences))
+filtered_sequences = list(filter(lambda seq: len(seq) <= 10, sequences))
+print("Original sequences:", sequences)
+print("Reversed sequences:", reverse_sequences)
+print("Filtered sequences (length <= 10):", filtered_sequences)
 
 
 #* 10. Docstring and Placeholder Function

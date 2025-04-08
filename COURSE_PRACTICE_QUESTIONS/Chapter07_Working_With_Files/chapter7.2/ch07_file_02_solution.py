@@ -13,15 +13,26 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 #* 1. Open 'example.fasta' and read its content
 with open('data/example.fasta', 'r') as fasta_file:
+    pass
     #$ content = 
-    # print content here
+    # Remove the pass statement and print content here
+
 
 #* 2. Reading File Line by Line
+# Add your code here
+
 
 #* 3. Removing Newline Characters
+# Add your code here
+
 
 #* 4. Extracting Sequence Headers
+# Add your code here
+
 
 #* 5. Using `.readlines()` Method
+# Add your code here
+
 
 #* 6. Counting Sequence Lengths
+# Add your code here

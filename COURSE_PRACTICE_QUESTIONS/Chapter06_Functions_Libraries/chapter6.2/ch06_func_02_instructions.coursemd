@@ -29,6 +29,6 @@ Create a dictionary from the given protein lengths data, then use conversion fun
 # Question 3
 ### Boolean Conversions
 
-Use the `bool()` function to test these values and predict their output:
+Use the `bool()` function with the provided values and try to predict their output.
 <br></br>
 </div>

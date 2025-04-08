@@ -20,13 +20,13 @@ fasta_files = [f for f in os.listdir(sequences_path) if f.endswith('.fasta')]
 print("FASTA files:", fasta_files)
 
 #* 2. Extracting Differential Genes
-with open('data/gene_expression_2024.csv', 'r', newline='') as infile, open('output/differential_genes.csv', 'w', newline='') as outfile:
+with open('data/gene_expression_2025.csv', 'r', newline='') as infile, open('output/differential_genes.csv', 'w', newline='') as outfile:
     reader = csv.reader(infile)
     writer = csv.writer(outfile)
     headers = next(reader)
     writer.writerow(headers)
     for row in reader:
-        if row[3] == 'Yes':
+        if row[2] == 'Yes':
             writer.writerow(row)
 
 #* 3. Appending to Log File
@@ -75,6 +75,7 @@ with open('data/genotype_data.csv', 'r', newline='') as infile, open('output/cle
 total_weight = 0
 count = 0
 with open('data/protein_weights.txt', 'r') as infile:
+    next(infile)  # Skip the header line
     for line in infile:
         protein, weight = line.strip().split('\t')
         total_weight += float(weight)

@@ -15,13 +15,16 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 message = "Hello, World of Bioinformatics!"
 # Open 'output/greetings.txt' in write mode and write the message
 
+
 #* 2. Appending to a File
 additional_message = "\nExploring file operations in Python."
 # Open 'output/greetings.txt' in append mode and append the additional message
 
+
 #* 3. Writing Multiple Lines with Loop
 genes = ["BRCA1 - DNA repair", "TP53 - Cell cycle regulation", "EGFR - Signal transduction"]
-# Open 'output/gene_info.txt' in write mode and use a loop to write each gene information
+# Open 'output/gene_info.txt' in write mode and use a loop to write each gene's information
+
 
 #* 4. Using `.writelines()` to Write a List
 sequences = ["Sequence A: ATCG", "Sequence B: GCTA", "Sequence C: CGAT"]

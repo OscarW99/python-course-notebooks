@@ -47,7 +47,7 @@ def analyze_sequence_distribution(sequences):
 
 
 #* 9. Lambda and Built-in Functions
-sequences = ['ATGC', 'GCTA', 'TAGC', 'CAGT']
+sequences = ['ACTCTGGCTCA', 'GTGCTTAGCCTA', 'TTAGCGCT', 'CAGT']
 # Write your solution here
 
 

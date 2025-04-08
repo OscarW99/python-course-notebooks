@@ -53,7 +53,7 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 # Check if line starts with '>'
 
 #* 7. Cleaning Genotype Data
-# Since we're working with CSV files, let's break this down:
+# Since we're working with CSV files:
 # 1. Use csv.reader to read the input file
 # 2. Use csv.writer for the output file
 # 3. For each row in the reader:
@@ -63,7 +63,7 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 #* 8. Calculating Average Molecular Weight
 # Steps:
-# 1. Read all lines and calculate average
+# 1. Read all lines (except header line) and calculate average
 # 2. Open file in append mode
 # 3. Write average at the end
 

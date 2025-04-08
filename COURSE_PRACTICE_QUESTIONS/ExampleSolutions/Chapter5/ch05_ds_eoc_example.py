@@ -10,7 +10,7 @@ print(dna_sequences)
 
 #* 2. Nested List Processing
 gene_data = [['GeneA', 120], ['GeneB', 85], ['GeneC', 150]]
-highest_expression_gene = max(gene_data, key=lambda x: x[1])[0]
+highest_expression_gene = max(gene[1] for gene in gene_data)
 average_expression = sum(gene[1] for gene in gene_data) / len(gene_data)
 gene_names = [gene[0] for gene in gene_data]
 print(f"Highest expression gene: {highest_expression_gene}")
@@ -31,8 +31,8 @@ print(amino_acids)
 #* 4. Set Operations
 gene_set1 = {'BRCA1', 'TP53', 'KRAS'}
 gene_set2 = {'EGFR', 'KRAS', 'PIK3CA'}
-intersection = gene_set1 & gene_set2
-unique_genes = gene_set1 | gene_set2
+intersection = gene_set1.intersection(gene_set2)
+unique_genes = gene_set1.union(gene_set2)
 is_brca1_present = 'BRCA1' in unique_genes
 print(f"Intersection: {intersection}")
 print(f"Unique genes: {unique_genes}")

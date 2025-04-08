@@ -38,7 +38,7 @@ The datetime module helps you work with dates and times. This is essential for t
 - **`datetime.datetime`**:
     - **Description**: Class for creating and manipulating date and time objects.
     - **Parameters**: `year, month, day, hour, minute, second, microsecond, tzinfo`
-    - **Example**: `dt = datetime.datetime(2025, 2, 15, 14, 30)` creates a `datetime` object for February 15, 2025, at 2:30 PM.
+    - **Example**: `dt = datetime.datetime(2025, 11, 15, 14, 30)` creates a `datetime` object for November 15, 2025, at 2:30 PM.
 - **`datetime.datetime.now()`**:
     - **Description**: Returns the current local date and time.
     - **Parameters**: `tz` (optional) – time zone info to localize the result.
@@ -48,9 +48,12 @@ The datetime module helps you work with dates and times. This is essential for t
     - **Parameters**: `days, seconds, microseconds, milliseconds, minutes, hours, weeks` (any combination).
     - **Example**: `delta = datetime.timedelta(days=10)` creates a `timedelta` object representing 10 days.
 
+To calculate the difference in days between two datetime objects: `(datetime_obj_1 - datetime_obj_2).days`
+
 Using the datetime module functions:
-* Create a datetime object for December 25, 2025, at 2:30 PM
-* Calculate the difference in days between your created date and the current time (datetime.datetime.now())
+* Create a datetime object for December 25 of the curent year, at 2:30 PM
+* Get the current time
+* Calculate the difference in days between your created date and the current time
 * Add 30 days to your datetime object using timedelta
 <br></br>
 </div>

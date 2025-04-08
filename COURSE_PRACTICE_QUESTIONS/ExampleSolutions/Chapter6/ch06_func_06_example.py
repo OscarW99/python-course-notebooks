@@ -2,7 +2,7 @@
 
 #* 1. Creating a Greeting Function
 def greet():
-    print("Hello, welcome to the Python course!")
+    print("Hello, welcome to the custom functions module!")
 greet()
 
 #* 2. DNA Sequence Printer

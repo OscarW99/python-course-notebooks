@@ -17,10 +17,10 @@ Append the message _**"Exploring file operations in Python."**_ to the file **`o
 <br></br>
 
 # Question 3: Writing Multiple Lines with Loop
-Create a file **`output/gene_info.txt`** and use a loop to write the following genes and their functions, each on a new line: **`["BRCA1 - DNA repair", "TP53 - Cell cycle regulation", "EGFR - Signal transduction"]`**.
+Create a file **`output/gene_info.txt`** and use a loop to process the provided list of genes. Write each gene and its associated function on a new line in the file.
 <br></br>
 
 # Question 4: Using `.writelines()` to Write a List
-With the list of strings **`["Sequence A: ATCG", "Sequence B: GCTA", "Sequence C: CGAT"]`**, write these to a file named **`output/sequence_list.txt`** using the **`.writelines()`** method.
+Using the provided list of strings, write each entry to a file named **`output/sequence_list.txt`** using the **`.writelines()`** method.
 <br></br>
 </div>

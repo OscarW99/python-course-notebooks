@@ -1,7 +1,6 @@
 # Chapter 5: Data Structures
 
 #* 1. Creating a Nested Protein Dictionary
-# Solution:
 protein_info = {
     "Insulin": {"mass": 5.8, "function": "hormone", "location": "pancreas"},
     "Albumin": {"mass": 66.5, "function": "transport", "location": "blood"},
@@ -16,7 +15,6 @@ cell_data = {
     "mitochondria": {"size": 1, "shape": "oval", "count": 300},
     "ribosome": {"size": 0.1, "shape": "round", "count": 10000}
 }
-# Solution:
 mitochondria_shape = cell_data["mitochondria"]["shape"]
 ribosome_count = cell_data["ribosome"]["count"]
 nucleus_data = cell_data["nucleus"]
@@ -26,7 +24,6 @@ print(nucleus_data)
 
 
 #* 3. Modifying Cell Data
-# Solution:
 # Add lysosome
 cell_data["lysosome"] = {"size": 0.5, "shape": "spherical", "count": 100}
 
@@ -39,7 +36,6 @@ print(cell_data)
 
 
 #* 4. Creating Experiment Results Dictionary
-# Solution:
 experiment_results = {
     "experiment1": {"date": "2023-01-01", "temperature": 37, "outcome": "success"},
     "experiment2": {"date": "2023-01-02", "temperature": 25, "outcome": "failure"},
@@ -54,7 +50,6 @@ gene_families = {
     "phosphatases": {"count": 12, "studied": False, "members": ["PHOS1", "PHOS2"]},
     "receptors": {"count": 25, "studied": True, "members": ["REC1", "REC2", "REC3"]}
 }
-# Solution:
 # Add new kinase member
 gene_families["kinases"]["members"].append("KIN4")
 

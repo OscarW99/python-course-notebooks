@@ -9,7 +9,7 @@
 <div style="font-size:18px;">
 
 For questions 1-4, use the sets of amino acids provided below:
-```
+```python
 # Sets for practice problems
 amino_acids_set1 = {'glycine', 'alanine', 'valine', 'serine', 'leucine', 'phenylalanine'}
 amino_acids_set2 = {'proline', 'glutamine', 'asparagine', 'valine', 'histidine', 'phenylalanine'}

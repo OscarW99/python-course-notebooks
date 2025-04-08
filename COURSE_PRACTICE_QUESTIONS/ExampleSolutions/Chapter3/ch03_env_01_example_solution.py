@@ -26,7 +26,7 @@ proteins = ["ASDFGHJKLKFERQWERTYUIOP",
 # write your for loop here
 motif = "KFERQ"
 for protein in proteins:
-    if motif in protein.upper():
+    if motif in protein:
         print("Protein containing motif:", protein)
 
 

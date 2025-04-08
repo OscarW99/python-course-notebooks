@@ -44,6 +44,6 @@ Import the `remainder()` function from the `math` module using the alias `rm`, a
 # Question 6
 ### Module Aliases
 
-Use the `as` keyword to abbreviate the `datetime` module to `dt`. Then, print the current date and time using `dt.datetime.now()`.
+Use the `as` keyword to import and abbreviate the `datetime` module to `dt`. Then, print the current date and time using `dt.datetime.now()`.
 <br></br>
 </div>

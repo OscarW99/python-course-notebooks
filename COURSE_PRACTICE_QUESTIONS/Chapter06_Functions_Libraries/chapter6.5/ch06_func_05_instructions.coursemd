@@ -12,14 +12,14 @@
 ### Using any() and all()
 
 Working with enzyme activity and sample quality data:
-* Check if ANY enzyme shows significant activity
+* Check if ANY enzyme shows activity
 * Determine if ALL samples pass quality control
 <br>
 
 # Question 2
 ### Formatting Numbers
 
-Using `format()` function, process these biological measurements:
+Using `format()` function, process the provided biological measurements:
 * Format protein concentration to 2 decimal places (Hint: Use `.2f`)
 * Convert mutation rate to a percentage with 1 decimal place (Hint: Use `.1%`)
 * Format gene expression value to scientific notation (Hint: Use `.2E`)

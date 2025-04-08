@@ -53,5 +53,5 @@ with open('data/example.tsv', 'r') as infile, open('output/upregulated_genes.tsv
     headers = next(reader)  # Skip and capture the header
     writer.writerow(headers)  # Write the header to the output file
     for row in reader:
-        if row[3] == 'Up':  # Assuming Notes column is in the fourth position
+        if row[3] == 'Upregulated':  # Assuming Notes column is in the fourth position
             writer.writerow(row)

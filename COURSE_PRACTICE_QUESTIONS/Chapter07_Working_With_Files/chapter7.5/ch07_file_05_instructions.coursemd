@@ -19,7 +19,7 @@
 
 <span style="color:#8b0153;">Hint</span>: To filter rows, use the following syntax:
 
-`df = df[df['Column_Name'] > value]`
+`filtered_df = df[df['Column_Name'] > value]`
 <br></br>
 
 
@@ -30,17 +30,11 @@
 
 <span style="color:#8b0153;">Hint</span>: To calculate the mean average of a column, use the following syntax:
 
-`df['Column_Name'].mean()`
+`column_mean = df['Column_Name'].mean()`
 <br></br>
 
 # Question 4
 - Use the given data to create a Pandas DataFrame.
-    ```python
-    data = {
-        'Protein': ['P53', 'BRCA1', 'EGFR', 'TNF', 'IL6'],
-        'Expression': [0.8, 1.2, 1.5, 0.6, 1.1]
-    }
-    ```
     1. Print the first few rows of the DataFrame using the `.head()` method.
     2. Write this DataFrame to a TSV file named `'output/protein_expression.tsv'`.
 <br></br>

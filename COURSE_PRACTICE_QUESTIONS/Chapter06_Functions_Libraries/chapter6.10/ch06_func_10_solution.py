@@ -27,5 +27,4 @@ def demonstrate_scope():
     value = 20
     print(f"Local value: {value}")
 print(f"Global value: {value}")
-
-# Play around with the function and using the global keyword with value
+# Play around with the function and using the global keyword with 'value'
