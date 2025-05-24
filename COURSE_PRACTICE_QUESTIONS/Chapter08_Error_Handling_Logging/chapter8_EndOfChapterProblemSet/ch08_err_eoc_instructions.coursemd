@@ -25,7 +25,7 @@
 <br></br>
 
 # Question 3
-- Add appropriate error handling to this code that divides values in `data/numbers.txt`:
+- Add appropriate error handling to this code that divides 1000 by values in `data/numbers.txt`
     - Handle both ZeroDivisionError and ValueError separately
     - Log different messages for each error type
     - Include the line number where the error occurred
@@ -38,9 +38,18 @@
     - Set different formatting for each handler
     - Set different logging levels for each handler
     - Test the configuration with messages at various levels
+
+Hints:
+- Use `logging.getLogger()` to retrieve or create a logger.
+- Use `logging.FileHandler()` to create handlers for writing to specific files.
+- Use `setLevel()` to assign logging levels to handlers.
+- Use `logging.Formatter()` to define custom formats for each handler.
+- Use `addHandler()` to attach the handlers to the logger.
+- Test with logging methods like `logger.debug()`, `logger.info()`, etc.
 <br></br>
 
 # Question 5
+_We're resetting the logging for this question to keep it simple.  Find the 'TODO' line and uncomment the line below it._
 - Add exception handling to process the content of `data/gene_data.txt`:
     - Log a warning if a line is not in the expected format (should be: **_gene_id\tsequence_**)
     - Skip invalid lines and continue processing
@@ -57,11 +66,12 @@
 <br></br>
 
 # Question 7
-- Use the logging module to create a debugging log:
+- Modify the `calculate_gc_content` function to::
     - Log entry and exit points of functions
     - Include parameter values in debug messages
-    - Use a format that includes function name
-    - Test with the `calculate_gc_content` function.
+    - Use a format that includes the function name
+    
+Call the `calculate_gc_content` function with different sequences.
 <br></br>
 
 # Question 8
@@ -70,14 +80,17 @@
     - Log position of first invalid base
     - Include try-except-else structure
     - Add debug logging of sequence length
+
+Call the `validate_dna` function with different sequences.
 <br></br>
 
 # Question 9
 - Modify this sequence processing code to include both `logging.exception()` and `logging.error()` approaches:
     - Use `logging.exception()` for file operation errors
-    - Use `logging.error()` with `exc_info=True` for invalid characters
+    - Use `logging.error()` for invalid characters
     - Compare the log outputs from both approaches
     - Add appropriate error messages for each case
+    - Test with the `data/sequences.txt` file
 <br></br>
 
 # Question 10

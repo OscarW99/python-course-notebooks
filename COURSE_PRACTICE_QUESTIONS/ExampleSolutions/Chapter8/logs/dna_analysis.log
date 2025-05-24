@@ -1,0 +1,88 @@
+2025-04-09 10:02:29,916 - DEBUG - This is a debug message
+2025-04-09 10:02:29,917 - INFO - This is an info message
+2025-04-09 10:02:29,917 - WARNING - This is a warning
+2025-04-09 10:02:29,917 - ERROR - This is an error
+2025-04-09 10:02:29,917 - CRITICAL - This is a critical error
+2025-04-09 10:02:29,917 - ERROR - Error on line 11: Cannot divide by zero
+Traceback (most recent call last):
+  File "c:\Users\oggyw\OneDrive\Documents\VSCODE\PythonForBioinformatics\JUPYTERLITE_NOTEBOOKS\COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter8\ch08_err_eoc_example.py", line 49, in <module>
+    result = 1000/ number
+             ~~~~^~~~~~~~
+ZeroDivisionError: division by zero
+2025-04-09 10:02:29,930 - INFO - File operation completed
+2025-04-09 10:02:29,930 - DEBUG - This is a DEBUG message.
+2025-04-09 10:02:29,930 - DEBUG - This is a DEBUG message.
+2025-04-09 10:02:29,930 - INFO - This is an INFO message.
+2025-04-09 10:02:29,930 - INFO - This is an INFO message.
+2025-04-09 10:02:29,931 - WARNING - This is a WARNING message.
+2025-04-09 10:02:29,931 - WARNING - This is a WARNING message.
+2025-04-09 10:02:29,931 - ERROR - This is an ERROR message.
+2025-04-09 10:02:29,931 - ERROR - This is an ERROR message.
+2025-04-09 10:02:29,931 - CRITICAL - This is a CRITICAL message.
+2025-04-09 10:02:29,931 - CRITICAL - This is a CRITICAL message.
+2025-04-09 10:04:22,406 - DEBUG - This is a debug message
+2025-04-09 10:04:22,406 - INFO - This is an info message
+2025-04-09 10:04:22,406 - WARNING - This is a warning
+2025-04-09 10:04:22,406 - ERROR - This is an error
+2025-04-09 10:04:22,406 - CRITICAL - This is a critical error
+2025-04-09 10:04:22,407 - ERROR - Error on line 11: Cannot divide by zero
+Traceback (most recent call last):
+  File "c:\Users\oggyw\OneDrive\Documents\VSCODE\PythonForBioinformatics\JUPYTERLITE_NOTEBOOKS\COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter8\ch08_err_eoc_example.py", line 49, in <module>
+    result = 1000/ number
+             ~~~~^~~~~~~~
+ZeroDivisionError: division by zero
+2025-04-09 10:04:22,411 - INFO - File operation completed
+2025-04-09 10:04:22,411 - DEBUG - This is a DEBUG message.
+2025-04-09 10:04:22,411 - DEBUG - This is a DEBUG message.
+2025-04-09 10:04:22,411 - INFO - This is an INFO message.
+2025-04-09 10:04:22,411 - INFO - This is an INFO message.
+2025-04-09 10:04:22,411 - WARNING - This is a WARNING message.
+2025-04-09 10:04:22,411 - WARNING - This is a WARNING message.
+2025-04-09 10:04:22,411 - ERROR - This is an ERROR message.
+2025-04-09 10:04:22,411 - ERROR - This is an ERROR message.
+2025-04-09 10:04:22,412 - CRITICAL - This is a CRITICAL message.
+2025-04-09 10:04:22,412 - CRITICAL - This is a CRITICAL message.
+2025-04-09 10:05:03,594 - DEBUG - This is a debug message
+2025-04-09 10:05:03,594 - INFO - This is an info message
+2025-04-09 10:05:03,594 - WARNING - This is a warning
+2025-04-09 10:05:03,594 - ERROR - This is an error
+2025-04-09 10:05:03,594 - CRITICAL - This is a critical error
+2025-04-09 10:05:03,595 - ERROR - Error on line 11: Cannot divide by zero
+Traceback (most recent call last):
+  File "c:\Users\oggyw\OneDrive\Documents\VSCODE\PythonForBioinformatics\JUPYTERLITE_NOTEBOOKS\COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter8\ch08_err_eoc_example.py", line 49, in <module>
+    result = 1000/ number
+             ~~~~^~~~~~~~
+ZeroDivisionError: division by zero
+2025-04-09 10:05:03,599 - INFO - File operation completed
+2025-04-09 10:05:03,599 - DEBUG - This is a DEBUG message.
+2025-04-09 10:05:03,599 - DEBUG - This is a DEBUG message.
+2025-04-09 10:05:03,599 - INFO - This is an INFO message.
+2025-04-09 10:05:03,599 - INFO - This is an INFO message.
+2025-04-09 10:05:03,599 - WARNING - This is a WARNING message.
+2025-04-09 10:05:03,599 - WARNING - This is a WARNING message.
+2025-04-09 10:05:03,599 - ERROR - This is an ERROR message.
+2025-04-09 10:05:03,599 - ERROR - This is an ERROR message.
+2025-04-09 10:05:03,599 - CRITICAL - This is a CRITICAL message.
+2025-04-09 10:05:03,599 - CRITICAL - This is a CRITICAL message.
+2025-04-09 10:12:45,467 - DEBUG - This is a debug message
+2025-04-09 10:12:45,467 - INFO - This is an info message
+2025-04-09 10:12:45,467 - WARNING - This is a warning
+2025-04-09 10:12:45,467 - ERROR - This is an error
+2025-04-09 10:12:45,467 - CRITICAL - This is a critical error
+2025-04-09 10:12:45,468 - ERROR - Error on line 11: Cannot divide by zero
+Traceback (most recent call last):
+  File "c:\Users\oggyw\OneDrive\Documents\VSCODE\PythonForBioinformatics\JUPYTERLITE_NOTEBOOKS\COURSE_PRACTICE_QUESTIONS\ExampleSolutions\Chapter8\ch08_err_eoc_example.py", line 49, in <module>
+    result = 1000/ number
+             ~~~~^~~~~~~~
+ZeroDivisionError: division by zero
+2025-04-09 10:12:45,473 - INFO - File operation completed
+2025-04-09 10:12:45,473 - DEBUG - This is a DEBUG message.
+2025-04-09 10:12:45,473 - DEBUG - This is a DEBUG message.
+2025-04-09 10:12:45,473 - INFO - This is an INFO message.
+2025-04-09 10:12:45,473 - INFO - This is an INFO message.
+2025-04-09 10:12:45,473 - WARNING - This is a WARNING message.
+2025-04-09 10:12:45,473 - WARNING - This is a WARNING message.
+2025-04-09 10:12:45,473 - ERROR - This is an ERROR message.
+2025-04-09 10:12:45,473 - ERROR - This is an ERROR message.
+2025-04-09 10:12:45,473 - CRITICAL - This is a CRITICAL message.
+2025-04-09 10:12:45,473 - CRITICAL - This is a CRITICAL message.

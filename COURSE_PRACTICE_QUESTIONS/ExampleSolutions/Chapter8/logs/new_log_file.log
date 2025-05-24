@@ -1,0 +1,135 @@
+2025-04-09 10:02:29,931 - INFO - Processed gene gene_id
+2025-04-09 10:02:29,931 - INFO - Processed gene GENE001
+2025-04-09 10:02:29,931 - INFO - Processed gene GENE002
+2025-04-09 10:02:29,931 - INFO - Processed gene GENE003
+2025-04-09 10:02:29,931 - INFO - Processed gene GENE004
+2025-04-09 10:02:29,931 - INFO - Processed gene GENE005
+2025-04-09 10:02:29,931 - INFO - Processed gene GENE006
+2025-04-09 10:02:29,931 - INFO - Processed gene GENE007
+2025-04-09 10:02:29,931 - INFO - Processed gene GENE008
+2025-04-09 10:02:29,931 - INFO - Processed gene GENE009
+2025-04-09 10:02:29,931 - INFO - Processed gene GENE010
+2025-04-09 10:02:29,932 - INFO - Processed gene GENE011
+2025-04-09 10:02:29,932 - INFO - Processed gene GENE012
+2025-04-09 10:02:29,932 - INFO - Finished processing. Invalid lines: 0
+2025-04-09 10:02:29,932 - ERROR - Invalid amino acid encountered: 'Z'
+2025-04-09 10:02:29,932 - DEBUG - Entering calculate_gc_content with sequence: ATGC
+2025-04-09 10:02:29,932 - DEBUG - Exiting calculate_gc_content with result: 50.0
+2025-04-09 10:02:29,932 - DEBUG - Entering calculate_gc_content with sequence: ATCGGCTGCA
+2025-04-09 10:02:29,932 - DEBUG - Exiting calculate_gc_content with result: 60.0
+2025-04-09 10:02:29,932 - DEBUG - Entering calculate_gc_content with sequence: ATCCTGGCTGCA
+2025-04-09 10:02:29,932 - DEBUG - Exiting calculate_gc_content with result: 58.333333333333336
+2025-04-09 10:02:29,932 - DEBUG - Sequence length: 12
+2025-04-09 10:02:29,932 - INFO - Sequence is valid
+2025-04-09 10:02:29,932 - DEBUG - Sequence length: 13
+2025-04-09 10:02:29,932 - ERROR - Invalid base 'X' found at position 13
+2025-04-09 10:02:29,932 - DEBUG - Sequence length: 13
+2025-04-09 10:02:29,932 - INFO - Sequence is valid
+2025-04-09 10:02:29,933 - ERROR - Invalid character 'D' found
+NoneType: None
+2025-04-09 10:02:29,933 - INFO - Invalid characters found: D
+2025-04-09 10:02:29,933 - DEBUG - Entering compare_sequences
+2025-04-09 10:02:29,933 - INFO - Difference found at position 2
+2025-04-09 10:02:29,933 - INFO - Difference found at position 3
+2025-04-09 10:02:29,933 - DEBUG - Exiting compare_sequences with 2 differences
+2025-04-09 10:04:22,412 - INFO - Processed gene gene_id
+2025-04-09 10:04:22,412 - INFO - Processed gene GENE001
+2025-04-09 10:04:22,412 - INFO - Processed gene GENE002
+2025-04-09 10:04:22,412 - INFO - Processed gene GENE003
+2025-04-09 10:04:22,412 - INFO - Processed gene GENE004
+2025-04-09 10:04:22,412 - INFO - Processed gene GENE005
+2025-04-09 10:04:22,412 - INFO - Processed gene GENE006
+2025-04-09 10:04:22,412 - INFO - Processed gene GENE007
+2025-04-09 10:04:22,412 - INFO - Processed gene GENE008
+2025-04-09 10:04:22,412 - INFO - Processed gene GENE009
+2025-04-09 10:04:22,412 - INFO - Processed gene GENE010
+2025-04-09 10:04:22,412 - INFO - Processed gene GENE011
+2025-04-09 10:04:22,412 - INFO - Processed gene GENE012
+2025-04-09 10:04:22,412 - INFO - Finished processing. Invalid lines: 0
+2025-04-09 10:04:22,413 - ERROR - Invalid amino acid encountered: 'Z'
+2025-04-09 10:04:22,413 - DEBUG - Entering calculate_gc_content with sequence: ATGC
+2025-04-09 10:04:22,413 - DEBUG - Exiting calculate_gc_content with result: 50.0
+2025-04-09 10:04:22,413 - DEBUG - Entering calculate_gc_content with sequence: ATCGGCTGCA
+2025-04-09 10:04:22,413 - DEBUG - Exiting calculate_gc_content with result: 60.0
+2025-04-09 10:04:22,413 - DEBUG - Entering calculate_gc_content with sequence: ATCCTGGCTGCA
+2025-04-09 10:04:22,413 - DEBUG - Exiting calculate_gc_content with result: 58.333333333333336
+2025-04-09 10:04:22,413 - DEBUG - Sequence length: 12
+2025-04-09 10:04:22,413 - INFO - Sequence is valid
+2025-04-09 10:04:22,413 - DEBUG - Sequence length: 13
+2025-04-09 10:04:22,413 - ERROR - Invalid base 'X' found at position 13
+2025-04-09 10:04:22,413 - DEBUG - Sequence length: 13
+2025-04-09 10:04:22,413 - INFO - Sequence is valid
+2025-04-09 10:04:22,413 - ERROR - Invalid character 'D' found
+2025-04-09 10:04:22,413 - INFO - Invalid characters found: D
+2025-04-09 10:04:22,413 - DEBUG - Entering compare_sequences
+2025-04-09 10:04:22,413 - INFO - Difference found at position 2
+2025-04-09 10:04:22,413 - INFO - Difference found at position 3
+2025-04-09 10:04:22,413 - DEBUG - Exiting compare_sequences with 2 differences
+2025-04-09 10:05:03,600 - INFO - Processed gene gene_id
+2025-04-09 10:05:03,600 - INFO - Processed gene GENE001
+2025-04-09 10:05:03,600 - INFO - Processed gene GENE002
+2025-04-09 10:05:03,600 - INFO - Processed gene GENE003
+2025-04-09 10:05:03,600 - INFO - Processed gene GENE004
+2025-04-09 10:05:03,600 - INFO - Processed gene GENE005
+2025-04-09 10:05:03,600 - INFO - Processed gene GENE006
+2025-04-09 10:05:03,600 - INFO - Processed gene GENE007
+2025-04-09 10:05:03,600 - INFO - Processed gene GENE008
+2025-04-09 10:05:03,600 - INFO - Processed gene GENE009
+2025-04-09 10:05:03,600 - INFO - Processed gene GENE010
+2025-04-09 10:05:03,601 - INFO - Processed gene GENE011
+2025-04-09 10:05:03,601 - INFO - Processed gene GENE012
+2025-04-09 10:05:03,601 - INFO - Finished processing. Invalid lines: 0
+2025-04-09 10:05:03,601 - ERROR - Invalid amino acid encountered: 'Z'
+2025-04-09 10:05:03,601 - DEBUG - Entering calculate_gc_content with sequence: ATGC
+2025-04-09 10:05:03,601 - DEBUG - Exiting calculate_gc_content with result: 50.0
+2025-04-09 10:05:03,602 - DEBUG - Entering calculate_gc_content with sequence: ATCGGCTGCA
+2025-04-09 10:05:03,602 - DEBUG - Exiting calculate_gc_content with result: 60.0
+2025-04-09 10:05:03,602 - DEBUG - Entering calculate_gc_content with sequence: ATCCTGGCTGCA
+2025-04-09 10:05:03,602 - DEBUG - Exiting calculate_gc_content with result: 58.333333333333336
+2025-04-09 10:05:03,602 - DEBUG - Sequence length: 12
+2025-04-09 10:05:03,602 - INFO - Sequence is valid
+2025-04-09 10:05:03,602 - DEBUG - Sequence length: 13
+2025-04-09 10:05:03,602 - ERROR - Invalid base 'X' found at position 13
+2025-04-09 10:05:03,602 - DEBUG - Sequence length: 13
+2025-04-09 10:05:03,602 - INFO - Sequence is valid
+2025-04-09 10:05:03,603 - ERROR - Invalid character 'D' found
+2025-04-09 10:05:03,603 - ERROR - Invalid character 'R' found
+2025-04-09 10:05:03,603 - INFO - Invalid characters found: R, D
+2025-04-09 10:05:03,603 - DEBUG - Entering compare_sequences
+2025-04-09 10:05:03,603 - INFO - Difference found at position 2
+2025-04-09 10:05:03,603 - INFO - Difference found at position 3
+2025-04-09 10:05:03,603 - DEBUG - Exiting compare_sequences with 2 differences
+2025-04-09 10:12:45,474 - INFO - Processed gene gene_id
+2025-04-09 10:12:45,474 - INFO - Processed gene GENE001
+2025-04-09 10:12:45,474 - INFO - Processed gene GENE002
+2025-04-09 10:12:45,474 - INFO - Processed gene GENE003
+2025-04-09 10:12:45,474 - INFO - Processed gene GENE004
+2025-04-09 10:12:45,474 - INFO - Processed gene GENE005
+2025-04-09 10:12:45,474 - INFO - Processed gene GENE006
+2025-04-09 10:12:45,474 - INFO - Processed gene GENE007
+2025-04-09 10:12:45,474 - INFO - Processed gene GENE008
+2025-04-09 10:12:45,475 - INFO - Processed gene GENE009
+2025-04-09 10:12:45,475 - INFO - Processed gene GENE010
+2025-04-09 10:12:45,475 - INFO - Processed gene GENE011
+2025-04-09 10:12:45,475 - INFO - Processed gene GENE012
+2025-04-09 10:12:45,475 - INFO - Finished processing. Invalid lines: 0
+2025-04-09 10:12:45,475 - ERROR - Invalid amino acid encountered: 'Z'
+2025-04-09 10:12:45,475 - DEBUG - Entering calculate_gc_content with sequence: ATGC
+2025-04-09 10:12:45,475 - DEBUG - Exiting calculate_gc_content with result: 50.0
+2025-04-09 10:12:45,476 - DEBUG - Entering calculate_gc_content with sequence: ATCGGCTGCA
+2025-04-09 10:12:45,476 - DEBUG - Exiting calculate_gc_content with result: 60.0
+2025-04-09 10:12:45,476 - DEBUG - Entering calculate_gc_content with sequence: ATCCTGGCTGCA
+2025-04-09 10:12:45,476 - DEBUG - Exiting calculate_gc_content with result: 58.333333333333336
+2025-04-09 10:12:45,476 - DEBUG - Sequence length: 12
+2025-04-09 10:12:45,476 - INFO - Sequence is valid
+2025-04-09 10:12:45,476 - DEBUG - Sequence length: 13
+2025-04-09 10:12:45,476 - ERROR - Invalid base 'X' found at position 13
+2025-04-09 10:12:45,477 - DEBUG - Sequence length: 13
+2025-04-09 10:12:45,477 - INFO - Sequence is valid
+2025-04-09 10:12:45,477 - ERROR - Invalid character 'D' found on line 16
+2025-04-09 10:12:45,477 - ERROR - Invalid character 'R' found on line 22
+2025-04-09 10:12:45,477 - INFO - Invalid characters found: D, R
+2025-04-09 10:12:45,477 - DEBUG - Entering compare_sequences
+2025-04-09 10:12:45,477 - INFO - Difference found at position 2
+2025-04-09 10:12:45,477 - INFO - Difference found at position 3
+2025-04-09 10:12:45,477 - DEBUG - Exiting compare_sequences with 2 differences

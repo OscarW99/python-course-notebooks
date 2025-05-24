@@ -19,6 +19,7 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 # Format should include: %(asctime)s - %(levelname)s - %(message)s
 # Remember to set level=logging.DEBUG
 
+
 #* 2. File Reading with Error Handling
 def read_sequence_file():
     try:
@@ -31,11 +32,19 @@ def read_sequence_file():
         # Add general error handling here
         pass
 
+
 #* 3. Division with Error Handling
-# Add logging configuration here
 try:
-    # File reading and division code here
-    pass
+    # File reading and division code
+    with open('data/numbers.txt', 'r') as file:
+        line_number = 1  # Track the line number manually
+        for line in file:
+            # Convert the line to a number
+            number = int(line.strip())
+            # Perform division and print the result
+            result = 1000/ number
+            print(f"Line {line_number}: 1000 / {number} = {result}")
+            line_number += 1
 except ZeroDivisionError:
     # Handle division by zero
     pass
@@ -46,14 +55,25 @@ finally:
     # Add cleanup code
     pass
 
-#* 4. Multiple Handlers Logging Configuration
-# Create and configure handlers here
-# Hint: Use logging.FileHandler() and setFormatter()
 
-# Test with log messages
+#* 4. Multiple Handlers Logging Configuration
+# Step 1: Create a custom logger
+# Step 2: Configure the first handler - Write all messages to logs/dna_analysis.log
+# Step 3: Configure the second handler - Write only CRITICAL messages to logs/errors.log
+# Step 4: Add both handlers to the logger
+# Step 5: Test the configuration with messages at various levels
+
 
 #* 5. Gene Data Processing
-def process_gene_data():
+### Configuration ###
+# Reset logging to avoid confusion
+logging.getLogger().handlers = []  # Remove all existing handlers 
+# All logs from this point will go to a new file at level DEBUG
+# TODO - Uncomment the following line to set up logging
+# logging.basicConfig(filename='logs/new_log_file.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+#######
+
+def process_gene_data(file_path):
     invalid_lines = 0
     try:
         # Add file processing code
@@ -61,11 +81,16 @@ def process_gene_data():
     except Exception as e:
         # Add error handling
         pass
+
+# Call function
+process_gene_data('data/gene_data.txt')
+
 # Hint: Use try-except within a loop for each line
 # Check if line matches expected format (split by '\t')
 # Use logging.warning for invalid lines
 # Keep track with counter variable
 # Log final summary with logging.info
+
 
 #* 6. Protein Analysis with Error Handling
 def analyze_protein(sequence):
@@ -83,22 +108,27 @@ def analyze_protein(sequence):
         pass
     return molecular_weight  # Placeholder return to avoid undefined function errors
 
+# Call function
+analyze_protein('MAGWFLPTDSVYHIK')
+analyze_protein('KLYGDSRTPHINACF')
+analyze_protein('WLHFTZGYRPIVDQM')
+
+
 #* 7. Function Debugging
 def calculate_gc_content(sequence):
     # Add logging statements
     gc_count = sequence.count('G') + sequence.count('C')
     return (gc_count / len(sequence)) * 100
 
+
 #* 8. Sequence Validation with Error Handling
 def validate_dna(sequence):
     valid_bases = {'A', 'T', 'G', 'C'}
-    # Add try-except-else structure
-    # Add logging statements
     for i, base in enumerate(sequence):
         if base not in valid_bases:
-            # Add error handling here
             pass
             
+
 #* 9. Sequence Processing with Different Logging Approaches
 def process_sequence_file(filename):
     """Process a sequence file and check for invalid characters.
@@ -116,8 +146,12 @@ def process_sequence_file(filename):
         logging.exception("File not found")
     except Exception as e:
         logging.exception(f"An error occurred: {e}")
+
     if invalid_chars:
         logging.info(f"Invalid characters found: {', '.join(invalid_chars)}")
+    else:
+        logging.info("No invalid characters detected.")
+
 
 #* 10. Sequence Comparison with Logging
 def compare_sequences(seq1, seq2):
@@ -127,3 +161,5 @@ def compare_sequences(seq1, seq2):
         if seq1[i] != seq2[i]:
             differences.append(i)
     return differences
+
+compare_sequences("ATGC", "ATCG")
